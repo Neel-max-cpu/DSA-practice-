@@ -25,7 +25,7 @@ public:
         // helper(root, ans);
 
         // iterative ---
-        // /*
+        /*
         stack<TreeNode*>s;
         TreeNode*current = root;
 
@@ -44,9 +44,51 @@ public:
             }
         }
         return ans;
-        // */
+        */
 
-        // Morris traversal ---
+        // using morris traversal --- similar to inorder just 1 line change
+        TreeNode *current = root;
+        while(current !=NULL){
+            if(current->left==NULL){                
+                ans.push_back(current->val);
+                current=current->right;
+            }
+            else{
+                /*
+                          1
+                         / \
+                        2   3
+                       / \
+                      4   5
+                           \
+                            6
+                */
+                // left is not null -- take the left subtree's(2s) right most guy(6) and 
+                TreeNode *previous = current->left;
+                // 2 case if next is null or else current 
+                while(previous->right!=NULL && previous->right!=current){
+                    previous=previous->right;
+                }
 
+
+                // connect it to current's node(if next is null) after connection is done,                 
+                // move to the left permananently
+                if(previous->right==NULL){
+                    // create the thread
+                    previous->right = current; 
+                    // push the value when making the thread -- 
+                    ans.push_back(current->val);
+                    
+                    current = current->left;
+                }
+                // else remove the thread
+                else{
+                    // cut the thread
+                    previous->right = NULL;
+                    current = current->right;
+                }                
+            }
+        } 
+        return ans;
     }
 };

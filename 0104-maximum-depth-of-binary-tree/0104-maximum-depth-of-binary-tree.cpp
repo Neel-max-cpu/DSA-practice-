@@ -11,7 +11,25 @@
  */
 class Solution {
 public:
+    int find_height(TreeNode*root){
+        if(root==NULL) return 0;
+        int left=0, right=0;
+        if(root->left!=NULL){
+            left = find_height(root->left);
+        }
+
+        if(root->right!=NULL){
+            right = find_height(root->right);
+        }
+
+        return max(left,right)+1;
+    }
+
     int maxDepth(TreeNode* root) {
+
+
+        // method 1 --
+        /*
         int n = 0;
         if(root==NULL) return 0;
         queue<TreeNode*>q;
@@ -28,6 +46,11 @@ public:
             }
         }
         return n;
+        */
+
+        // method 2 ---
+        return find_height(root);
+        
         
     }
 };

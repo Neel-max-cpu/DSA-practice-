@@ -13,6 +13,8 @@ class Solution {
 public:
     int find_height(TreeNode*root){
         if(root==NULL) return 0;
+        
+        /*
         int left=0, right=0;
         if(root->left!=NULL){
             left = find_height(root->left);
@@ -21,6 +23,13 @@ public:
         if(root->right!=NULL){
             right = find_height(root->right);
         }
+        */
+        
+        // since already returning 0 when null
+        
+        int left = find_height(root->left);
+        int right = find_height(root->right);
+        
 
         return max(left,right)+1;
     }

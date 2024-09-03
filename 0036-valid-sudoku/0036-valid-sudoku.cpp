@@ -65,6 +65,29 @@ public:
     }
 
     bool isValidSudoku(vector<vector<char>>& board) {
-        return helper(board, 0, 0);
+        // method 2 --- 
+        bool row[9][9] = {false};
+        bool col[9][9] = {false};
+        bool sub[9][9] = {false};
+
+        for(int i=0; i<9; i++){
+            for(int j=0; j<9; j++){
+                if(board[i][j]=='.') continue;
+
+                int index = board[i][j] -'0'-1;
+                int area = (i/3)*3+(j/3);
+
+                if(row[i][index]==true || col[j][index]==true || sub[area][index]==true) return false;
+
+                row[i][index] = true;            
+                col[j][index] = true;            
+                sub[area][index] = true;            
+            }
+        }
+        return true;
+
+
+        //my method --
+        // return helper(board, 0, 0);
     }
 };

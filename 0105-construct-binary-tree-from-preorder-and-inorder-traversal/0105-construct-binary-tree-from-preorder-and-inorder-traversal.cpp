@@ -31,6 +31,7 @@ public:
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
         // pre = root, left, right,
         // inor  = left , root, right
+        // eg -- in = 40,20,50,10,60,30; post = 40,50,20,60,30,10
         map<int,int>m;
         for(int i=0; i<inorder.size(); i++){
             m[inorder[i]] = i;

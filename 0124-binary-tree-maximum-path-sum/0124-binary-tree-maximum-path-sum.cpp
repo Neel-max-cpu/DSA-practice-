@@ -18,7 +18,8 @@ public:
         int right = max(0, helper(root->right, ans));
 
         ans = max(ans, left+right+root->val);
-
+        
+        // return max of left/right since we need path and not the tree,
         return max(left,right)+root->val;
     }
 

@@ -31,12 +31,10 @@ public:
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
         // pre = root, left, right,
         // inor  = left , root, right
-
         map<int,int>m;
         for(int i=0; i<inorder.size(); i++){
             m[inorder[i]] = i;
         }
-
         TreeNode *root = helper(0, inorder.size()-1, inorder, 0, preorder.size()-1, preorder, m);
         return root;
     }

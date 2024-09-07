@@ -59,6 +59,7 @@ public:
         */
 
         // o(n*26) ~ o(n)
+        /*
         map<char,int>m;
         int ans = 0;
         int l=0, r=0;
@@ -79,6 +80,39 @@ public:
             
             // if valid
             if(size-maxi<=k){
+                cout<<l<<" "<<r<<": ";
+                ans = max(ans, size);
+                cout<<ans<<endl;
+            }
+            else{
+                m[s[l]]--;
+                l++;
+            }            
+            r++;
+        }
+        return ans;
+        */
+
+        // o(n) 
+        map<char,int>m;
+        int ans = 0;
+        int l=0, r=0;
+        int maxf = 0;
+        while(r<n){
+            char c = s[r];
+            if(m.find(c)!=m.end()){
+                m[c]++;
+            }
+            else m[c] = 1;
+
+            // most freq char
+            maxf = max(maxf, m[c]);
+           
+            // size of the window
+            int size = r-l+1;
+            
+            // if valid
+            if(size-maxf<=k){
                 cout<<l<<" "<<r<<": ";
                 ans = max(ans, size);
                 cout<<ans<<endl;

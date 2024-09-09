@@ -33,18 +33,27 @@ public:
     }
 
     TreeNode *helper2(TreeNode *root, TreeNode*p, TreeNode*q){
+        // o(h) = height
+        // /*
         if(root==NULL) return NULL;
         int data = root->val;
         int a = p->val;
         int b = q->val;
 
         if(data>a && data>b) return helper2(root->left, p, q);
-        else if(data<a && data<b) return helper2(root->right, p, q);
-        else if((data>a && data<b) || (data<a && data>b)) return root;
-        else if(data==a && (data>b || data<b)) return p;
-        else if((data>a || data<a) && data==b) return q;
-        // dummy return
-        return root;
+        else if(data<a && data<b) return helper2(root->right, p, q);       
+        else return root;
+        // */
+
+        // in binary tree - o(n)
+        /*
+        if(root==NULL || root==p || root==q) return root;
+        TreeNode *left = helper2(root->left, p, q);
+        TreeNode*right = helper2(root->right, p, q);
+        if(left==NULL) return right;
+        else if(right==NULL) return left;
+        else return root;
+        */
     }
 
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {

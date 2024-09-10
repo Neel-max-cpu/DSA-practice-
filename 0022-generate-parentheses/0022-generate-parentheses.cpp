@@ -35,7 +35,21 @@ public:
         }while(next_permutation(s.begin(), s.end()));
     }
 
+    void make(int n, int open, int close, string s, vector<string>&ans){
+        if(open==n && close == n){
+            ans.push_back(s);
+            return;
+        }
+        if(close>open) return;
+        if(open<n)
+            make(n, open+1, close, s+'(', ans);
+        if(open>close)
+            make(n, open, close+1, s+')', ans);
+    }
+
     vector<string> generateParenthesis(int n) {
+        // brute - o(n)+o(n)+(2n*2n!)+o(2n)
+        /*
         string s = "";
         for(int i=0; i<n; i++){
             s+='(';
@@ -47,6 +61,12 @@ public:
         vector<string>ans;
         helper(s, ans);
         for(auto it:ans) cout<<it<<" ";
+        return ans;
+        */
+
+        // using backtracking - o(2^n)
+        vector<string>ans;
+        make(n, 0,0,"", ans);
         return ans;
     }
 };

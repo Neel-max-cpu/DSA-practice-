@@ -56,7 +56,7 @@ public:
         vector<int>rank;
         for(int i=0; i<n; i++){
             parent.push_back(i);
-            rank.push_back(i);
+            rank.push_back(1);
         }   
 
         int result = n;

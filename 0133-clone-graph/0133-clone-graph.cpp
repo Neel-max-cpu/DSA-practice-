@@ -36,7 +36,8 @@ public:
         // using dfs ---
         /*
         if(m.find(node)==m.end()){
-            // if node not found -- create a node wiht empyt vector
+            // if node not found -- create a node with empty vector
+            // map the original node to the new copy node
             m[node] = new Node(node->val);
             for(int i=0; i<node->neighbors.size(); i++){
                 Node *neighbor = node->neighbors[i];
@@ -57,6 +58,7 @@ public:
             for(int i=0; i<curr->neighbors.size();i++){
                 Node *neighbor = curr->neighbors[i];
                 if(m.find(neighbor)==m.end()){
+                    // if not present
                     m[neighbor] = new Node(neighbor->val);
                     q.push(neighbor);
                 }

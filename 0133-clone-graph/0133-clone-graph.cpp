@@ -34,6 +34,7 @@ public:
         */
 
         // using dfs ---
+        /*
         if(m.find(node)==m.end()){
             // if node not found -- create a node wiht empyt vector
             m[node] = new Node(node->val);
@@ -43,10 +44,25 @@ public:
             }
         }
         return m[node];
+        */
 
-        // // using bfs
-        // unordered_map<Node*,Node*>m;
-        // Node *copy = new Node(node->val);
-
+        // using bfs ---
+        Node *copy = new Node(node->val);
+        m[node] = copy;
+        queue<Node*>q;
+        q.push(node);
+        while(!q.empty()){
+            Node* curr = q.front();
+            q.pop();
+            for(int i=0; i<curr->neighbors.size();i++){
+                Node *neighbor = curr->neighbors[i];
+                if(m.find(neighbor)==m.end()){
+                    m[neighbor] = new Node(neighbor->val);
+                    q.push(neighbor);
+                }
+                m[curr]->neighbors.push_back(m[neighbor]);
+            }
+        }
+        return copy;
     }
 };

@@ -1,7 +1,22 @@
 class Solution {
 public:    
+    void dfs(vector<vector<bool>>&visited, vector<vector<char>>&grid, int i, int j){
+        visited[i][j] = true;
+        int dx[] = {-1, 1, 0, 0};
+        int dy[] = {0, 0, -1, 1};
+        int n = grid.size();
+        int m = grid[0].size();
+        for (int k = 0; k < 4; k++) {
+            int nrow = i + dx[k];
+            int ncol = j + dy[k];
+            if (nrow >= 0 && nrow < n && ncol >= 0 && ncol < m && 
+                grid[nrow][ncol] == '1' && !visited[nrow][ncol]) {
+                dfs(visited, grid, nrow, ncol);            
+            }
+        }
+    }
 
-    void helper(vector<vector<bool>>&visited, vector<vector<char>>&grid, int i, int j){
+    void bfs(vector<vector<bool>>&visited, vector<vector<char>>&grid, int i, int j){
         visited[i][j] = true;
         queue<pair<int,int>>q;
         q.push({i, j});
@@ -50,7 +65,10 @@ public:
             for(int j=0; j<m; j++){
                 if(!visited[i][j] && grid[i][j]=='1'){
                     count++;
-                    helper(visited, grid, i, j);
+                    // bfs
+                    // bfs(visited, grid, i, j);
+                    // dfs
+                    dfs(visited, grid, i, j);
                 }
             }
         }

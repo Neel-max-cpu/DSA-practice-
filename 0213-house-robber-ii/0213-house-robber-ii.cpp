@@ -58,12 +58,14 @@ public:
         // return max(rec(temp1, N-1), rec(temp2, N-1));
 
         // dp memoization
+        /*
         vector<int>dp1(n, -1);
         vector<int>dp2(n, -1);
         return max(memo(temp1, N-1, dp1), memo(temp2, N-1, dp2));
+        */
 
         // dp tabulation
-        // return tab(nums, n);
+        return max(tab(temp1, N),tab(temp2, N));
 
         // space optimization --         
         // int prev = nums[0], prev2 = 0;

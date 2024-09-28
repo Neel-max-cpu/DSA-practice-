@@ -44,7 +44,19 @@ public:
         // return memo(nums, n-1, dp);
 
         // dp tabulation
-        return tab(nums, n);
+        // return tab(nums, n);
+
+        // space optimization --         
+        int prev = nums[0], prev2 = 0;
+        for(int i=1; i<n; i++){
+            int pick = nums[i];
+            if(i-2>=0) pick+=prev2;        
+            int not_pick = prev;
+            
+            prev2 = prev;
+            prev = max(pick, not_pick);
+        }
+        return prev;
 
     }
 };

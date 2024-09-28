@@ -36,6 +36,19 @@ public:
         return dp[n-1];
     }
 
+    int so(vector<int>&nums, int n){
+        int prev = nums[0], prev2 = 0;
+        for(int i=1; i<n; i++){
+            int pick = nums[i];
+            if(i-2>=0) pick+=prev2;        
+            int not_pick = prev;
+            
+            prev2 = prev;
+            prev = max(pick, not_pick);
+        }
+        return prev;
+    }
+
     int rob(vector<int>& nums) {
 
         int n = nums.size();
@@ -65,19 +78,10 @@ public:
         */
 
         // dp tabulation
-        return max(tab(temp1, N),tab(temp2, N));
+        // return max(tab(temp1, N),tab(temp2, N));
 
-        // space optimization --         
-        // int prev = nums[0], prev2 = 0;
-        // for(int i=1; i<n; i++){
-        //     int pick = nums[i];
-        //     if(i-2>=0) pick+=prev2;        
-        //     int not_pick = prev;
-            
-        //     prev2 = prev;
-        //     prev = max(pick, not_pick);
-        // }
-        // return prev;
+        // space optimization --                        
+        return max(so(temp1, N), so(temp2, N));
 
     }
 };

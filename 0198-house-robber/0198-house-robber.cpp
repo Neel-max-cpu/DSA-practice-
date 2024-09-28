@@ -22,13 +22,29 @@ public:
         return dp[start] = max(pick, not_pick);
     }
 
+    int tab(vector<int>&nums, int n){
+        vector<int>dp(n,0);
+        dp[0] = nums[0];
+        for(int i=1; i<n; i++){
+            int pick = nums[i];
+            if(i-2>=0) pick+=dp[i-2];        
+            int not_pick = dp[i-1];
+            dp[i] = max(pick, not_pick);
+        }
+        return dp[n-1];
+    }
+
     int rob(vector<int>& nums) {
         int n = nums.size();
         // recursion
         // return rec(nums, n-1);
 
         // dp memoization
-        vector<int>dp(n, -1);
-        return memo(nums, n-1, dp);
+        // vector<int>dp(n, -1);
+        // return memo(nums, n-1, dp);
+
+        // dp tabulation
+        return tab(nums, n);
+
     }
 };

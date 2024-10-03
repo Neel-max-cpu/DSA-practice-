@@ -54,6 +54,31 @@ public:
         return dp[n-1][m-1];
     }
 
+    int so(int n, int m, vector<vector<int>>&arr){
+        vector<int>prev(m, 0);
+        for(int i=0; i<n; i++){
+            vector<int>temp(m, 0);
+            for(int j=0; j<m; j++){
+                if(i==0 && j==0){
+                    if(arr[i][j]==0) temp[j] = 1;
+                    else temp[j] = 0;
+                    continue;
+                }
+                if((i>0 || j>0) && arr[i][j]==1){
+                    temp[j] = 0;
+                    continue;
+                }
+                int up = 0;
+                int left = 0;
+                if(i>0) up = prev[j];
+                if(j>0) left = temp[j-1];
+                temp[j] = up+left;
+            }
+            prev = temp;
+        }
+        return prev[m-1];
+    }
+
     int uniquePathsWithObstacles(vector<vector<int>>& arr) {
         int n = arr.size();
         int m = arr[0].size();
@@ -68,7 +93,10 @@ public:
         */
 
         // dp tabulation ---
-        return tab(n, m, arr);
+        // return tab(n, m, arr);
+
+        // space optimization --
+        return so(n, m, arr);
         
 
     }

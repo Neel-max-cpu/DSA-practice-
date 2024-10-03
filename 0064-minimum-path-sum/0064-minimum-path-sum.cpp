@@ -23,6 +23,7 @@ public:
     int tab(int m, int n, vector<vector<int>>&arr){
         vector<vector<int>>dp(m, vector<int>(n,0));
 
+        /*
         dp[0][0] = arr[0][0];
         for(int i=1; i<m; i++){        
             dp[i][0] = arr[i][0]+dp[i-1][0];
@@ -40,9 +41,36 @@ public:
             }
         }
         return dp[m-1][n-1];
+        */
+
+        // or ---
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 && j == 0)
+                    dp[i][j] = arr[i][j]; 
+                else {                
+                    int up = arr[i][j];
+                    if (i > 0)
+                        up += dp[i - 1][j]; 
+                    else
+                        up += 1e9; 
+
+                    int left = arr[i][j];
+                    if (j > 0)
+                        left += dp[i][j - 1]; 
+                    else
+                        left += 1e9; 
+
+                    dp[i][j] = min(up, left);
+                }
+            }
+        }
+
+        return dp[n - 1][m - 1];
     }
 
     int so(int m, int n, vector<vector<int>>&arr){
+        // can be done like above --- tabulation or
         vector<int>prev(n, 0);
         prev[0] = arr[0][0];
         for(int i=1; i<n; i++){

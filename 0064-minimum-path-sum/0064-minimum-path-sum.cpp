@@ -42,6 +42,31 @@ public:
         return dp[m-1][n-1];
     }
 
+    int so(int m, int n, vector<vector<int>>&arr){
+        vector<int>prev(n, 0);
+        prev[0] = arr[0][0];
+        for(int i=1; i<n; i++){
+            prev[i] = arr[0][i]+prev[i-1];
+        }
+        for(int i=1; i<m; i++){
+            vector<int>temp(n, 0);
+            for(int j=0; j<n; j++){
+                if(j==0){
+                    temp[j] = arr[i][j]+prev[j];
+                    continue;
+                }                
+                int ans = arr[i][j];
+                int up  = 0, left = 0;
+                up = prev[j];
+                left = temp[j-1];
+                ans += min(up, left);
+                temp[j] = ans;
+            }
+            prev = temp;
+        }
+        return prev[n-1];
+    }
+
     int minPathSum(vector<vector<int>>& grid) {
         int m = grid.size();
         int n = grid[0].size();
@@ -56,7 +81,10 @@ public:
         */
 
         // dp tabulation --
-        return tab(m, n, grid);
+        // return tab(m, n, grid);
+
+        // space optimization --
+        return so(m, n, grid);
         
     }
 };

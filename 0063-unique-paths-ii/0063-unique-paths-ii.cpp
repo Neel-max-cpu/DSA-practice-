@@ -22,6 +22,38 @@ public:
         return dp[row][col] = up+down;
     }
 
+    int tab(int n, int m, vector<vector<int>>&arr){
+        vector<vector<int>>dp(n, vector<int>(m, 0));
+        
+        int i = 0;
+        while(i<n){
+            if(arr[i][0]==0) {
+                dp[i][0] = 1;
+                i++;
+            }
+            else break;
+        }
+
+        i = 0;
+        while(i<m){
+            if(arr[0][i]==0) {
+                dp[0][i] = 1;
+                i++;
+            }
+            else break;
+
+        }
+    
+        for(int i=1; i<n; i++){
+            for(int j=1; j<m; j++){
+                if(arr[i][j]==1) dp[i][j] = 0;
+                else
+                    dp[i][j] = dp[i-1][j] + dp[i][j-1];
+            }
+        }
+        return dp[n-1][m-1];
+    }
+
     int uniquePathsWithObstacles(vector<vector<int>>& arr) {
         int n = arr.size();
         int m = arr[0].size();
@@ -30,8 +62,13 @@ public:
         // return rec(n, m, n-1, m-1, arr);
 
         // dp memoization --
+        /*
         vector<vector<int>>dp(n, vector<int>(m,-1));        
         return memo(n, m, n-1, m-1, arr, dp);
+        */
+
+        // dp tabulation ---
+        return tab(n, m, arr);
         
 
     }

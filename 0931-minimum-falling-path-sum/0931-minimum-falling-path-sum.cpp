@@ -52,6 +52,34 @@ public:
         return ans;
     }
     
+    int so(vector<vector<int>>&arr, int n){
+        vector<int>prev(n,0);
+
+        for(int i=0; i<n; i++){
+            prev[i] = arr[n-1][i];
+        }
+
+        for(int i=n-2; i>=0; i--){
+            vector<int>temp(n,0);
+            for(int j=0; j<n; j++){
+                temp[j] = arr[i][j];
+                int left = 1e9, right = 1e9;
+                if(j>0) left = prev[j-1];
+                if(j<n-1) right = prev[j+1];
+                int down = prev[j];
+                temp[j] += min({left, right, down});
+            }
+            prev = temp;
+        }
+
+        int ans = prev[0];
+        for(int i=1; i<n; i++){
+            ans = min(ans, prev[i]);
+        }
+
+        return ans;
+    }
+    
     int minFallingPathSum(vector<vector<int>>& matrix) {
         // recursion ---
         int n = matrix.size();
@@ -73,6 +101,9 @@ public:
         */
 
         // dp tabulation ---
-        return tab(matrix, n);
+        // return tab(matrix, n);
+
+        // space optimization --
+        return so(matrix, n);
     }
 };

@@ -48,6 +48,15 @@ functionNameOne: (arg) => returnValue
 
 How to throw an error
 throw new Error("message");
+
+return {
+    toBe: (parameters) => {
+        [doing some stuff]
+    },
+    notToBe: (parameters) => {
+        [doing some stuff]
+    }
+}
 */
 
 

@@ -6,6 +6,7 @@
 var filter = function(arr, fn) {
     result = [];
     for(let i=0; i<arr.length; i++){
+        // know the difference between strictly true and truthly
         if(fn(arr[i], i)) result.push(arr[i]);
     }
     return result;

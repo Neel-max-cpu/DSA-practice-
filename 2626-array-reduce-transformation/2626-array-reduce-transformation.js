@@ -4,12 +4,17 @@
  * @param {number} init
  * @return {number}
  */
-var reduce = function(nums, fn, init) {
-    let n = nums.length;
-    if(n===0) return init;
+var reduce = function(nums, fn, init) {    
     let val = init;
-    for(let i=0; i<n; i++){
+    /*
+    for(let i=0; i<nums.length; i++){
         val = fn(val, nums[i]);
     }
+    return val;
+    */
+
+    nums.forEach((num)=>{
+        val = fn(val, num);
+    })
     return val;
 };

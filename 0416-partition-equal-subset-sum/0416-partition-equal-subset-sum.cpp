@@ -68,6 +68,27 @@ public:
         }
         return dp[n-1][target];
     }
+    
+    int so(vector<int>&arr, int n, int target){        
+        vector<bool>prev(target+1,false);
+        prev[0] = true;
+        if (arr[0] <= target) prev[arr[0]] = true;
+
+        for(int i=1; i<n; i++){
+            vector<bool>temp(target+1, false);
+            temp[0] = true;
+            for(int sum = 0; sum<=target; sum++){
+                bool notpick = prev[sum];
+                bool pick = false;
+                if(sum>=arr[i])
+                    pick = prev[sum-arr[i]];
+
+                temp[sum] = notpick || pick;
+            }
+            prev = temp;
+        }
+        return prev[target];
+    }
 
     bool canPartition(vector<int>& nums) {
         int n = nums.size();
@@ -94,7 +115,10 @@ public:
         */
 
         // dp tabulation ---
-        return tab(nums, n, sum/2);
+        // return tab(nums, n, sum/2);
+
+        // space optimization --
+        return so(nums, n, sum/2);
 
 
     }

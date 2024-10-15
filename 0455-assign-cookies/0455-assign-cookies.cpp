@@ -20,6 +20,7 @@ public:
         */
 
         // better ---
+        /*
         if(g.size()==0 || s.size()==0) return 0;
         sort(g.begin(), g.end());
         sort(s.begin(), s.end());
@@ -35,6 +36,17 @@ public:
             else if(s[j]<g[i]) j++;
         }
         return count;
+        */
+
+        sort(g.begin(), g.end());
+        sort(s.begin(), s.end());
+        int n = g.size(), m = s.size();
+        int l = 0, r = 0;
+        while(l<m && r<n){
+            if(g[r]<=s[l]) r++;
+            l++;
+        }        
+        return r;
 
 
 

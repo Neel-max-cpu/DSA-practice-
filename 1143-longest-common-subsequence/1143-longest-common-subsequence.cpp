@@ -64,9 +64,30 @@ public:
                 dp[i][j] = max({pick, notpick1, notpick2});
             }
         }
-
         return dp[n-1][m-1];
+    }
+    
+    int so(string &s1, string &s2, int n, int m){        
+        vector<int>prev(m, 0);
 
+        for(int i=0; i<n; i++){
+            vector<int>curr(m,0);
+            for(int j=0; j<m; j++){
+                // base case if i<0 && j<0 then 0 so, initiallized pick,np1, np2 to 0
+                int pick = 0;
+                if(s1[i]==s2[j]){
+                    pick = 1;
+                    if(i!=0 && j!=0) pick+=prev[j-1];
+                }
+                int notpick1 = 0, notpick2=0;
+                if(i!=0) notpick1+=prev[j];
+                if(j!=0) notpick2+=curr[j-1];
+
+                curr[j] = max({pick, notpick1, notpick2});
+            }
+            prev = curr;
+        }
+        return prev[m-1];
     }
 
 
@@ -101,7 +122,10 @@ public:
         */
 
         // dp tabulation ---
-        return tab(s1, s2, n, m);
+        // return tab(s1, s2, n, m);
+
+        // space optimization --
+        return so(s1, s2, n, m);
 
     }
 };

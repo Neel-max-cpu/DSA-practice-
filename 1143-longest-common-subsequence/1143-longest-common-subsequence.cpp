@@ -49,6 +49,31 @@ public:
     int tab(string &s1, string &s2, int n, int m){
         vector<vector<int>>dp(n, vector<int>(m,0));
 
+        /*
+        or we can shift the index -- can be done in recursion/memo
+        vector<vector<int>>dp(n+1, vector<int>(m+1,0));
+
+        // base case 
+        for(int i=0; i<=n; i++) dp[i][0] = 0;
+        for(int j=0;j<=m; j++) dp[0][j] = 0;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=m; j++){
+                int pick = 0;
+                if(s1[i-1]==s2[j-1]){                    
+                    pick= 1+dp[i-1][j-1];
+                }
+                int notpick1 = 0, notpick2=0;
+                notpick1+=dp[i-1][j];
+                notpick2+=dp[i][j-1];
+
+                dp[i][j] = max({pick, notpick1, notpick2});
+            }
+        }
+
+        return dp[n][m];
+
+        */
+
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
                 // base case if i<0 && j<0 then 0 so, initiallized pick,np1, np2 to 0

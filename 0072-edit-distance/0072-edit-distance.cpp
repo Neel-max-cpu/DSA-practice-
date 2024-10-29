@@ -13,6 +13,10 @@ public:
         if(i<0 && j<0) return 0;
 
         // insert, delete, replace
+
+        // one - match then ok(0+) else replace and match(1+)
+        // two is delete
+        // three is insert
         int one = 0;
         if(s1[i]==s2[j]) one = rec(s1, s2, i-1, j-1);
         else one = 1+rec(s1, s2, i-1, j-1);
@@ -73,14 +77,37 @@ public:
         }
         return dp[n][m];
     }
+   
+    int so(string s1, string s2, int n, int m){
+        vector<vector<int>>dp(n+1, vector<int>(m+1, 0));
+        vector<int>prev(m+1, 0), curr(m+1, 0);
+
+        // base 
+        prev[0] = 0;
+        for(int j=1; j<=m; j++) prev[j] = j;        
+
+        for(int i=1; i<=n; i++){
+            // since column was also initiallized in the base case
+            curr[0] = i;            
+            for(int j=1; j<=m; j++){
+                int one = 0;
+                if(s1[i-1]==s2[j-1]) one = prev[j-1];
+                else one = 1+ prev[j-1];
+                int two = 1, three=1;
+                two += prev[j];
+                three += curr[j-1];
+
+                curr[j] = min({one, two, three});
+            }
+            prev = curr;
+        }
+        return prev[m];
+    }
 
     int minDistance(string word1, string word2) {
         // recrusion ---
         int n = word1.size();
         int m = word2.size();
-        if(n==0 || m==0){
-            return max(n, m);
-        } 
         // return rec(word1, word2, n-1, m-1);
 
         // dp memoization ---
@@ -90,6 +117,9 @@ public:
         */
 
         // dp tabulation --
-        return tab(word1, word2, n, m);
+        // return tab(word1, word2, n, m);
+
+        // space optimization --
+        return so(word1, word2, n, m);
     }
 };

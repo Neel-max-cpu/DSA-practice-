@@ -51,8 +51,12 @@ public:
             if(arr[i]>v.back()) v.push_back(arr[i]);
             else{                
                 // binary search
-                auto it = lower_bound(v.begin(), v.end(), arr[i]);
-                *it = arr[i];
+                // auto it = lower_bound(v.begin(), v.end(), arr[i]);
+                // *it = arr[i];
+
+                // or 
+                int it = lower_bound(v.begin(), v.end(), arr[i]) - v.begin();
+                v[it] = arr[i];                
             }
         }
         return v.size();

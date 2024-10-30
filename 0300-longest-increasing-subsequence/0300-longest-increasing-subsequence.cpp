@@ -44,6 +44,20 @@ public:
         return dp[i][prev+1] = max(pick, notpick);
     }
 
+    int bm(vector<int>&arr, int n){
+        vector<int>v;
+        v.push_back(arr[0]);
+        for(int i=1; i<n; i++){
+            if(arr[i]>v.back()) v.push_back(arr[i]);
+            else{                
+                // binary search
+                auto it = lower_bound(v.begin(), v.end(), arr[i]);
+                *it = arr[i];
+            }
+        }
+        return v.size();
+    }
+
     int lengthOfLIS(vector<int>& nums) {
         int n = nums.size();
         int ans= -1e9;
@@ -57,7 +71,12 @@ public:
         // return rec2(nums, n, 0, -1);
         
         // dp memoization --
+        /*
         vector<vector<int>>dp(n, vector<int>(n+1,-1));
         return memo(nums, n, 0, -1, dp);
+        */
+
+        // best method ---
+        return bm(nums, n);
     }
 };

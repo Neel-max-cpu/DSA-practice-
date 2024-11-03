@@ -23,6 +23,25 @@ public:
         return dp[i][j] = ans;
     }
 
+    int tab(vector<int>&arr, int n){
+        vector<vector<int>>dp(n+2, vector<int>(n+2, 0));
+
+        for(int i=n; i>=1; i--){
+            for(int j=1; j<=n; j++){
+                if(i>j) continue;
+                else{
+                    int ans = 0;
+                    for(int ind=i; ind<=j; ind++){
+                        int coins = arr[i-1]*arr[ind]*arr[j+1] + dp[i][ind-1] + dp[ind+1][j];
+                        ans = max(ans, coins);
+                    }
+                    dp[i][j] = ans;
+                }
+            }
+        }
+        return dp[1][n];
+    }
+
     int maxCoins(vector<int>& nums) {
         int n = nums.size();
         // inserting 1 in front and back for ease
@@ -55,8 +74,13 @@ public:
         // return rec(nums, 1, n);
 
         // dp memoization --
+        /*
         vector<vector<int>>dp(n+1, vector<int>(n+1, -1));
         return memo(nums, 1, n, dp);
+        */
+
+        // dp tabualtion --
+        return tab(nums, n);
         
     }
 };

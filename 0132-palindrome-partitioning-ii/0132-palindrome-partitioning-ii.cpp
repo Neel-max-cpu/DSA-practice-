@@ -36,14 +36,34 @@ public:
         return dp[i] = mincost;
     }
 
+    int tab(int &n, string &s){
+        vector<int>dp(n+1, 0);
+        for(int i=n-1; i>=0; i--){
+            int mincost = INT_MAX;
+            for(int j=i; j<n; j++){
+                if(isPalindrome(i, j, s)){
+                    int cost = 1+dp[j+1];
+                    mincost = min(cost, mincost);
+                }
+            }
+            dp[i] = mincost;
+        }
+        return dp[0]-1;
+    }
+
     int minCut(string s) {
         int n = s.size();       
         // recursion -- 
         // return rec(0, n, s)-1;        
 
         // dp memoization ---
+        /*
         vector<int>dp(n, -1);
         return memo(0, n, s, dp)-1;        
+        */
+
+        // dp tabulation ---
+        return tab(n, s);
 
     }
 };

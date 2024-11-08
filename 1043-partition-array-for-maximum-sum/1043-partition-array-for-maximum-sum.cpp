@@ -28,14 +28,37 @@ public:
         return dp[i] = ans;
     }
 
+    int tab(vector<int>&arr, int k, int n){
+        vector<int>dp(n+1, 0);
+        // base case
+        dp[n] = 0;
+        
+        for(int i=n-1; i>=0; i--){
+            int ans = INT_MIN;
+            int maxele = arr[i];
+            for(int ind=i; ind<i+k && ind<n; ind++){
+                maxele = max(maxele, arr[ind]);
+                int partition = (ind-i+1)*maxele + dp[ind+1];
+                ans = max(ans, partition);
+            }
+            dp[i] = ans;
+        }
+        return dp[0];
+    }
+
     int maxSumAfterPartitioning(vector<int>& arr, int k) {
         int n = arr.size();
         // recursion ---
         // return rec(0, k, n, arr);
 
         // dp memoization ---
+        /*
         vector<int>dp(n, -1);
         return memo(0, k, n, arr, dp);
+        */
+
+        // dp tabulation --
+        return tab(arr, k, n);
 
     }
 };

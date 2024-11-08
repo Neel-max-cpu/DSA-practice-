@@ -37,7 +37,11 @@ public:
     }
 
     int tab(int &n, string &s){
+        // n+1 since we are checking j+1
         vector<int>dp(n+1, 0);
+        // base case i==n 0
+        dp[n] = 0;
+        
         for(int i=n-1; i>=0; i--){
             int mincost = INT_MAX;
             for(int j=i; j<n; j++){

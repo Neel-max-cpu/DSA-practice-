@@ -61,8 +61,10 @@ public:
 
         for(int i=1; i<=n; i++){
             // check each substring
+            // since n+1, so till <i and not <=i
             for(int j=0; j<i; j++){
                 string t = s.substr(j, i-j);
+                // and here too j and not j-1
                 if(dp[j] && m.find(t)!=m.end()){
                     dp[i] = true;
                     break;
@@ -88,10 +90,10 @@ public:
         return memo(0, n, s, m, dp);
         */
 
-        // unordered_map<int,bool>dp;  
-        // return memo2(n-1, n, s, m, dp);
         
 
+        // unordered_map<int,bool>dp;  
+        // return memo2(n-1, n, s, m, dp);
         // dp tabulation --
         return tab(n, s, m);
     }

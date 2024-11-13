@@ -44,7 +44,7 @@ public:
 
         TreeNode *leftChild = root->left;
         TreeNode *lastLeft = findLastLeft(root->right);
-        lastLeft->right = leftChild;
+        lastLeft->left = leftChild;
         // making all the left to right
         return root->right;
     }
@@ -60,9 +60,9 @@ public:
             if(root->val > key){
                 if(root->left != NULL && root->left->val==key){
                     // method 1 
-                    root->left = helper(root->left);
+                    // root->left = helper(root->left);
                     // method 2
-                    // root->left = helper2(root->left);
+                    root->left = helper2(root->left);
                     break;
                 }
                 else {
@@ -72,9 +72,9 @@ public:
             else{
                 if(root->right != NULL && root->right->val==key){
                     // method 1
-                    root->right = helper(root->right);
+                    // root->right = helper(root->right);
                     // method 2
-                    // root->right = helper2(root->right);
+                    root->right = helper2(root->right);
                     break;
                 }
                 else{

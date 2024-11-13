@@ -42,7 +42,7 @@ public:
         return ans[k-1];
         */
 
-        // optimal - using counter
+        // optimal - using counter -- k smallest
         int ans= 0;
         int counter = 0;
         helper(root,counter,k, ans);

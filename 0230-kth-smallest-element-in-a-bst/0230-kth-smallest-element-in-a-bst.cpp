@@ -22,6 +22,17 @@ public:
         helper(root->right, counter, k, ans);
     }
 
+    void helper2(TreeNode*root, int& counter, int k, int &ans){
+        if(root==NULL || counter>=k) return;
+        helper2(root->right, counter, k, ans);
+        counter++;
+        if(counter==k) {
+            ans = root->val;
+            return;
+        }
+        helper(root->left, counter, k, ans);
+    }
+
     int kthSmallest(TreeNode* root, int k) {
         // brute -- o(n)
         /*
@@ -47,5 +58,13 @@ public:
         int counter = 0;
         helper(root,counter,k, ans);
         return ans;
+
+        // k largest 
+        /*   
+        int ans = 0;
+        int counter = 0;
+        helper2(root, counter, k, ans);
+        return ans;
+        */
     }
 };

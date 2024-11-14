@@ -22,6 +22,7 @@ public:
     stack<TreeNode*>s;
     BSTIterator(TreeNode* root) {
         // method 1
+        // basically inorder traversal saved in vector ---
         /*
         TreeNode *temp = root;
         stack<TreeNode*>s;

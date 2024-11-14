@@ -13,17 +13,14 @@
 class BSTIterator{
     stack<TreeNode*>s;
     bool reverse = false;
-
 public:
     BSTIterator(TreeNode*root, bool is_reverse){
         reverse = is_reverse;
         pushAll(root);
     }
-
     bool hasNext(){
         return !s.empty();
     }
-
     int next(){
         TreeNode *current = s.top();
         s.pop();
@@ -31,7 +28,6 @@ public:
         else pushAll(current->left);
         return current->val;
     }
-
 private:
     void pushAll(TreeNode*root){
         while(root!=NULL){
@@ -40,7 +36,6 @@ private:
             else root=root->left;
         }
     }
-
 };
 
 class Solution {
@@ -73,7 +68,12 @@ public:
         // used bst iterator next() and before()
         // next - insorted order, and before - in decending order
         if(!root) return false;
+        
         BSTIterator l(root, false);
+        
+        //BSTIterator* l = new BSTIterator(root, false)
+        //l->next();  // Now you use '->' because 'l' is a pointer to a BSTIterator object.
+
         BSTIterator r(root, true);
 
         int i = l.next();   

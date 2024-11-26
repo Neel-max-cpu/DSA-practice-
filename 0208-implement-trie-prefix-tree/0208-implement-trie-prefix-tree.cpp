@@ -18,8 +18,50 @@ struct Node {
         flag = true;
     }
 
+    void unsetEnd() {
+        flag = false;
+    }
+
     bool isEnd(){
         return flag;
+    }
+
+    bool remove(Node* node, string word, int depth) {
+        // Base case: if we've processed all characters of the word
+        if (depth == word.length()) {
+            // If it's the end of the word, unset the flag
+            if (node->isEnd()) {
+                node->unsetEnd();   // to false
+            }
+            // If the node has no children, it can be deleted
+            for (int i = 0; i < 26; i++) {
+                if (node->links[i] != nullptr) return false; // Node is still required
+            }
+            return true; // Node can be deleted
+        }
+
+        // Recursive case: move to the next character
+        char ch = word[depth];
+        Node* nextNode = node->get(ch);
+
+        if (nextNode == nullptr) return false; // Word not found in Trie
+
+        bool shouldDeleteCurrentNode = remove(nextNode, word, depth + 1);
+
+        // If the child node can be deleted, unset its link
+        if (shouldDeleteCurrentNode) {
+            node->put(ch, nullptr);
+
+            // Check if the current node can also be deleted
+            if (!node->isEnd()) {
+                for (int i = 0; i < 26; i++) {
+                    if (node->links[i] != nullptr) return false; // Node still has children
+                }
+                return true; // Node can be deleted
+            }
+        }
+
+        return false; // Node cannot be deleted
     }
 };
 
@@ -65,6 +107,13 @@ public:
             node = node->get(prefix[i]);
         }
         return true;
+    }
+
+
+    // extra delete
+    void deleteWord(string s){
+        Node *node = root;
+        node->remove(node, s, 0);
     }
 };
 

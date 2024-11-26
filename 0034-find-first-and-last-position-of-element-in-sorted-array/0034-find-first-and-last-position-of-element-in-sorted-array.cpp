@@ -22,6 +22,22 @@ public:
         if(pos == -1){
             return {-1,-1};
         }
+
+        // or then find the last pos
+        int lpos = -1;
+        left = 0, right = n-1;
+        while(left<=right){
+            int mid = (left+right)/2;
+            if(arr[mid]==target){
+                lpos = mid;
+                left = mid+1;
+            }
+            else if(arr[mid]<target) left = mid+1;
+            else right= mid-1;
+        }
+        return {pos,lpos};
+        
+        /*
         int epos = pos;
         for(int i=pos+1; i<n; i++){
             if(arr[pos]!=arr[i]){
@@ -31,5 +47,6 @@ public:
             epos = i;
         }
         return {pos, epos};
+        */
     }
 };

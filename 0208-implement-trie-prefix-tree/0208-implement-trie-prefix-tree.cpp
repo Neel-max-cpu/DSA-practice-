@@ -78,6 +78,8 @@ public:
         Node *node = root;
         for(int i=0; i<word.length(); i++){
             if(!node->containsKey(word[i])){
+                // doesn't contain so create one, 
+                // eg apple , pass, a and a new empty node
                 node->put(word[i], new Node());
             }
             // move to the reference trie

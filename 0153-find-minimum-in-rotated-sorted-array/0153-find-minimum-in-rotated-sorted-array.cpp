@@ -6,6 +6,11 @@ public:
         int ans = 1e9;
         while(left<=right){
             int mid = (left+right)/2;
+            // if the whole array is sorted            
+            if(arr[left]<=arr[right]){
+                ans = min(ans, arr[left]);
+                break;
+            }
             // check for left sorted
             if(arr[left]<=arr[mid]){
                 // take the min in the left

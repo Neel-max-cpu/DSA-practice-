@@ -13,6 +13,7 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
+        // brute ---
         /*
         ListNode *temp = head;
         vector<int>v;
@@ -41,6 +42,7 @@ public:
 
         // better(best ---)
         // recursion --
+        /*
         if(head==NULL || head->next==NULL) return head;
 
         ListNode *newhead = reverseList(head->next);
@@ -49,9 +51,10 @@ public:
         head->next = NULL;
 
         return newhead;
+        */
 
         // best ---
-        /*
+        // /*
         ListNode *current = head;
         ListNode *next = NULL;
         ListNode *prev = NULL;
@@ -64,7 +67,7 @@ public:
         }
         head = prev;
         return head;
-        */
+          // */
 
 
     }

@@ -38,6 +38,8 @@ public:
                     sort(temp.begin(), temp.end());
                     st.insert(temp);
                 }
+                // eg -- -1(i) 0 1 2 -1(j) 4 --- keep 0 1 2 in the hash table leave i and j alone
+                // if not found insert the val of the arr
                 hashset.insert(arr[j]);
             }
         }

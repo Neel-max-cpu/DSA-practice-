@@ -1,72 +1,50 @@
 class Solution {
 public:
-    int lengthOfLongestSubstring(string input) {
-        int n = input.size();
+    int lengthOfLongestSubstring(string s) {
+        int n = s.size();
+        int l = 0, r=0;
+        int len = 0;
+        unordered_set<char>st;
         /*
-        int ans = 0;
-        for(int i=0; i<n; i++){
-            set<char>s;
-            int count = 0;
-            for(int j=i; j<n; j++){
-                // if not found
-                if(s.find(input[j]) == s.end()){
-                    s.insert(input[j]);
-                    count++;
+        while(r<n){
+            char x = s[r];
+            if(st.find(x)!=st.end()){
+                //if found l,r range has repeating character
+                while(st.find(x)!=st.end()){
+                    //check if x is present in the set or not 
+                    // - yes then = remove the element from the set and l++, and repeat until x is removed
+                    st.erase(s[l]);
+                    l++;
                 }
-                // if found
-                else{
-                    break;
-                }
+                // once done check len
+                len = max(len, r-l+1);
+                // then again insert x now then r++ 
+                st.insert(x);
+                r++;
             }
-            ans = max(ans, count);
+            else{
+                // not found l,r range has non repeating
+                len = max(len, r-l+1);
+                st.insert(x);
+                r++;
+            }
         }
-        return ans;
         */
 
-        // better ---- 
+        while(r<n){
+            char x = s[r];
 
-        /*
-        int ans =0;
-        int left = 0, right = 0;
-        set<char>s;
-        for(int right = 0; right<n; right++){
-            if(s.find(input[right])!=s.end()){
-                // if found
-                while(left<right && s.find(input[right])!=s.end()){
-                    s.erase(input[left]);
-                    left++;
-                }
+            //if duplicate found
+            while(st.find(x)!=st.end()){
+                st.erase(s[l]);
+                l++;
             }
-            // not found
-            ans = max(ans, right-left+1);
-            s.insert(input[right]);
+            st.insert(x);
+            len = max(len, r-l+1);
+            r++;
         }
-        return ans;
-        */
 
-            //    best -- 
-    // /*
-
-
-        vector<int>v(256, -1);
-        // vector<char>v(256, -1);
-        // map<char,int>v;
-        int left = 0;
-        int ans = 0;
-        int right = 0;
-        while(right<n){
-            if(v[input[right]] != -1){
-            // if(v.find(input[right]) != v.end()){
-                // alread present
-                // take the right + 1 since we have to update the left to that place
-                left = max(v[input[right]] + 1, left);
-            }
-            // if not found/even if found update the index
-            v[input[right]] = right;
-            ans = max(ans, right-left+1);
-            right++;
-        }
-        return ans;
-        // */
+        return len;
+        
     }
 };

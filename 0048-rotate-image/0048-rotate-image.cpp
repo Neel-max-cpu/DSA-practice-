@@ -4,6 +4,7 @@ public:
         int n = arr.size();
 
         //transpose in place 
+        /*
         for(int i=0; i<n; i++){
             for(int j=0; j<n; j++){
                 if(i==j) continue;
@@ -11,7 +12,13 @@ public:
                     swap(arr[i][j], arr[j][i]);
                 }
             }
-        }       
+        } 
+        */
+        for(int i=0; i<n; i++){
+            for(int j=0; j<i; j++){
+                swap(arr[i][j], arr[j][i]);
+            }
+        }      
 
         //reverse each row
         for(int i=0; i<n; i++){

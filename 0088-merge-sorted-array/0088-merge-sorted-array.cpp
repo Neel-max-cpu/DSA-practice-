@@ -1,24 +1,25 @@
 class Solution {
 public:
-    void merge(vector<int>& arr1, int m, vector<int>& arr2, int n) {
-        int i = m-1;
-        int j = n-1;
-        int k = m+n-1;
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        // start from the back since we don't need to shift elements from nums1 everytime a new element comes
+        int i = m-1;    //last ele of num1
+        int j = n-1;    //last ele of num2
+        int k = n+m-1;  // last place in num1 where we will put the ele
         while(i>=0 && j>=0){
-            if(arr1[i]>arr2[j]){
-                arr1[k] = arr1[i];
+            //check which is larger
+            if(nums1[i]>=nums2[j]){
+                nums1[k] = nums1[i];
+                k--;
                 i--;
             }
             else{
-                arr1[k] = arr2[j];
+                nums1[k] = nums2[j];
+                k--;
                 j--;
             }
-            k--;
         }
-
-        //put the rest 
         while(j>=0){
-            arr1[k] = arr2[j];
+            nums1[k] = nums2[j];
             k--;
             j--;
         }

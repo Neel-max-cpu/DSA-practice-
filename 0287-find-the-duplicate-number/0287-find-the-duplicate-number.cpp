@@ -1,28 +1,30 @@
 class Solution {
 public:
     int findDuplicate(vector<int>& arr) {
-        // int i = 0;
-        // int curr = -1;
-        // while(true){
-        //     if(arr[i]==-1) return curr;
-        //     curr = arr[i];            
-        //     arr[i] = -1;
-        //     i = curr;
-        // }
-        // return -1;
-
-        int fast = arr[0];
-        int slow = arr[0];
-        do{
-            fast = arr[arr[fast]];
-            slow = arr[slow];
+        int n = arr.size();
+        //modified -- not allowed
+        /*
+        int i = 0;
+        while(true){            
+            int x = arr[i];
+            if(x==-1) return i;
+            arr[i] = -1;
+            i = x;
         }
-        while(slow!=fast);
-
-        int newPointer = arr[0];
-        while(slow!=newPointer){
+        */
+        int fast = 0;
+        int slow = 0;
+        // use do while since using while it would never run
+        do{
+            slow = arr[slow];           //moves once
+            fast = arr[arr[fast]];      //moves twice
+        }while(slow!=fast);        
+        //here now slow == fast
+        // now reset fast to 0(or slow since both are equal) and move both by one step until they meet again
+        fast = 0;
+        while(fast!=slow){
             slow = arr[slow];
-            newPointer = arr[newPointer];
+            fast = arr[fast];
         }
         return slow;
     }

@@ -10,61 +10,49 @@
  */
 class Solution {
 public:
-    vector<ListNode*>donode(vector<int>v){
-        int n = v.size();
-        ListNode *head = new ListNode(0);
-        ListNode *temp = head;
-        for(int i=v.size()-1; i>=0; i--){
-            ListNode *newNode = new ListNode(v[i]);
-            temp->next = newNode;
-            temp = temp->next;
+    pair<ListNode*,ListNode*> doReverse(ListNode*start){
+        ListNode*temp = start;
+        ListNode *prev = NULL;
+        while(temp!=NULL){
+            ListNode *next = temp->next;
+            temp->next = prev;
+            prev = temp;
+            temp = next;
         }
-        return {head->next, temp};
+        // prev will be head and start will be tail
+        return {prev, start};
     }
 
-    ListNode *helper(vector<int>v){
-        ListNode *head = new ListNode(v[0]);
-        ListNode *temp = head;
-        for(int i=1; i<v.size(); i++){
-            ListNode *newNode = new ListNode(v[i]);
-            temp->next = newNode;
-            temp = temp->next;
-        }
-        return head;
-    }
     ListNode* reverseKGroup(ListNode* head, int k) {
-        vector<int>v;
-        ListNode *temp = head;
-        int x = 0;
-        ListNode *newHead = new ListNode(0);
-        ListNode *dummy = newHead;
-        while(temp){
-            if(x<k){
-                v.push_back(temp->val);
-                x++;
-                temp = temp->next;
+        ListNode *curr = head;
+        ListNode *prev = NULL;
+        ListNode *start = head;
+        ListNode*prevTail = NULL;
+        int count = 0;
+        ListNode*newHead = NULL;
+        bool isFirst = true;
+        while(curr!=NULL){
+            count++;
+            if(count==k){
+                count = 0;
+                ListNode *nextNode = curr->next;
+                curr->next = NULL;
+                auto p = doReverse(start);
+                if(isFirst){
+                    newHead = p.first;
+                    isFirst = false;
+                }             
+                else{
+                    prevTail->next = p.first;
+                }                 
+                p.second->next = nextNode;     
+                start = nextNode;   
+                prevTail = p.second;
+                curr = p.second;                        
             }
-            else if(x==k){
-                vector<ListNode*>node = donode(v);
-                dummy->next = node[0];                
-                dummy = node[1];                
-                x = 0;
-                v.clear();
-            }
+            prev = curr;
+            curr = curr->next;
         }
-        if(!v.empty()){
-            if(v.size()!=k){
-                ListNode *makenode = helper(v);
-                dummy->next = makenode;
-            }
-            else{
-                vector<ListNode*>node = donode(v);            
-                dummy->next = node[0];                
-                dummy = node[1];                
-                x = 0;
-                v.clear();
-            }
-        }
-        return newHead->next;
+        return newHead;
     }
 };

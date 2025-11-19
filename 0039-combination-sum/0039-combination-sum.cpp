@@ -1,28 +1,26 @@
 class Solution {
 public:
-    void recursion(vector<int>&arr, int target, int i, vector<vector<int>>&ans, vector<int>&temp, int sum){
-        if(i==arr.size()){
-            if(sum==target){
-                ans.push_back(temp);
+
+    void helper(vector<int>&a, int target, vector<vector<int>>&ans, vector<int>&ds, int i){
+        // base case
+        if(i==a.size()){
+            if(target==0){
+                ans.push_back(ds);
             }
             return;
         }
-        if(sum==target){
-            ans.push_back(temp);
-            return;
+
+        if(a[i]<=target){
+            ds.push_back(a[i]);
+            helper(a, target-a[i], ans, ds, i);
+            ds.pop_back();
         }
-        if(sum>target) return;
-
-        temp.push_back(arr[i]);
-        recursion(arr, target, i, ans, temp, sum+arr[i]);
-        temp.pop_back();
-        recursion(arr, target, i+1, ans, temp, sum);
+        helper(a, target, ans, ds, i+1);
     }
-
-    vector<vector<int>> combinationSum(vector<int>& arr, int target) {
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
         vector<vector<int>>ans;
-        vector<int>temp;
-        recursion(arr, target, 0, ans, temp , 0);
+        vector<int>ds;
+        helper(candidates, target, ans, ds, 0);
         return ans;
     }
 };

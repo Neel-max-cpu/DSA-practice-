@@ -1,66 +1,71 @@
 class MedianFinder {
 public:
-    // method 1 --
+    // maxHeap
     /*
-    vector<int>v;
+    Contains the smaller half of numbers
+    Top = largest of the smaller half
+    */
+    priority_queue<int>left;
+    
+    // min heap 
+    /*
+    Contains the larger half of numbers
+    Top = smallest of the larger half
+    */
+    priority_queue<int, vector<int>, greater<int>> right;
+
+    // keep the size diff 1
     int size;
-    */
-
-    // method 2 -- using max and min heap
-    /* in max heap we will store half of the lower number -- so it will give
-    max of smaller numbers
-    in min heap we will store half of the greater number -- so it will give
-    min of the larger number, so both's top will be the middle top element
-
-    if even then maxheap size == min heap size
-    else if odd then maxheap size == min heap size+1 (maxheap has 1 more ele)
-    */
-
-    // max heap
-    priority_queue<int>maxHeap;
-    // min heap
-    priority_queue<int, vector<int>, greater<int>>minHeap;
-    int k;
-
     MedianFinder() {
-        // method 1 --
-        /*
         size = 0;
-        */
-        k = 0;
+    }
+
+    void reArrange(int n, int m){
+        // move the top element from bigger size heap to smaller size heap
+        if(n>m){
+            //left has more ele move to right
+            int x = left.top();
+            left.pop();
+            right.push(x);
+        }
+        else{
+            int x = right.top();
+            right.pop();
+            left.push(x);
+        }
     }
     
     void addNum(int num) {
-        // method 1 --
-        /*
-        v.push_back(num);
-        if(size!=0) 
-            sort(v.begin(), v.end());
         size++;
-        */
+        if(left.empty()){
+            left.push(num);
+        }
+        else{
+            int leftTop = left.top();                        
+            if(num<=leftTop){
+                left.push(num);
+            }
+            else right.push(num);            
+        }
 
-        k++;
-        maxHeap.push(num);
-        minHeap.push(maxHeap.top());
-        maxHeap.pop();
-        if(minHeap.size()>maxHeap.size()){
-            maxHeap.push(minHeap.top());
-            minHeap.pop();
+        //check size diff
+        int n = left.size();
+        int m = right.size();
+        if(abs(n-m)>1){
+            reArrange(n,m);
         }
     }
     
     double findMedian() {
-        // method 1 --
-        /*
-        if(size%2==1) return v[size/2];
-        else{
-            double a = (double)(v[(size-1)/2] + v[size/2])/2.0;
-            return a;
+        int n = left.size();
+        int m = right.size();
+        if(size%2==1){
+            if(n>m) return double (left.top());
+            else return double (right.top());
         }
-        */
-        if(k%2==1) return maxHeap.top();
-        else {
-            return (maxHeap.top()+minHeap.top())/2.0;
+        else{
+            double ans = (left.top()+right.top())/2.0;
+            return ans;
         }
     }
 };

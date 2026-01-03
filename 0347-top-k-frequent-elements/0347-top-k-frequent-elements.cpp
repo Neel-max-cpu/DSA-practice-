@@ -1,24 +1,37 @@
-class Solution {
-public:
-    
-    static bool custom(pair<int,int>&a, pair<int,int>&b){
-        return a.second>b.second;
+class Neel{
+    public: 
+    int val; int freq;
+};
+
+struct compare{
+    bool operator()(const Neel &x, Neel &y ){
+        // x.freq>y.freq;
+        // x's freq greater than y's freq so y has lower priority values so comes out first
+        // so opposite        
+        return x.freq<y.freq;
     }
+};
 
-    vector<int> topKFrequent(vector<int>& nums, int k) {
+class Solution {
+public:    
+    vector<int> topKFrequent(vector<int>& arr, int k) {
         unordered_map<int,int>m;
-        for(int i=0; i<nums.size(); i++){
-            m[nums[i]]++;
+        for(auto it:arr){
+            m[it]++;
         }
-        vector<pair<int,int>>p(m.begin(), m.end());
-        
-        sort(p.begin(), p.end(), custom);
 
-        vector<int>ans(k);
-        for(int i=0; i<k; i++){
-            ans[i] = p[i].first;
+        priority_queue<Neel, vector<Neel>, compare>pq;
+        for(auto it:m){
+            pq.push({it.first, it.second});
+        }
+
+        vector<int>ans;
+        while(k>0){
+            Neel x = pq.top();
+            pq.pop();
+            ans.push_back(x.val);
+            k--;
         }
         return ans;
-     
     }
 };

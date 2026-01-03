@@ -1,55 +1,64 @@
 class Solution {
 public:
-    void merge(vector<int>&arr, int low, int mid, int high){
-        int l = low, r = mid+1;
+    void merge(vector<int>&arr, int start, int mid, int end){
+        int left = start, right = mid+1;
         vector<int>temp;        
-        while(l<=mid && r<=high){            
-            if(arr[l]<=arr[r]){
-                temp.push_back(arr[l]);
-                l++;                
+        while(left<=mid && right<=end){
+            if(arr[left]<=arr[right]){
+                temp.push_back(arr[left]);
+                left++;
             }
-            else {
-                temp.push_back(arr[r]);
-                r++;
+            else{                
+                temp.push_back(arr[right]);
+                right++;
             }
         }
-        while(l<=mid){
-            temp.push_back(arr[l++]);
-        }
-        while(r<=high) temp.push_back(arr[r++]);
+
+        while(left <= mid) temp.push_back(arr[left++]);
+        while(right <= end) temp.push_back(arr[right++]);
+
         for(int i=0; i<temp.size(); i++){
-            arr[low+i] = temp[i];
+            arr[start+i] = temp[i];
         }        
     }
 
-    int countPairs(vector<int>&arr, int low, int mid, int high){
+    int countPairs(vector<int>&arr, int start, int mid, int end){
         int count = 0;
         int j = mid+1;
-        for(int i=low; i<=mid; i++){
-            while(j<=high && arr[i] > (long long)2*(long long)arr[j]){
+        /*
+        Suppose we have a sorted left half [start..mid] and sorted right half [mid+1..end].
+        Fix an element arr[i] in the left half.
+        We want to count how many elements arr[j] in the right half satisfy: arr[i]>2∗arr[j]
+        We start j = mid+1 and move forward while the condition is true.
+        Why arr[mid+1 .. j-1]?
+        When the while loop stops, j is the first index in the right half that does NOT satisfy the condition.
+        All indices from mid+1 up to j-1 did satisfy the condition.
+        So: number of valid pairs for this i=(j−1)−(mid+1)+1=j−(mid+1)
+        */
+        for(int i=start; i<=mid; i++){
+            //for ele check how many it satisfies and j doesn't move back cause sorted
+            // and number of element are : j-1 + (mid+1) +1
+            while(j<=end && arr[i]> (long long) 2 * (long long)arr[j]){
                 j++;
             }
-            count += (j-(mid+1));   
-            //since already did j++ so mid+1 = 0th ele of the right arr and j is curr index
+            count += (j-(mid+1));
         }
         return count;
     }
 
-    int mergeSort(vector<int>&arr, int low, int high){
-        if(low>=high) return 0;
-        int mid = low + (high-low)/2;
-        int ans1 = mergeSort(arr, low, mid);
-        int ans2 = mergeSort(arr, mid+1, high);
-        // since both the parts are sorted
-        int ans3 = countPairs(arr, low, mid, high);
-        merge(arr, low, mid, high);
-        return ans1+ans2+ans3;
+    int mergeSort(vector<int>&arr, int start, int end){
+        if(start>=end) return 0;
+        int mid = start + (end-start)/2;
+        int count1 = mergeSort(arr, start, mid);
+        int count2 = mergeSort(arr, mid+1, end);
+        //before merge count
+        int count3 = countPairs(arr, start, mid, end);
+        merge(arr, start, mid, end);
+        return count1+count2+count3;
     }
 
-    int reversePairs(vector<int>& nums) {
-        // merge sort
-        int n = nums.size();
-        int count = mergeSort(nums, 0, n-1);
+    int reversePairs(vector<int>& arr) {
+        int count = mergeSort(arr, 0, arr.size()-1);
         return count;
     }
 };

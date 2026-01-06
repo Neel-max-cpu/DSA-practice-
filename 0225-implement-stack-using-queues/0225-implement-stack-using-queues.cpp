@@ -1,31 +1,17 @@
 class MyStack {
 public:
+    // using deque M1
+    // deque<int>dq;
+
+    // using 2 queue - keep q1 as main and q2 as temp
     queue<int>q1;
     queue<int>q2;
-    // COMMENTED MY METHOD -- by alternating
     MyStack() {
-
     }
     
     void push(int x) {
-        /*
-        if(q1.empty()) {
-            q1.push(x);
-            while(!q2.empty()){
-                q1.push(q2.front());
-                q2.pop();
-            }
-        }
-        else{
-            q2.push(x);
-            while(!q1.empty()){
-                q2.push(q1.front());
-                q1.pop();
-            }
-        }
-        */
+        // dq.push_back(x);
 
-        // keep q1 as the main and q2 as temporary
         q2.push(x);
         while(!q1.empty()){
             q2.push(q1.front());
@@ -36,18 +22,11 @@ public:
     
     int pop() {
         /*
-        int ans = -1;
-        if(q1.empty()){
-            ans = q2.front();
-            q2.pop();
-        }
-        else{
-            ans = q1.front();
-            q1.pop();
-        }
-        return ans;
+        int x= dq.back();
+        dq.pop_back();
+        return x;
         */
-        
+
         int ans = -1;
         ans = q1.front();
         q1.pop();
@@ -55,21 +34,14 @@ public:
     }
     
     int top() {
-        /*
-        if(q1.empty()){
-            return q2.front();
-        }
-        else return q1.front();
-        */
+        // return dq.back();
+
         if(q1.empty()) return -1;
         else return q1.front();
     }
     
     bool empty() {
-        /*
-        if(q1.empty() && q2.empty()) return true;
-        else return false;
-        */
+        // return dq.empty();
 
         return q1.empty();
     }

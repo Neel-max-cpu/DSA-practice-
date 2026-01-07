@@ -2,42 +2,27 @@ class Solution {
 public:
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
         int n = nums2.size();
-        vector<int>temp(n,0);
         stack<int>s;
-                
-        for(int i=nums2.size()-1; i>=0; i--){
-            int curr = nums2[i];
-            if(s.empty()) {
-                temp[i] = -1;
-                s.push(curr);
+        unordered_map<int,int>m;
+        for(int i=n-1; i>=0; i--){
+            // till stack is not empty remove the ele which are smaller than nums2[i]
+            while(!s.empty() && s.top()<nums2[i]){
+                s.pop();
+            }    
+
+            // if stack is empty
+            if(s.empty()){
+                m[nums2[i]] = -1;            
             }
-            else{
-                while(!s.empty() && s.top()<curr){
-                    s.pop();
-                }
-                if(s.empty()) {
-                    temp[i] = -1;
-                }
-                else{
-                    temp[i] = s.top();
-                }
-                s.push(curr);
+            else {
+                m[nums2[i]] = s.top();
             }
+            s.push(nums2[i]);
         }
 
-        cout<<"temp: ";
-        for(auto it:temp){
-            cout<<it<<" ";
-        }
-        cout<<endl;
-
-        vector<int>ans(nums1.size(),0);
+        vector<int>ans;
         for(int i=0; i<nums1.size(); i++){
-            for(int j=0; j<nums2.size(); j++){
-                if(nums1[i]==nums2[j]){
-                    ans[i] = temp[j];
-                }
-            }
+            ans.push_back(m[nums1[i]]);
         }
         return ans;
     }

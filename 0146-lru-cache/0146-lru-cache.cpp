@@ -1,104 +1,111 @@
+class Node{
+    public:
+    int key;
+    int value;
+    Node*prev;
+    Node *next;
+
+    Node(int key, int value){
+        this->key = key;
+        this->value = value;
+        prev = NULL;
+        next = NULL;
+    }
+};
+
 class LRUCache {
 public:
-    class Node {
-        public:
-            int key;
-            int val;
-            Node *next;
-            Node *prev;
-            
-            Node(int _key, int _val){
-                key = _key;
-                val = _val;
-            }
-    };
-
-    Node *head = new Node(-1, -1);
-    Node *tail = new Node(-1,-1);
-
-    int cap;
+    int size;
+    int curr;
     unordered_map<int,Node*>m;
-
+    Node *head = new Node(-1,-1);
+    Node *tail = new Node(-1,-1);
+    
     LRUCache(int capacity) {
-        // initially 
-        cap = capacity;
+        size = capacity;
+        curr = 0;
         head->next = tail;
-        tail->prev = head;    
-    }
-
-    void insertAfterHead(Node *node){
-        // save the head's next
-        Node *temp = head->next;
-
-        // head of next = node and node's prev = head;
-        head->next = node;
-        node->prev = head;
-
-        // and node's next = temp and temp's prev = node;
-        node->next = temp;
-        temp->prev = node;
-    }
-
-    void deleteNode(Node* node){
-        Node *previous = node->prev;
-        Node *nextone = node->next;
-
-        previous->next = nextone;
-        nextone->prev = previous;
+        tail->prev = head;
     }
     
     int get(int key) {
-        // if the map doesnt have the key
-        if(m.find(key) == m.end()) return -1;
+        if(m.find(key)==m.end()) return -1;
+        else{
 
-        Node *node = m[key];
-
-        // since most recent one move it forward
-        deleteNode(node);
-        insertAfterHead(node);
-
-        // return the node value;
-        return node->val;
+            Node *listNode = m[key];
+            int val = listNode->value;
+            //change postion in the linkedlist
+            changePos(listNode);
+            return val;
+        }
+        
     }
     
     void put(int key, int value) {
-        // if the map has it
-        if(m.find(key) != m.end()){
-            // change the value;
-            Node *node = m[key];
-            node->val = value;
-            
-            // make it most recently used            
-            deleteNode(node);
-            insertAfterHead(node);            
+        if(m.find(key)==m.end()){
+            if(curr>=size){
+                //remove least used
+                removeLeastUsed();            
+            }
+            Node *newNode = new Node(key, value);
+            m[key] = newNode;        
+            // put value in linkedlist
+            putVal(newNode);
         }
         else{
-            // 2 case if not present
-            
-            // size exceeds
-            if(m.size()==cap){
-                // delete the least recently used(near the tail)
-                Node *node = tail->prev;
-                // remove from the map
-                m.erase(node->key);
-                deleteNode(node);
-
-                // create a newNode and insert it;
-                Node *newNode = new Node(key, value);
-                insertAfterHead(newNode);
-                // make changes in the map
-                m[key] = newNode;
-            }
-            else{
-                // size doesn't exceeds
-                
-                // create a newNode and insert it;
-                Node *newNode = new Node(key, value);
-                insertAfterHead(newNode);
-                // make changes in the map
-                m[key] = newNode;
-            }
+            // if found -- update the key and put the value behind the head
+            Node *listNode = m[key];
+            listNode->value = value;
+            changePos(listNode);
         }
+    }
+
+    private:
+    void changePos(Node*listNode){
+        // eg 3 in null<>1<>2<>3<>4<>null
+        Node *nextToList = listNode->next;      // 4
+        Node *prevToList = listNode->prev;      // 2
+
+        //connect prev and next of list
+        nextToList->prev = prevToList;       // 2<4
+        prevToList->next = nextToList;      //2<>4
+
+        Node *nextToHead = head->next;      // 1
+        head->next = listNode;              // null>3
+        listNode->prev = head;              // null<>3
+        listNode->next = nextToHead;        // null<>3>1
+        nextToHead->prev = listNode;        // null<>3<>1
+    }
+
+    void putVal(Node*newNode){
+        // null<>1<>2<>4<>null -- lets say put 3 after head(null)
+        Node*nextToHead = head->next;    //1
+        head->next = newNode;       // null>3
+        newNode->prev = head;        // null<>3  --chain done        
+
+        newNode->next = nextToHead;     //null<>3>1
+        nextToHead->prev = newNode;      // null<>3<>1 -- chain done
+        curr++;
+    }
+    void removeLeastUsed(){
+        // null<>1<>2<>3<>4<>null -- lets say remove 3 (4 tail)
+        Node *leastUsed = tail->prev;    // 3
+        Node *nextLeastUsed = leastUsed->prev;  //2
+
+        // make 3 alone
+        leastUsed->next = NULL;
+        leastUsed->prev = NULL;
+
+        tail->prev = nextLeastUsed;     // 2<4
+        nextLeastUsed->next = tail;     //2<>4  -- chain done
+
+        // remove from map
+        m.erase(leastUsed->key);
+        
+        // remove 3
+        delete(leastUsed);
+
+        curr--;
     }
 };
 

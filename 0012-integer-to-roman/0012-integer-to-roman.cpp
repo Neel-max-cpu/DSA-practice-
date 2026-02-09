@@ -1,61 +1,34 @@
 class Solution {
 public:
-    int get10s(int num, int len){
-        int value = 1;
-        for(int i=0; i<len-1; i++){
-            value*=10;
-        }
-        return value;
-    }
-
     string intToRoman(int num) {
-        unordered_map<int,string>m;
-        m[1] = "I";
-        m[2] = "II";
-        m[3] = "III";
-        m[4] = "IV";
-        m[5] = "V";
-        m[6] = "VI";
-        m[7] = "VII";
-        m[8] = "VIII";
-        m[9] = "IX";
+        // see constraints 3999
+
+        /*
+        string M[] = {"", "M", "MM", "MMM"};
+        string C[] = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
+        string X[] = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};   
+        string I[] = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};   
         
-        m[10] = "X";
-        m[20] = "XX";
-        m[30] = "XXX";
-        m[40] = "XL";
-        m[50] = "L";
-        m[60] = "LX";
-        m[70] = "LXX";
-        m[80] = "LXXX";
-        m[90] = "XC";
-
-        m[100] = "C";
-        m[200] = "CC";
-        m[300] = "CCC";
-        m[400] = "CD";
-        m[500] = "D";
-        m[600] = "DC";
-        m[700] = "DCC";
-        m[800] = "DCCC";
-        m[900] = "CM";
+        string s = M[num/1000] + C[(num%1000)/100] + X[(num%100)/10] + I[num%10];
+        return s;
+        */
         
-        m[1000] = "M";
-        m[2000] = "MM";
-        m[3000] = "MMM";
+        // generic way to solve --
+        // keep the main value(M,C,L,D etc) and 1 less value
+        vector<pair<int,string>> values = {
+            {1000, "M"}, {900,"CM"}, {500, "D"}, {400, "CD"},
+            {100, "C"}, {90, "XC"}, {50, "L"}, {40, "XL"},
+            {10, "X"}, {9, "IX"}, {5, "V"}, {4, "IV"}, {1, "I"}
+        };
 
-        string ans;
-        while(num>0){
-            string s = to_string(num);
-            int diffValue = get10s(num, s.size());
-            // 3749 then diffValue = 1000, so left = 3
-            int left = num/diffValue;
-            int totalVal = left*diffValue;
-            ans+=m[totalVal];  
-
-            // 3749 then new num = 3749%1000 = 749
-            num = num%diffValue;
+        string ans = "";
+        for(auto [value, symbol]:values){
+            while(num>=value){
+                num-=value;
+                ans+=symbol;
+            }
         }
         return ans;
+        
     }
 };

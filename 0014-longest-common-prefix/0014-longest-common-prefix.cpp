@@ -1,25 +1,28 @@
 class Solution {
 public:
-    string longestCommonPrefix(vector<string>& arr) {
-        int n = arr.size();
-
-        int minLen = INT_MAX;
-        for(int i=0; i<n; i++){
-            int l = arr[i].size();
-            minLen = min(l, minLen);
-        }
-
-        int j=0;
-        string s ="";
-        char c = arr[0][j];
-        while(j<minLen){
-            for(int i=1; i<n; i++){
-                if(arr[i][j]!=c) return s;
+    string longestCommonPrefix(vector<string>& strs) {
+        string ans = "";
+        for(int i=0; i<strs.size(); i++){
+            if(i==0) {
+                ans = strs[i];
+                // cout<<ans<<" "<<i<<endl;
             }
-            s+=c;
-            j++;
-            c = arr[0][j];
+            else{
+                string temp = "";
+                int j = 0;
+                int k = 0;
+                while(k<ans.size() && j<strs[i].size()){
+                    if(strs[i][j]==ans[k]){
+                        k++;
+                        j++;
+                    }
+                    else break;
+                }
+                ans.erase(k, ans.size()-k);
+                if(ans.size()==0) return ans;
+                // cout<<ans<<" "<<i<<endl;                
+            }
         }
-        return s;
+        return ans;
     }
 };

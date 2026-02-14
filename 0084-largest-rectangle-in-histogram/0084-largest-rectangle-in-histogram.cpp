@@ -24,7 +24,7 @@ public:
         return ans;
         */
 
-        /*
+        // better - easier understanding than  best(same thing just here sc - o(3n) there o(n))        
         stack<int>st;
         // save index
         vector<int>smallLeft(n);
@@ -57,21 +57,21 @@ public:
             else smallRight[i] = n;
 
             st.push(i);            
+        }        
+        for(int i=0; i<n; i++){
+            /* from (smallLeft[i] + 1)  to  (smallRight[i] - 1) = (sR-1)-(sL+1)=sR-sL-1
+            [since cant include the walls themselves - eg in [2,1,5,6,2,3] for wall 6
+            sL=5(idx 2) and sR=2(idx 4) so (4-1)-(2+1)+1 = 3-3+1 = 1 = which is width 1]             
+            */
+            // caues minimun left size -1 and max right size n =             
+            int width = smallRight[i]-smallLeft[i]-1;
+            int area = arr[i]*width;
+            ans = max(ans, area);
         }
-        */ 
-        // for(int i=0; i<n; i++){
-        //     /* from (smallLeft[i] + 1)  to  (smallRight[i] - 1) = (sR-1)-(sL+1)=sR-sL-1
-        //     [since cant include the walls themselves - eg in [2,1,5,6,2,3] for wall 6
-        //     sL=5(idx 2) and sR=2(idx 4) so (4-1)-(2+1)+1 = 3-3+1 = 1 = which is width 1]             
-        //     */
-        //     // caues minimun left size -1 and max right size n =             
-        //     int width = smallRight[i]-smallLeft[i]-1;
-        //     int area = arr[i]*width;
-        //     ans = max(ans, area);
-        // }
-        // return ans;
+        return ans;
 
         // best --- same as above but with one pass
+        /*
         stack<int>st;
         // loop including the nth bar(doen't exist)
         for(int i=0; i<=n; i++){
@@ -91,6 +91,7 @@ public:
             st.push(i);
         }              
         return ans;  
+        */
         
         
     }

@@ -80,6 +80,47 @@ public:
         return false;
     }
 
+    bool rabinKarp(string &a, string &b){
+        int n = a.size(), m = b.size();
+
+        const int base = 256;
+        const int mod = 1e9+7;
+        long long patHash = 0;
+        long long txtHash = 0;
+        long long highestPower = 1;
+        
+        // Compute base^(m-1)
+        for (int i = 0; i < m - 1; i++)
+            highestPower = (highestPower * base) % mod;
+        
+        // Initial hash for pattern and first window
+        for (int i = 0; i < m; i++) {
+            patHash = (patHash * base + b[i]) % mod;
+            txtHash = (txtHash * base + a[i]) % mod;
+        }
+        
+        // vector<int> ans;
+        
+        for (int i = 0; i <= n - m; i++) {
+            
+            // If hash matches → verify characters
+            if (patHash == txtHash) {
+                if (a.substr(i, m) == b)
+                    return true;
+                    // ans.push_back(i);
+            }
+            
+            // Slide window
+            if (i < n - m) {
+                txtHash = (txtHash - a[i] * highestPower % mod + mod) % mod;
+                txtHash = (txtHash * base + a[i + m]) % mod;
+            }
+        }
+        
+        // return ans;
+        return false;
+    }
+
     bool findSubstring(string &a, string &b){
         int n = a.size(), m = b.size();
         // tc - o(n*m) = o(m2) since n = m or m+1
@@ -111,6 +152,12 @@ public:
         // best --
         if(kmpAlgo(a,b)) return true;
         else return false;
+
+        // rabin karp algorithm also works in n+m but worst case could go to n*m
+        /*
+        if(rabinKarp(a,b)) return true;
+        else return false;
+        */
 
     }
 

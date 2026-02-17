@@ -1,16 +1,114 @@
 class Solution {
 public:
-    int strStr(string h, string s) {
-        int n = h.size();
-        int m = s.size();
-        for(int i=0; i<n; i++){
-            // from index i to length m
-            if(n-i<m) return -1;
-            else{
-                string t = h.substr(i,m);
-                if(t==s) return i;
-            }            
+    vector<int>rabinKarpAlgo(string &a, string &b){
+        // we using the hash function and rolling hash function to find the pattern --
+        // hash = (a[0]*b^(m-1)+a[1]*b^(m-2)+....+a[n-1]*b^0)%mod
+        // and rolling just remove the left most and add one in right        
+        int n = a.size();
+        int m = b.size();
+        const int mod = 1e9+7;    // -- prime number
+        const int base = 256;     // as 256 ascii characters
+        long long highestPower = 1;    // base^m-1 --- m since patter size is m
+        for(int i=0; i<m-1; i++){
+            // base*base*base*... up to m-1 times
+            highestPower = (highestPower*base)%mod;
         }
-        return -1;
+
+        long long patternHash = 0, stringHash = 0;
+        // Initial hash for pattern and first window
+        /* eg for ccb then it should be --
+        h = c*B² + c*B¹ + b*B⁰
+        for i = 0; patHash = (0*B+c) = c
+        for i = 1; patHash = (c*B+c) = c*B+c
+        for i = 2; patHash = ((c*B+c)*B+b) = c*B² + c*B¹ + b
+        */
+        for(int i=0; i<m; i++){
+            // hash the patter(b) and the string(a)
+            patternHash = (patternHash*base+b[i])%mod;
+            stringHash = (stringHash*base+a[i])%mod;
+        }
+
+        vector<int>ans;
+
+        for(int i=0; i<=n-m; i++){
+            if(patternHash == stringHash){
+                if(a.substr(i,m) == b){
+                    ans.push_back(i);
+                }
+            }
+
+            // rolling hash function --
+            // Slide window
+            /*  abcd and B = base
+            (abc) H = a*B² + b*B¹ + c
+            now for (bcd) we want -- b*B² + c*B¹ + d
+            start from old hash = H = a*B² + b*B¹ + c (remove the leftmost)
+            then = b*B¹ + c now if we add base(B) to it then => (b*B¹ + c) * B = b*B² + c*B¹
+            and finally add d so b*B² + c*B¹ + d (we got the new hash without recalculating from the start)
+            */
+            if(i<n-m){
+                // subtraction can make it -ve so +mod
+                /*
+                -30 % 101 = -30 (wrong) instead it is this: -30 mod 101 = 71
+                and -30 ≡ 71 (mod 101) so (-30 + 101) % 101 => 71 % 101 => 71
+                */
+                stringHash = (stringHash - (a[i]*highestPower % mod) + mod) % mod;
+                stringHash = ((stringHash*base)+a[i+m])%mod;
+            }
+        }
+
+        return ans;
+    }
+
+    int findIndex(string &a, string &b){
+        int n = a.size();
+        int m = b.size();
+        if(m>n) return -1;
+
+        // -- also we can break when we find but here saving just for extra if asked find all
+        vector<int>ans;
+        // method 1 -- worst case o(n*m)
+        /*
+        for(int i=0; i<n-m; i++){
+            int j = 0;
+            while(j<m && a[i+j]==b[j]) j++;
+            if(j==m){
+                ans.push_back(i);
+            }
+        }
+        */
+
+        // method 2 --- same o(n*m)
+        /*
+        for(int i=0; i<n-m; i++){            
+            string t = a.substr(i, m);
+            if(t==b){
+                ans.push_back(i);
+            }
+        }
+        */
+
+        // method 3 --
+        /*
+        int res = a.find(b);
+        if(res!=string::npos){
+            return res;
+        }
+        else return -1;
+        */
+
+
+        // better method -- o(n+m) worst case o(n*m) --rabin karp algorithm
+        ans = rabinKarpAlgo(a,b);
+
+        // best -- kmp and z function(dont know z function todo kmp)
+
+        return ans.empty()? -1 : ans[0];
+    }
+
+    int strStr(string haystack, string needle) {
+        // brute --
+        int firstIndex = findIndex(haystack, needle);
+        return firstIndex;
     }
 };

@@ -39,6 +39,48 @@ public:
         }
         return ans;
     }
+    
+    vector<int>iterative2(TreeNode*root){        
+        vector<int>ans;
+        stack<TreeNode*>st;        
+        
+        while(root || !st.empty()){
+            /*
+            There are 3 phases per node:
+            Go left as much as possible
+            Try to go right
+            If right already processed → print
+            */
+            if(root){
+                st.push(root);
+                root = root->left;
+            }
+            else{
+                // try right
+                TreeNode *temp = st.top()->right;
+                /*
+                temp has 2 possibilities -- 
+                */
+                if(temp==NULL){
+                    // if doesn't exist then top is the last node there
+                    temp = st.top();
+                    st.pop();
+                    ans.push_back(temp->val);
+                    while(!st.empty() && temp == st.top()->right){
+                        // go back
+                        temp = st.top();
+                        st.pop();
+                        ans.push_back(temp->val);
+                    }
+                }
+                else{
+                    // if right exists then go right
+                    root = temp;
+                }
+            }
+        }        
+        return ans;
+    }
 
     vector<int> postorderTraversal(TreeNode* root) {
         // left, right, root
@@ -46,7 +88,10 @@ public:
         vector<int>ans;
         // recursion(root, ans);
 
-        ans = iterative(root);
+        // ans = iterative(root);
+
+        // using 1 stack (but above one better to understand)
+        ans = iterative2(root);
         return ans;
     }
 };

@@ -11,87 +11,62 @@
  */
 class Solution {
 public:
-    void recursion(TreeNode*root, vector<int>&ans){
-        if(root==NULL) return;
-
-        recursion(root->left, ans);
-        recursion(root->right, ans);
-        ans.push_back(root->val);
-    }
-    vector<int>iterative(TreeNode*root){        
-        vector<int>ans;
-        stack<TreeNode*>st1;
-        stack<int>st2;
-        if(root)
-            st1.push(root);
-
-        while(!st1.empty()){
-            TreeNode*current = st1.top();
-            st1.pop();
-            st2.push(current->val);
-            if(current && current->left) st1.push(current->left);
-            if(current && current->right) st1.push(current->right);
-        }
-
-        while(!st2.empty()){            
-            ans.push_back(st2.top());
-            st2.pop();
-        }
-        return ans;
-    }
-    
-    vector<int>iterative2(TreeNode*root){        
-        vector<int>ans;
-        stack<TreeNode*>st;        
-        
-        while(root || !st.empty()){
-            /*
-            There are 3 phases per node:
-            Go left as much as possible
-            Try to go right
-            If right already processed → print
-            */
-            if(root){
-                st.push(root);
-                root = root->left;
-            }
-            else{
-                // try right
-                TreeNode *temp = st.top()->right;
-                /*
-                temp has 2 possibilities -- 
-                */
-                if(temp==NULL){
-                    // if doesn't exist then top is the last node there
-                    temp = st.top();
-                    st.pop();
-                    ans.push_back(temp->val);
-                    while(!st.empty() && temp == st.top()->right){
-                        // go back
-                        temp = st.top();
-                        st.pop();
-                        ans.push_back(temp->val);
-                    }
-                }
-                else{
-                    // if right exists then go right
-                    root = temp;
-                }
-            }
-        }        
-        return ans;
-    }
-
     vector<int> postorderTraversal(TreeNode* root) {
-        // left, right, root
+        // Write your code here.
 
+        // preorder -- root, left, right
+        // inorder -- left, root, right
+        // postorder -- left, right, root
+
+        stack<pair<TreeNode*, int>>st;
+        // tree and state - 1(pre), 2(in), 3(post)
+        if(root){
+            st.push({root, 1});
+        }
+
+        // vector<vector<int>>ans(3);
+        // at 0 inorder , 1 pre, and 2 post
         vector<int>ans;
-        // recursion(root, ans);
 
-        // ans = iterative(root);
+        while(!st.empty()){        
+            auto a = st.top();        
+            st.pop();
 
-        // using 1 stack (but above one better to understand)
-        ans = iterative2(root);
-        return ans;
+            TreeNode *curr = a.first;
+            int state = a.second;
+        
+
+            if(state==1){
+                // update the state(to 2) and push again
+                st.push({curr, state+1});
+                // and push the left child if present with state 1
+                if(curr->left){                                            
+                    st.push({curr->left, 1});
+                }        
+
+                // preorder
+                // ans[1].push_back(curr->data);
+            }
+
+            if(state==2){
+                // update the state(to 3) and push again
+                st.push({curr, state+1});
+                // and push the right child if present with state 1
+                if(curr->right){
+                    st.push({curr->right, 1});
+                }
+
+                // inorder
+                // ans[0].push_back(curr->data);
+            }
+
+            if(state==3){
+                // final pop done
+                // post order
+                // ans[2].push_back(curr->data);
+                ans.push_back(curr->val);
+            }        
+        }
+        return ans;    
     }
 };

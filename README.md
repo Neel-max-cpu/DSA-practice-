@@ -5,10 +5,12 @@ just the solution of my leetcode problems
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0145-binary-tree-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
 | [0199-binary-tree-right-side-view](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0199-binary-tree-right-side-view/) | Medium |
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0145-binary-tree-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
 | [0199-binary-tree-right-side-view](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0199-binary-tree-right-side-view/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
@@ -17,5 +19,10 @@ just the solution of my leetcode problems
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0145-binary-tree-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
 | [0199-binary-tree-right-side-view](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0199-binary-tree-right-side-view/) | Medium |
+## Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0145-binary-tree-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
 <!---LeetCode Topics End-->

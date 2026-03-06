@@ -11,86 +11,50 @@
  */
 class Solution {
 public:
-    vector<vector<int>> verticalTraversal(TreeNode* root) {
-
-        // similar to top view/bottom view just 1more index is being added
-        vector<vector<int>>ans;
-        if(root==NULL) return ans;
-
+    vector<vector<int>> verticalTraversal(TreeNode* root) {        
+        // mulitset allows duplicates and stores them in ascending order
+        // we need in **column>row>value sorted order
+        // eg -- we start from column 0, row 0 (can go -1,1 in column) and row increases by 1
+        // eg 10 is at 0 column and row = 1 and another 5 at column 0 but row = 3 then we will have 10,5(not 5,10)
+        // but if we have 10 at 0column and row 1 and another 5 at col 0 and row =1 then value sorted i.e 5,10
+        
+        // so in map - first col, then row, then values sorted
+        map<int, map<int,multiset<int>>>m;
         queue<pair<TreeNode*,pair<int,int>>>q;
-        // since root is 0,0
-        q.push({root, {0, 0}});
-        /*            
-        not visualize like the question -- 
-                3(0,0)
-               /  \ 
-        (-1,1)9   20(1,1)
-                 /  \
-           (0,2)15   7(2,2)
-        */
+        if(root){
+            q.push({root, {0,0}});
+        }
 
-        // A multiset as the value, which can hold multiple integers, including duplicates, in sorted order(increasing default).
-        //  multiset<int, greater<int> > -- decreasing
-        map<int,map<int,multiset<int>>>m;
-
-        // level order traversal
         while(!q.empty()){
-            // automatically dedeuce the data structure
             auto p = q.front();
             q.pop();
-            
-            TreeNode *current = p.first;
-            int x = p.second.first;
-            int y = p.second.second;
 
-            m[x][y].insert(current->val);
+            TreeNode *curr = p.first;
+            // column
+            int col = p.second.first;
+            // row 
+            int row = p.second.second;
 
-            if(current->left != NULL){
-                // we want the vector to have verticall
-                q.push({current->left,{x-1, y+1}});    
-                
-                // we we do this we will get horizontally same col like 9,20 are in the same 1 but col is -1,1
-                // similarly 15,7 in the same 
-                /*
-                basically the vector will be like this
-                ----->
-                ----->
-                ----->
+            // insert 
+            m[col][row].insert(curr->val);
 
-                but we want the vector to be like this --
-                |  |  |
-                |  |  |
-                |  |  |
-                |  |  |
-                ↓  ↓  ↓
-                */          
-                // q.push({current->left,{x+1, y-1}});                
-            }
-            if(current->right!=NULL){
-                q.push({current->right,{x+1, y+1}});                
-                // q.push({current->right,{x+1, y+1}});                
+            if(curr->left){
+                q.push({curr->left, {col-1, row+1}});
+            } 
+
+            if(curr->right){
+                q.push({curr->right, {col+1, row+1}});
             }
         }
-        
 
-        /*
-            -1: {1: {9}},               // Vertical distance -1: Level 1 -> Node 9
-            0: {0: {3}, 2: {15}},      // Vertical distance 0: Level 0 -> Node 3, Level 2 -> Node 15
-            1: {1: {20}},              // Vertical distance 1: Level 1 -> Node 20
-            2: {2: {7}}                  
-        */
+        vector<vector<int>>ans;
         for(auto it:m){
-            vector<int>col;    
-            // move to second since int,multiset        
+            vector<int>v;
             for(auto x:it.second){
-                // and we have to push all the elements of each key 1 key might have mulitple multisets
-                // x.second cause second is multiset
-
-                //syntax =  vector_name.insert(position, iterator1, iterator2)
-                // since let say 0 ->1 = {} and 0->2={} and 0->3={} then i have to put all the values of 0 in the vector 
-                col.insert(col.end(), x.second.begin(), x.second.end());
+                // insert multiset in vector
+                v.insert(v.end(), x.second.begin(), x.second.end());
             }
-            ans.push_back(col);
+            ans.push_back(v);
         }
         return ans;
     }

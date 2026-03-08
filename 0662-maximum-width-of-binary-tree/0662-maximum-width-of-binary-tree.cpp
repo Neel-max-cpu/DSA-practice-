@@ -9,44 +9,57 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
- 
-// const unsigned int mod = 1e9+7;
-long long mod = 1e11;
 class Solution {
 public:
     int widthOfBinaryTree(TreeNode* root) {
-        if(root==NULL) return 0;
-        queue<pair<TreeNode*,long long int>>q;
-        q.push({root,1});
-        // left child would be 2*parentindex and right child would be 2*parentindex+1;
-        
-        long long int ans = 0;
+        queue<pair<TreeNode*, long long int>>q;
+        if(root) q.push({root, 0});
+        int ans = 0;
+
         while(!q.empty()){
-            long long len = q.size();
-            long long starting;
-            long long ending;
+            int len = q.size();
+            int count = 0;           
+            long long int left = 0;
+            long long int right = 0;  
+
+            //min index -- index of the first node at this level
+            int minIndex = q.front().second;   
+
             for(int i=0; i<len; i++){
-                auto p = q.front();
+                auto a = q.front();
                 q.pop();
+                TreeNode *curr = a.first;
+                long long int index = a.second;  
+                // normalize index --
+                long long int normalizeIndex = index - minIndex;                          
+
                 if(i==0){
-                    starting = p.second;
+                    // relative index to avoid overflow --
+                    /*
+                    Width only depends on:
+                    right - left
+                    Subtracting a constant from both doesn't 
+                    change the difference
+                    */
+                    left = normalizeIndex;
                 }
                 if(i==len-1){
-                    ending = p.second;
+                    // same normalize ---
+                    right = normalizeIndex;
                 }
-                
-                if(p.first->left != NULL){
-                    // left child
-                    long long x = (2*p.second)%mod;
-                    q.push({p.first->left, x});                    
+
+                if(curr->left){
+                    long long int idx = 2*normalizeIndex;
+                    q.push({curr->left, idx});
                 }
-                if(p.first->right!=NULL){
-                    // right child
-                    long long x = (2* p.second+1)%mod;
-                    q.push({p.first->right, x});
-                }                
-            }    
-            ans = max(ans, ending-starting+1);
+                if(curr->right){
+                    long long int idx = 2*normalizeIndex+1;
+                    q.push({curr->right, idx});
+                }
+            }
+
+            int width = (right-left)+1;            
+            ans = max(ans, width);
         }
         return ans;
     }

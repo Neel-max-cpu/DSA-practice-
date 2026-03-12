@@ -27,13 +27,31 @@ public:
         }
 
         return 1+max(left, right);
+    }
 
+    int helper2(TreeNode*root){
+        if(root==NULL) return 0;
+
+        int left = helper2(root->left);
+        int right = helper2(root->right);
+
+        if(left==-1 || right == -1) return -1;
+        
+        int diff = abs(left-right);
+        if(diff>1) return -1;
+        else return 1+max(left, right);
     }
 
     bool isBalanced(TreeNode* root) {
         // true balanced/flag = unbalanced
+        /*
         bool flag = true;
         helper(root, flag);
         return flag;
+        */
+
+        // optimal --
+        int ans = helper2(root);
+        return ans==-1? false : true;
     }
 };

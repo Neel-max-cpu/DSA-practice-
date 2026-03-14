@@ -20,7 +20,7 @@ public:
         return left || right;
     }
 
-    bool getNodes(TreeNode *root, TreeNode *key, vector<TreeNode *>&v, vector<TreeNode *>temp){
+    bool getNodes(TreeNode *root, TreeNode *key, vector<TreeNode *>&v, vector<TreeNode *>&temp){
         if(root==NULL) return false;
 
         temp.push_back(root);
@@ -30,17 +30,22 @@ public:
         }
 
         bool left = getNodes(root->left, key, v, temp);
+        if(left){            
+            return true;
+        }        
         bool right = getNodes(root->right, key, v, temp);
+        if(right){            
+            return true;
+        }
 
         temp.pop_back();
-
-        return left||right;
+        return false;
     }
 
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
 
 
-        //brute --
+        //brute -- o(n2)
         /*
         // lca will be this ---
         if(root==p || root==q) return root;
@@ -73,12 +78,13 @@ public:
         else return root;
         */
 
-        // better ---
+        // better --- o(n) space o(n)
         vector<TreeNode*>forP;
         vector<TreeNode*>forQ;
-        vector<TreeNode*>temp;
-        getNodes(root, p, forP, temp);
-        getNodes(root, q, forQ, temp);
+        vector<TreeNode*>temp1;
+        vector<TreeNode*>temp2;
+        getNodes(root, p, forP, temp1);
+        getNodes(root, q, forQ, temp2);
         
         TreeNode *ans = NULL;
         for(int i=0; i<min(forP.size(), forQ.size()); i++){

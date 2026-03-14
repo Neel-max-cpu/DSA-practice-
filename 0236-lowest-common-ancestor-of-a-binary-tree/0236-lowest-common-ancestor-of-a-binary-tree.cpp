@@ -42,10 +42,30 @@ public:
         return false;
     }
 
+    TreeNode * optimal(TreeNode*root, TreeNode* p, TreeNode *q){
+        if(root==NULL) return NULL;
+
+        // if we find any one of the nodes return it
+        if(root==p || root==q) return root;
+
+        TreeNode *left = optimal(root->left, p, q);
+        TreeNode *right = optimal(root->right, p, q);
+
+        // if both sides return not null current is lca
+        if(left && right) return root;
+        else{
+            // return the opposites if one of them is null
+            if(left==NULL) return right;
+            else return left;   
+        }
+        
+    }
+
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
 
-
-        //brute -- o(n2)
+        // n - height of the tree
+        //brute -- helper(n) + 4*called helper(n) [lowestCommonAncestor called worst case N]
+        // so tc - o(n2) and sc o(n) = worst case n = height of a skewed tree
         /*
         // lca will be this ---
         if(root==p || root==q) return root;
@@ -78,7 +98,10 @@ public:
         else return root;
         */
 
-        // better --- o(n) space o(n)
+        // better --- getNodes(n) + 2*called getNodes[2*o(n)] space o(n) + min(len of p,q = H) o(h)
+        // = o(n) + 2*o(n) + o(h) = o(n)
+        // and space forp,q o(n)+o(n) [worst case height = n] and recursion stack space (h) sc = o(n)
+        /*
         vector<TreeNode*>forP;
         vector<TreeNode*>forQ;
         vector<TreeNode*>temp1;
@@ -94,6 +117,9 @@ public:
             }
         }
         return ans;
+        */
 
+        // optimal --- tc - o(n)
+        return optimal(root, p, q);
     }
 };

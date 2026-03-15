@@ -11,7 +11,22 @@
  */
 class Solution {
 public:
+    bool helper(TreeNode *p, TreeNode*q){
+        // check both null
+        if(p==NULL && q==NULL) return true;
+
+        // only one is null (cause both null check above)
+        if(p==NULL || q==NULL) return false;
+
+        // now both p and q are present -- so check data, move left, move right
+        return ((p->val == q->val) && helper(p->left, q->left) && helper(p->right, q->right));
+    } 
+
     bool isSameTree(TreeNode* p, TreeNode* q) {
+        // recurisive ---
+        // return helper(p, q);
+
+        // iterative --- (recursion better)
         queue<TreeNode*>one;
         queue<TreeNode*>two;
 
@@ -32,34 +47,35 @@ public:
                 one.pop();
                 two.pop();
 
-                if(x->val != y->val) {
-                    cout<<"val not same!"<<endl;
-                    return false;
+                // check data
+                if(x->val != y->val) return false;
+
+                if(x->left || y->left){
+                    // both null no problem
+                    if(!x->left && !y->left) continue;
+                    else if(!x->left || !y->left){
+                        // if one of them is null
+                        return false;
+                    }
+                    else{
+                        // both present --
+                        one.push(x->left);
+                        two.push(y->left);
+                    }
                 }
 
-                int left = 0;
-                if(x->left){
-                    one.push(x->left);
-                    left++;
-                }
-                if(y->left){
-                    left++;
-                    two.push(y->left);                                
-                }                
-
-                int right = 0;
-                if(x->right){
-                    right++;
-                    one.push(x->right);
-                }
-                if(y->right){
-                    right++;
-                    two.push(y->right);                                
-                }
-
-                
-                if(left==1 || right == 1){
-                    return false;
+                if(x->right || y->right){
+                    // both null no problem
+                    if(!x->right && !y->right) continue;
+                    else if(!x->right || !y->right){
+                        // if one of them is null
+                        return false;
+                    }
+                    else{
+                        // both present --
+                        one.push(x->right);
+                        two.push(y->right);
+                    }
                 }
             }
         }

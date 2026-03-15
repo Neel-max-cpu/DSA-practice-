@@ -12,65 +12,62 @@
 class Solution {
 public:
     bool isSameTree(TreeNode* p, TreeNode* q) {
-        if(q==NULL && p==NULL) return true;
-        
-        if(q==NULL && p!=NULL) return false;
-        if(q!=NULL && p==NULL) return false;
-
         queue<TreeNode*>one;
         queue<TreeNode*>two;
-        one.push(p);
-        two.push(q);
+
+        if(p) one.push(p);
+        if(q) two.push(q);
 
         while(!one.empty() && !two.empty()){
             int len1 = one.size();
             int len2 = two.size();
 
-            if(len1!=len2) {
-                cout<<"line1"<<endl;
+            if(len1 != len2) {
+                cout<<"size not same!"<<endl;
                 return false;
             }
-
             for(int i=0; i<len1; i++){
-                TreeNode *current1 = one.front();
+                TreeNode *x = one.front();
+                TreeNode *y = two.front();
                 one.pop();
-                TreeNode *current2 = two.front();
                 two.pop();
 
-                
-                if(current1->val != current2->val) {
-                    cout<<"line2"<<endl;
+                if(x->val != y->val) {
+                    cout<<"val not same!"<<endl;
                     return false;
                 }
 
-                int x=0,y=0;
-                if(current1->left!=NULL) {
-                    x++;
-                    one.push(current1->left);       
+                int left = 0;
+                if(x->left){
+                    one.push(x->left);
+                    left++;
+                }
+                if(y->left){
+                    left++;
+                    two.push(y->left);                                
+                }                
+
+                int right = 0;
+                if(x->right){
+                    right++;
+                    one.push(x->right);
+                }
+                if(y->right){
+                    right++;
+                    two.push(y->right);                                
                 }
 
-                if(current2->left!=NULL){
-                    y++;
-                    two.push(current2->left);
-                }
-
-                if(x!=y) return false;
-               
                 
-                if(current1->right!=NULL) {
-                    x++;
-                    one.push(current1->right);       
+                if(left==1 || right == 1){
+                    return false;
                 }
-
-                if(current2->right!=NULL) {
-                    y++;
-                    two.push(current2->right);
-                }
-                
-                if(x!=y) return false;
             }
         }
 
-        return true;
+        if(!one.empty() || !two.empty()) {
+            cout<<"one/two is not empty!"<<endl;
+            return false;
+        }
+        else return true;
     }
 };

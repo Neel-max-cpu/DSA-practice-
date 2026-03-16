@@ -18,6 +18,8 @@ public:
         if(root) q.push(root);
         else return ans;
 
+        // brute --
+        /*
         int count = 0;
         while(!q.empty()){
             int n = q.size();
@@ -34,6 +36,29 @@ public:
                 reverse(v.begin(), v.end()); 
             ans.push_back(v);
             count++;
+        }
+        return ans;
+        */
+
+
+        // optimal --- skipped reverse
+        bool leftToRight = true;
+        while(!q.empty()){
+            int n = q.size();
+            vector<int>v(n);
+            for(int i=0; i<n; i++){
+                TreeNode *node = q.front();
+                q.pop();
+                
+                int index = leftToRight? i : n-1-i;
+                v[index] = node->val;
+
+                if(node->left) q.push(node->left);
+                if(node->right) q.push(node->right);
+            }            
+            // alternate
+            leftToRight = !leftToRight;
+            ans.push_back(v);            
         }
         return ans;
     }

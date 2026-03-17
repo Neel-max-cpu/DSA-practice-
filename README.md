@@ -10,6 +10,7 @@ just the solution of my leetcode problems
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0103-binary-tree-zigzag-level-order-traversal/) | Medium |
 | [0104-maximum-depth-of-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0104-maximum-depth-of-binary-tree/) | Easy |
 | [0110-balanced-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0110-balanced-binary-tree/) | Easy |
+| [0124-binary-tree-maximum-path-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
 | [0145-binary-tree-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
 | [0199-binary-tree-right-side-view](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0199-binary-tree-right-side-view/) | Medium |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
@@ -22,6 +23,7 @@ just the solution of my leetcode problems
 | [0100-same-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0100-same-tree/) | Easy |
 | [0104-maximum-depth-of-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0104-maximum-depth-of-binary-tree/) | Easy |
 | [0110-balanced-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0110-balanced-binary-tree/) | Easy |
+| [0124-binary-tree-maximum-path-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
 | [0145-binary-tree-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
 | [0199-binary-tree-right-side-view](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0199-binary-tree-right-side-view/) | Medium |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
@@ -46,6 +48,7 @@ just the solution of my leetcode problems
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0103-binary-tree-zigzag-level-order-traversal/) | Medium |
 | [0104-maximum-depth-of-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0104-maximum-depth-of-binary-tree/) | Easy |
 | [0110-balanced-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0110-balanced-binary-tree/) | Easy |
+| [0124-binary-tree-maximum-path-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
 | [0145-binary-tree-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
 | [0199-binary-tree-right-side-view](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0199-binary-tree-right-side-view/) | Medium |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
@@ -64,4 +67,8 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0124-binary-tree-maximum-path-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
 <!---LeetCode Topics End-->

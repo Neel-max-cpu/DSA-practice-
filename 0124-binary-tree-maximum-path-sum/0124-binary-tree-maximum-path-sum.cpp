@@ -12,20 +12,31 @@
 class Solution {
 public:
     int helper(TreeNode*root, int &ans){
-        if(root==NULL) return 0;
+        if(root==NULL) return INT_MIN;
 
-        int left = max(0, helper(root->left, ans));
-        int right = max(0, helper(root->right, ans));
+        int left = helper(root->left, ans);
+        int right = helper(root->right, ans);
 
-        ans = max(ans, left+right+root->val);
-        
-        // return max of left/right since we need path and not the tree,
-        return max(left,right)+root->val;
+        int one = root->val;
+        int two = root->val;
+        int three = root->val;
+        int four = root->val;
+        if(left!=INT_MIN)
+            two += left;
+        if(right!=INT_MIN)
+            three += right;
+        if(left!=INT_MIN && right!=INT_MIN)
+            four += left + right;
+
+        // we can send root, root+down left or root+down right
+        int res = max({one, two, three});
+        // global max could be ans, res(3 options), or max that node(four)
+        ans = max({ans, res, four});
+        return res;
     }
 
     int maxPathSum(TreeNode* root) {
-        if(root==NULL) return 0;
-        int ans =INT_MIN;
+        int ans = INT_MIN;
         helper(root, ans);
         return ans;
     }

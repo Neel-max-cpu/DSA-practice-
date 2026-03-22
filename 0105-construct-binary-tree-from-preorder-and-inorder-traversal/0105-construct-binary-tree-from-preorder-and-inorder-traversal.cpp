@@ -17,6 +17,7 @@ public:
         int data = preorder[start_pre];
         TreeNode *root = new TreeNode(data);
         
+        // root's index in inorder array
         int root_ind = m[data];
         
         // elements in the left subtree
@@ -31,7 +32,10 @@ public:
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
         // pre = root, left, right,
         // inor  = left , root, right
-        // eg -- in = 40,20,50,10,60,30; post = 40,50,20,60,30,10
+
+        // pre order will give root, and inorder will give left and right
+        // map the inorder so that we can find the root's position (from pre order array to inorder's 
+        // in constant time)
         map<int,int>m;
         for(int i=0; i<inorder.size(); i++){
             m[inorder[i]] = i;

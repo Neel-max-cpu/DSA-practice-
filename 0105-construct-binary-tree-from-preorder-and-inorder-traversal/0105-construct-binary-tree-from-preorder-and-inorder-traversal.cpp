@@ -33,6 +33,12 @@ public:
         // pre = root, left, right,
         // inor  = left , root, right
 
+        /*
+        inorder = 40, 20, 50, 10, 60, 30
+        pre order = 10, 20, 40, 50, 30, 60
+        post order = 40, 50, 20, 60, 30, 10
+        */
+
         // pre order will give root, and inorder will give left and right
         // map the inorder so that we can find the root's position (from pre order array to inorder's 
         // in constant time)

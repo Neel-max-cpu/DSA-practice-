@@ -10,32 +10,48 @@
  * };
  */
 class Solution {
-public:
-    bool isSymmetric(TreeNode* root) {    
-        if(root==NULL) return false;
-        queue<TreeNode*>q;
-        queue<TreeNode*>p;            
-
-        q.push(root->left);
-        p.push(root->right); 
-
-        while(!q.empty() && !p.empty()){
-            TreeNode *leftNode = q.front();
-            q.pop();
-            TreeNode *rightNode = p.front();
-            p.pop();
-
-            if(leftNode==NULL && rightNode==NULL) continue;
-            if(leftNode==NULL || rightNode==NULL) return false;
-            if(leftNode->val != rightNode->val) return false;
-
-            q.push(leftNode->left);
-            q.push(leftNode->right);
-            p.push(rightNode->right);            
-            p.push(rightNode->left);
+public:    
+    bool check(vector<string>&v){
+        int i = 0, j = v.size()-1;
+        while(i<j){                        
+            if(v[i]!=v[j]) {                
+                return false;
+            }
+            i++; j--;
         }
-        
-        return q.empty() && p.empty();
-        
+        return true;
+    }
+
+    bool isSymmetric(TreeNode* root) {        
+        queue<TreeNode*>q;
+        if(root)
+            q.push(root);
+
+        while(!q.empty()){
+            int len = q.size();
+            vector<string>v;
+            for(int i=0; i<len; i++){
+                TreeNode* curr = q.front();
+                q.pop();                
+                if(curr->left) {
+                    q.push(curr->left);
+                    int x = curr->left->val;
+                    v.push_back(to_string(x));
+                }
+                else v.push_back("#");
+                
+                if(curr->right) {
+                    q.push(curr->right);
+                    int x = curr->right->val;
+                    v.push_back(to_string(x));
+                }
+                else v.push_back("#");                
+            }
+
+            if(!check(v)) {                
+                return false;
+            }
+        }
+        return true;
     }
 };

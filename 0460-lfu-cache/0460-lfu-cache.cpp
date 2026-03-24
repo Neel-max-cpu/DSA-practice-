@@ -1,83 +1,76 @@
 class Node{
     public:
-    int key;
-    int value;
-    int freq;
-    Node *prev;
-    Node*next;
+    int key, value, freq;
+    Node *next, *prev;
     Node(int key, int value){
         this->key = key;
         this->value = value;
         freq = 1;
-        prev = NULL;
         next = NULL;
+        prev = NULL;
     }
 };
 
-class LRUList{
+class LRUlist{
     public:
-    // inside we have atlease 1 head and 1 tail
-    Node *head;
-    Node *tail;    
+    Node*head, *tail;
     int size;
-    LRUList(){
+    LRUlist(){
+        size = 0;
         head = new Node(-1,-1);
-        tail = new Node(-1,-1);
+        tail = new Node(-1, -1);
         head->next = tail;
         tail->prev = head;        
-        size=0;
     }
 
-    // insert
-    void insert(Node *listNode){
-        // near the tail newest
-        // -1<>2<>3<>-1      --add 4(after 3 --- -1 end tail)
-        Node *lastNode = tail->prev;    //3
-        lastNode->next = listNode;      //3>4
-        listNode->prev = lastNode;      //3<>4
-        listNode->next = tail;          //4>-1
-        tail->prev = listNode;          //4<>-1
+    void insert(Node *node){
+        // latest near head
+        Node *nextHead = head->next;
+
+        head->next = node;
+        node->prev = head;
+
+        node->next = nextHead;
+        nextHead->prev = node;
+        
         size++;
     }
 
-    // remove
-    void remove(Node*listNode){
-        // -1<>2<>3<>4<>-1      --remove 3
-        Node*nextNode = listNode->next;     //4
-        Node *prevNode = listNode->prev;    //2
+    void unlink(Node *node){
+        Node *nextNode = node->next;
+        Node *prevNode = node->prev;
 
-        prevNode->next = nextNode;  //2>4
-        nextNode->prev = prevNode;  //2<>4
+        nextNode->prev = prevNode;
+        prevNode->next = nextNode;
 
-        listNode->prev = NULL;
-        listNode->next = NULL;
-        size--;        
+        node->next = NULL;
+        node->prev = NULL;
 
-        //don't delete
-        //delete(listNode);
+        size--;
     }
 
-    Node*popLRU(){
+    Node *getLeastUsed(){
         if(size==0) return NULL;
-        Node*listNode = head->next;
-        remove(listNode);
-        return listNode;
-    }    
+        Node *leastUsed = tail->prev;
+        // unlink
+        unlink(leastUsed);
+        return leastUsed;
+    }
 
-    // empty
     bool empty(){
         return size == 0;
     }
-
 };
 
+
+
 class LFUCache {
-public:    
-    unordered_map<int, LRUList*> freqBucket; // near head oldest - near tail newest
-    unordered_map<int,Node*>m;    // key and node
-    int curr;
-    int size;
-    int minFreq;
+public:
+    // near tail least used -- near head latest (freq, and lru list)
+    unordered_map<int, LRUlist*>freqBucket;
+    // key and node -- node has key, value and freq
+    unordered_map<int,Node*>m;
+    int curr, size, minFreq;
     LFUCache(int capacity) {
         size = capacity;
         curr = 0;
@@ -86,18 +79,16 @@ public:
     
     int get(int key) {
         if(size==0) return -1;
+
+        // if not found --
+        if(m.find(key)==m.end()) return -1;
+
+        // found --
+        Node*node = m[key];
+        int value = node->value;
+        updateLRUList(node);
+        return value;
         
-        // not present in the map
-        if(m.find(key)==m.end()){             
-            return -1;
-        }
-        else{
-            Node *listNode = m[key];
-            int value = listNode->value;
-            // remove from the freq and add it to freq+1   
-            updateLRUList(listNode);
-            return value;
-        }
     }
     
     void put(int key, int value) {
@@ -105,56 +96,60 @@ public:
 
         if(m.find(key)!=m.end()){
             // if found
-            Node *listNode = m[key];
-            listNode->value = value;
-            updateLRUList(listNode);
+            Node *node = m[key];
+            // update value
+            node->value = value;
+            updateLRUList(node);
             return;
         }
 
-        if(curr == size){
-            LRUList *list = freqBucket[minFreq];
-            // free from lru (don't delete - now)
-            Node *delNode = list->popLRU();
-            // delete from map
-            m.erase(delNode->key);
-            // finally delete then node
-            delete(delNode);
+        // if not found
+        if(curr==size){     
+            // if size full
+
+            // get list from minFreq
+            LRUlist *list = freqBucket[minFreq]; 
+            // get the least used (unlinked)
+            Node *leastUsed = list->getLeastUsed();
+            // delete from the map
+            m.erase(leastUsed->key);
+            delete(leastUsed);
+
             curr--;
         }
 
-        Node *listNode = new Node(key, value);
+        Node *node = new Node(key, value);
+        // update minFreq
         minFreq = 1;
         if(freqBucket.find(1)==freqBucket.end()){
-            // if no lrulist with freq 1
-            freqBucket[1] = new LRUList();
+            // if no list with freq 1 then create
+            freqBucket[1] = new LRUlist();
         }
-        // insert in lru list
-        freqBucket[1]->insert(listNode);
+        // insert
+        freqBucket[1]->insert(node);
         // insert in map
-        m[key]=listNode;
+        m[key] = node;
         curr++;
-    }    
+    }
 
-    private:    
-    void updateLRUList(Node*listNode){
-        // here we are detatching the list -- don't delete
+    private:
+    void updateLRUList(Node *node){
+        int freq = node->freq;
+        // remove the node from the LRU -- but don't delete node
+        freqBucket[freq]->unlink(node);
 
-        int freq = listNode->freq;                
-        freqBucket[freq]->remove(listNode); 
+        if(freq==minFreq && freqBucket[freq]->empty()) minFreq++;
 
-        if(freq==minFreq && freqBucket[freq]->empty()) minFreq++;        
+        // increase freq --
+        node->freq = freq+1;
+        int currFreq = node->freq;
 
-        // increase freq
-        listNode->freq = freq+1;
-        int currFreq = listNode->freq;
-
-        // add in the new LRU list if size small
-        if(freqBucket.find(currFreq) == freqBucket.end()){
-            // if freq not there then add
-            freqBucket[currFreq] = new LRUList();
+        // add the node in the currFreq (if not present create)
+        if(freqBucket.find(currFreq)==freqBucket.end()){
+            freqBucket[currFreq] = new LRUlist();
         }
-        // add it 
-        freqBucket[currFreq]->insert(listNode);
+        // insert it --
+        freqBucket[currFreq]->insert(node);
     }
 };
 

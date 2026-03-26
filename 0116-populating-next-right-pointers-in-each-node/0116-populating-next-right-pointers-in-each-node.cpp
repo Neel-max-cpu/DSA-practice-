@@ -50,31 +50,26 @@ public:
         */
 
         // optimal -- o(n) ans sc - o(1) (skipping the queue)
-        Node *curr = root;
-        Node *prev = NULL;
-        int count = 1;
-        while(curr){
-            if(curr->left && curr->right){
-                // left points to right
-                curr->left->next = curr->right;
-                // right points to null
-                curr->right->next = NULL;
-            }
-            if(prev){
-                // if prev is present then prev's next will point to left
-                prev->next = curr->left;
-            }
+        Node *start = root;                
+        while(start){
+            // keeping this for vertical travelling
+            Node *curr = start;
+            while(curr){
+                // travel horizontally ---
+                // connect left and right
+                if(curr->left && curr->right){
+                    curr->left->next = curr->right;
+                }   
+                // connect right to next's left    
+                if(curr->right && curr->next && curr->next->left){
+                    curr->right->next = curr->next->left;
+                }
 
-            if(count>=2){
-                // we want it to work from 3rd level so update it from 2nd level
-                prev = curr->right;
+                // move to next
+                curr = curr->next;                
             }
-
-            // move to root to left (if root's next point to null else move next)
-            if(curr->next) curr = curr->next;
-            else curr= curr->left;
-
-            count++;
+            // move left most since we finished travelling level wise
+            start = start->left;
         }
         return root;
 

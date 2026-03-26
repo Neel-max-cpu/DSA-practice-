@@ -14,9 +14,20 @@ public:
     TreeNode* searchBST(TreeNode* root, int val) {
         if(!root) return root;
 
-        // found
+        // found 
+        // recursion --
+        /*
         if(val==root->val) return root;
         else if(val<root->val) return searchBST(root->left, val);
         else return searchBST(root->right, val);
+        */
+
+        // iterative --
+        while(root){
+            if(root->val == val) return root;
+            else if(root->val > val) root = root->left;
+            else root = root->right;
+        }
+        return NULL;
     }
 };

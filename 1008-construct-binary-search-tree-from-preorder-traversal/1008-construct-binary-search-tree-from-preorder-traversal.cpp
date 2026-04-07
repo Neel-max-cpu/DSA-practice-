@@ -11,49 +11,63 @@
  */
 class Solution {
 public:
-    TreeNode *helper(int start_pre, int end_pre, vector<int>&pre, int start_in, int end_in, vector<int>&in, map<int,int>&m){
-        if(start_pre>end_pre || start_in>end_in) return NULL;
-        
-        int data = pre[start_pre];
-        TreeNode *root = new TreeNode(data);
-        int ind = m[data];
-        int left = ind-start_in;
+    TreeNode *helper(int start_in, int end_in, vector<int>&inorder, 
+        int start_pre, int end_pre, vector<int>&preorder, unordered_map<int,int>&m)
+    {
+        if(start_in>end_in || start_pre > end_pre) return NULL;        
 
-        root->left = helper(start_pre+1, start_pre+left, pre, start_in, ind-1, in, m);
-        root->right = helper(start_pre+left+1, end_pre, pre, ind+1, end_in, in, m);
+        int data = preorder[start_pre];
+        TreeNode *root = new TreeNode(data);
+
+        // root's index in inorder array
+        int root_idx = m[data];
+
+        // elements in the left subtree 
+        int len = root_idx - start_in;
+
+        root->left = helper(start_in, root_idx-1, inorder, start_pre+1, start_pre+len, preorder, m);
+        root->right = helper(root_idx+1, end_in, inorder, start_pre+len+1, end_pre, preorder, m);
         return root;
     }
 
-    TreeNode *helper2(vector<int>&pre, int&i, int n, int upper_bound){
-        if(i==n || pre[i]>upper_bound) return NULL;        
+    TreeNode *helper2(vector<int>&preorder, int &i, int upperBound){
+        if(i>=preorder.size() || preorder[i]>upperBound) return NULL;
+        int data = preorder[i];        
 
-        TreeNode *root = new TreeNode(pre[i]);
+        // < only works
+        TreeNode *root = new TreeNode(data);
         i++;
-        root->left = helper2(pre, i, n, root->val);
-        root->right = helper2(pre, i, n, upper_bound);
-        return root;    
+
+        // when going left send the current root's data
+        root->left = helper2(preorder, i, data);
+        // when going right send the current root's parent's data(here upperbound is parent of current)
+        root->right = helper2(preorder, i, upperBound);
+
+        return root;
     }
 
-    TreeNode* bstFromPreorder(vector<int>& v) {
-        // preorder - node, left, right
-        // inorder of a bst is sorted array
+    TreeNode* bstFromPreorder(vector<int>& preorder) {
 
-        // o(nlogn)+o(n)
+        // brute ---
         /*
-        int n = v.size();
-        vector<int>a = v;
-        sort(a.begin(), a.end());
-        // now similar to make a binary tree using preorder and inorder
-        map<int,int>m;
-        for(int i=0; i<n; i++) m[a[i]]= i;
-        TreeNode *root = helper(0, n-1, v, 0, n-1, a, m);
+        vector<int>inorder = preorder;
+        sort(inorder.begin(), inorder.end());
+
+        //[8,5,1,7,10,12] -pre
+        //[1,5,7,8,10,12] -in
+
+        // now we have both inorder and preorder
+        unordered_map<int,int>m;
+        for(int i=0; i<inorder.size(); i++){
+            m[inorder[i]]=i;            
+        }
+        TreeNode *root = helper(0, inorder.size()-1, inorder, 0, preorder.size()-1, preorder, m);
         return root;
         */
 
-        // optimised o(n)
-        int n = v.size();
+        //optimal --- 
         int i = 0;
-        TreeNode*root = helper2(v, i, n, INT_MAX);
+        TreeNode *root = helper2(preorder, i, INT_MAX);
         return root;
     }
 };

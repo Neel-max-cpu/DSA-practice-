@@ -24,6 +24,7 @@ just the solution of my leetcode problems
 | [0572-subtree-of-another-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0572-subtree-of-another-tree/) | Easy |
 | [0662-maximum-width-of-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0662-maximum-width-of-binary-tree/) | Medium |
 | [0700-search-in-a-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0700-search-in-a-binary-search-tree/) | Easy |
+| [0703-kth-largest-element-in-a-stream](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 ## Depth-First Search
@@ -77,6 +78,7 @@ just the solution of my leetcode problems
 | [0572-subtree-of-another-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0572-subtree-of-another-tree/) | Easy |
 | [0662-maximum-width-of-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0662-maximum-width-of-binary-tree/) | Medium |
 | [0700-search-in-a-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0700-search-in-a-binary-search-tree/) | Easy |
+| [0703-kth-largest-element-in-a-stream](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 ## Stack
@@ -123,6 +125,7 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0460-lfu-cache](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0460-lfu-cache/) | Hard |
+| [0703-kth-largest-element-in-a-stream](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
 ## Doubly-Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -132,6 +135,7 @@ just the solution of my leetcode problems
 | ------- | ------- |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0108-convert-sorted-array-to-binary-search-tree/) | Easy |
 | [0700-search-in-a-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0700-search-in-a-binary-search-tree/) | Easy |
+| [0703-kth-largest-element-in-a-stream](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 ## Monotonic Stack
 | Problem Name | Difficulty |
@@ -145,4 +149,12 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0572-subtree-of-another-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0572-subtree-of-another-tree/) | Easy |
+## Heap (Priority Queue)
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0703-kth-largest-element-in-a-stream](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
+## Data Stream
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0703-kth-largest-element-in-a-stream](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
 <!---LeetCode Topics End-->

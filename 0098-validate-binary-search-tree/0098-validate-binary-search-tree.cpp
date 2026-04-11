@@ -11,20 +11,19 @@
  */
 class Solution {
 public:
-    bool helper(TreeNode*root, long a, long b){
-        if(root==NULL) return true;
+    bool helper(TreeNode *root, long mini, long maxi){
+        if(!root) return true;
 
-        bool f1 = helper(root->left, a, root->val);
-        bool f2 = helper(root->right, root->val, b);
+        // since strictly so equal
+        if(root->val <= mini || root->val >= maxi){
+            return false;
+        }
 
-        // all must be true return true else false (generally right subtree >= but here given > only question)
-        return ((root->val>a && root->val<b) && f1 && f2);
+        return helper(root->left, mini, root->val) && helper(root->right, root->val, maxi);
     }
 
     bool isValidBST(TreeNode* root) {
-        // starting node's range INT_MIN,
-        // 2147483647-max -2147483648-min
-        if(root==NULL) return true;
-        return helper(root, LLONG_MIN, LLONG_MAX);
+        if(!root) return true;
+        return helper(root, LONG_MIN, LONG_MAX);
     }
 };

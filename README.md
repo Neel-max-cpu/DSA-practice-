@@ -5,6 +5,7 @@ just the solution of my leetcode problems
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0098-validate-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0098-validate-binary-search-tree/) | Medium |
 | [0100-same-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0100-same-tree/) | Easy |
 | [0101-symmetric-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0101-symmetric-tree/) | Easy |
 | [0102-binary-tree-level-order-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0102-binary-tree-level-order-traversal/) | Medium |
@@ -30,6 +31,7 @@ just the solution of my leetcode problems
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0098-validate-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0098-validate-binary-search-tree/) | Medium |
 | [0100-same-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0100-same-tree/) | Easy |
 | [0101-symmetric-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0101-symmetric-tree/) | Easy |
 | [0104-maximum-depth-of-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0104-maximum-depth-of-binary-tree/) | Easy |
@@ -59,6 +61,7 @@ just the solution of my leetcode problems
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0098-validate-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0098-validate-binary-search-tree/) | Medium |
 | [0100-same-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0100-same-tree/) | Easy |
 | [0101-symmetric-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0101-symmetric-tree/) | Easy |
 | [0102-binary-tree-level-order-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0102-binary-tree-level-order-traversal/) | Medium |
@@ -136,6 +139,7 @@ just the solution of my leetcode problems
 ## Binary Search Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0098-validate-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0098-validate-binary-search-tree/) | Medium |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0108-convert-sorted-array-to-binary-search-tree/) | Easy |
 | [0700-search-in-a-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0700-search-in-a-binary-search-tree/) | Easy |
 | [0703-kth-largest-element-in-a-stream](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |

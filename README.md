@@ -19,6 +19,7 @@ just the solution of my leetcode problems
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0116-populating-next-right-pointers-in-each-node/) | Medium |
 | [0124-binary-tree-maximum-path-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
 | [0145-binary-tree-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
+| [0173-binary-search-tree-iterator](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [0199-binary-tree-right-side-view](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0199-binary-tree-right-side-view/) | Medium |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0235-lowest-common-ancestor-of-a-binary-search-tree/) | Medium |
@@ -83,6 +84,7 @@ just the solution of my leetcode problems
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0116-populating-next-right-pointers-in-each-node/) | Medium |
 | [0124-binary-tree-maximum-path-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
 | [0145-binary-tree-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
+| [0173-binary-search-tree-iterator](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [0199-binary-tree-right-side-view](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0199-binary-tree-right-side-view/) | Medium |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0235-lowest-common-ancestor-of-a-binary-search-tree/) | Medium |
@@ -100,6 +102,7 @@ just the solution of my leetcode problems
 | ------- | ------- |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0114-flatten-binary-tree-to-linked-list/) | Medium |
 | [0145-binary-tree-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
+| [0173-binary-search-tree-iterator](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
@@ -143,6 +146,7 @@ just the solution of my leetcode problems
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0173-binary-search-tree-iterator](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [0460-lfu-cache](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0460-lfu-cache/) | Hard |
 | [0703-kth-largest-element-in-a-stream](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
 ## Doubly-Linked List
@@ -154,6 +158,7 @@ just the solution of my leetcode problems
 | ------- | ------- |
 | [0098-validate-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0098-validate-binary-search-tree/) | Medium |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0108-convert-sorted-array-to-binary-search-tree/) | Easy |
+| [0173-binary-search-tree-iterator](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0235-lowest-common-ancestor-of-a-binary-search-tree/) | Medium |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0653-two-sum-iv-input-is-a-bst/) | Easy |
@@ -206,4 +211,8 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
+## Iterator
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0173-binary-search-tree-iterator](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0173-binary-search-tree-iterator/) | Medium |
 <!---LeetCode Topics End-->

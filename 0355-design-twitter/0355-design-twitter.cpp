@@ -91,7 +91,10 @@ public:
         return data;
         */
 
-        // similar to merge k sorted list ---
+        // similar to merge k sorted list --- (most optimal)
+
+        // method 1 put all following twetts and bring out top 10 -- (almost optimal)
+        /*
         m[userId].insert(userId);
         priority_queue<pair<int,int>>maxHeap;
         // iterate over the following list
@@ -108,6 +111,60 @@ public:
             maxHeap.pop();
             res.push_back(x.second);
         }
+        return res;
+        */
+
+        // method 2 -- push only the latest of each user into heap (most optimal)
+        m[userId].insert(userId);
+
+        // {time, tweetId, userId, index} each maxheap contatains
+        priority_queue<vector<int>> maxHeap;
+
+        // push only the "latest/last" tweet of every followed user
+        for(auto user : m[userId]) {
+
+            if(posts[user].size() == 0) continue;
+
+            // last index 
+            int idx = posts[user].size() - 1;
+
+            // push it ---
+            maxHeap.push({
+                posts[user][idx].first,     // time
+                posts[user][idx].second,    // tweetid
+                user,                       // user
+                idx                         // idx
+            });
+        }
+
+        vector<int> res;
+
+        while(!maxHeap.empty() && res.size() < 10) {
+
+            auto curr = maxHeap.top();
+            maxHeap.pop();
+
+            int tweetTime = curr[0];
+            int tweetId = curr[1];
+            int user = curr[2];
+            int idx = curr[3];
+
+            res.push_back(tweetId);
+
+            // push next previous tweet of same user
+            if(idx > 0) {
+
+                idx--;
+
+                maxHeap.push({
+                    posts[user][idx].first,
+                    posts[user][idx].second,
+                    user,
+                    idx
+                });
+            }
+        }
+
         return res;
     }
     

@@ -29,16 +29,7 @@ public:
         vector<vector<bool>>visited(n, vector<bool>(m,false));
         vector<vector<int>>ans = image;
         int original = image[sr][sc];
-        helper(image, sr, sc, color, visited, original, ans);
-
-        // for(int i=0; i<n; i++){
-        //     for(int j=0; j<m; j++){
-        //         if(!visited[i][j]){
-        //             original = image[i][j];
-        //             helper(image, i, j, color, visited, original, ans);
-        //         }
-        //     }
-        // }
+        helper(image, sr, sc, color, visited, original, ans);      
         return ans;
     }
 };

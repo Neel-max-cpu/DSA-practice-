@@ -41,8 +41,42 @@ public:
         return newNode;
     }
 
-    Node* cloneGraph(Node* node) {        
+    Node* cloneGraph(Node* node) {     
         unordered_map<Node*,Node*>m;
+        // dfs ----
+        /*   
         return helper(node, m);        
+        */
+
+        // bfs --
+        if(!node) return NULL;
+        int val = node->val;
+        Node *copy = new Node(val);
+
+        // put it in map
+        m[node] = copy;
+
+        queue<Node*>q;
+        q.push(node);
+        while(!q.empty()){
+            Node *curr = q.front();
+            q.pop();
+            vector<Node*> v = curr->neighbors;
+            for(int i=0; i<v.size(); i++){
+                Node *neighbour = v[i];
+                Node *newNode = NULL;
+                if(m.find(neighbour)==m.end()){
+                    // if not present -- create clone, add in map, and push it in queue
+                    Node *clone = new Node(neighbour->val);
+                    m[neighbour] = clone;
+                    q.push(neighbour);
+                }
+                // if present do nothing extra 
+
+                // cloned neighbor to the cloned current node's neighbor list - common to both
+                m[curr]->neighbors.push_back(m[neighbour]);
+            }
+        }
+        return copy;
     }
 };

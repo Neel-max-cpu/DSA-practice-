@@ -21,50 +21,28 @@ public:
 
 class Solution {
 public:
-    unordered_map<Node*,Node*>m;
-    Node* cloneGraph(Node* node) {
-        if(node==NULL) return NULL;           
-        /*
-        cout<<node->val<<": ";
-        for(int i=0; i<node->neighbors.size(); i++){
-            cout<<node->neighbors[i]->val<<" ";
-        }
-        cout<<endl;         
-        return NULL;
-        */
+    Node *helper(Node*node, unordered_map<Node*,Node*>&m){
+        if(!node) return NULL;
 
-        // using dfs ---
-        /*
-        if(m.find(node)==m.end()){
-            // if node not found -- create a node with empty vector
-            // map the original node to the new copy node
-            m[node] = new Node(node->val);
-            for(int i=0; i<node->neighbors.size(); i++){
-                Node *neighbor = node->neighbors[i];
-                m[node]->neighbors.push_back(cloneGraph(neighbor));
-            }
-        }
-        return m[node];
-        */
+        // if present - return the clone
+        if(m.find(node)!=m.end()) return m[node];
 
-        // using bfs ---
-        Node *copy = new Node(node->val);
-        m[node] = copy;
-        queue<Node*>q;
-        q.push(node);
-        while(!q.empty()){
-            Node* curr = q.front();
-            q.pop();
-            for(int i=0; i<curr->neighbors.size();i++){
-                Node *neighbor = curr->neighbors[i];
-                if(m.find(neighbor)==m.end()){
-                    // if not present
-                    m[neighbor] = new Node(neighbor->val);
-                    q.push(neighbor);
-                }
-                m[curr]->neighbors.push_back(m[neighbor]);
-            }
+        int val = node->val;
+        Node *newNode = new Node(val);
+
+        // save in map
+        m[node] = newNode;
+
+        vector<Node*> v = node->neighbors;
+        for(int i=0; i<v.size(); i++){
+            Node *neighbour = helper(v[i], m);
+            newNode->neighbors.push_back(neighbour);
         }
-        return copy;
+        return newNode;
+    }
+
+    Node* cloneGraph(Node* node) {        
+        unordered_map<Node*,Node*>m;
+        return helper(node, m);        
     }
 };

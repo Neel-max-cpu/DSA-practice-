@@ -1,37 +1,62 @@
 class Solution {
 public:
-    bool helper(int start, unordered_map<int,vector<int>>&m, unordered_set<int>&visited ){
-        // already visited and course haven't ended
-        if(visited.find(start)!=visited.end()) return false;
-        
-        if(m[start].empty()) return true;
+    vector<vector<int>> createAdj(int v, vector<vector<int>>&arr){
+        vector<vector<int>>adj(v);
+        for(int i = 0; i<arr.size(); i++){
+            int first = arr[i][0];
+            int second = arr[i][1];
+            // directed            
+            adj[second].push_back(first);
+        }
+        return adj;
+    }        
 
-        visited.insert(start);
-        for(int i=0; i<m[start].size(); i++){
-            int value = m[start][i];        
-            if(!helper(value, m, visited)) return false;                                                            
+
+    bool dfsCycle(int node, vector<vector<int>>&adj, vector<bool>&visited, vector<bool>&pathVisited){
+        visited[node] = true;
+        // its in the same path
+        pathVisited[node] = true;
+
+        for(auto it:adj[node]){
+            if(!visited[it]){
+                bool flag = dfsCycle(it, adj, visited, pathVisited);
+                // if true then cycle
+                if(flag) return true;
+            }
+            // if already visted 
+            else{
+                // then check for pathVisited (same path)
+                if(pathVisited[it]) return true;
+                else continue;
+            }
         }
 
-        // if course is completed erase all the prerequisites   
-        m[start].clear();        
-        // and mark as unvisited
-        visited.erase(start);
+        // remove it since returned
+        pathVisited[node] = false;
+        return false;
+    }
+
+    bool dfs(vector<vector<int>>&adj, int v){
+        vector<bool>visited(v, false);
+        vector<bool>pathVisited(v, false);
+
+        for(int i=0; i<v; i++){
+            if(!visited[i]){
+                bool flag = dfsCycle(i, adj, visited, pathVisited);
+                if(flag){
+                    // has cycle so cant finish course
+                    return false;
+                }
+            }
+        }
         return true;
     }
 
-    bool canFinish(int n, vector<vector<int>>& v) {
-        unordered_map<int,vector<int>>m;
-        for(int i=0; i<v.size(); i++){
-            int a = v[i][0];
-            int b = v[i][1];
-            m[a].push_back(b);
-        }
-        
-        // dfs from 0 to n-1
-        unordered_set<int>visited;
-        for(int i=0; i<n; i++){
-            if(!helper(i, m, visited)) return false;
-        }
-        return true;
+    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+        // directed graph
+        vector<vector<int>>adj = createAdj(numCourses, prerequisites);   
+
+        // dfs
+        return dfs(adj, numCourses);
     }
 };

@@ -48,6 +48,7 @@ just the solution of my leetcode problems
 | [0133-clone-graph](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0133-clone-graph/) | Medium |
 | [0145-binary-tree-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
 | [0199-binary-tree-right-side-view](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0199-binary-tree-right-side-view/) | Medium |
+| [0200-number-of-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0200-number-of-islands/) | Medium |
 | [0207-course-schedule](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0207-course-schedule/) | Medium |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0235-lowest-common-ancestor-of-a-binary-search-tree/) | Medium |
@@ -70,6 +71,7 @@ just the solution of my leetcode problems
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0116-populating-next-right-pointers-in-each-node/) | Medium |
 | [0133-clone-graph](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0133-clone-graph/) | Medium |
 | [0199-binary-tree-right-side-view](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0199-binary-tree-right-side-view/) | Medium |
+| [0200-number-of-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0200-number-of-islands/) | Medium |
 | [0207-course-schedule](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0207-course-schedule/) | Medium |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0653-two-sum-iv-input-is-a-bst/) | Easy |
 | [0662-maximum-width-of-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0662-maximum-width-of-binary-tree/) | Medium |
@@ -143,6 +145,7 @@ just the solution of my leetcode problems
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0105-construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0106-construct-binary-tree-from-inorder-and-postorder-traversal/) | Medium |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0108-convert-sorted-array-to-binary-search-tree/) | Easy |
+| [0200-number-of-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0200-number-of-islands/) | Medium |
 | [0215-kth-largest-element-in-an-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0621-task-scheduler](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0621-task-scheduler/) | Medium |
 | [0733-flood-fill](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0733-flood-fill/) | Easy |
@@ -237,6 +240,7 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
+| [0200-number-of-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0200-number-of-islands/) | Medium |
 | [0733-flood-fill](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0733-flood-fill/) | Easy |
 ## Iterator
 | Problem Name | Difficulty |
@@ -259,4 +263,8 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0207-course-schedule](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0207-course-schedule/) | Medium |
+## Union-Find
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0200-number-of-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0200-number-of-islands/) | Medium |
 <!---LeetCode Topics End-->

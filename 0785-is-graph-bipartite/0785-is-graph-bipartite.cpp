@@ -1,48 +1,41 @@
 class Solution {
 public:
-    bool bfs(int start, vector<int>&color, vector<vector<int>>&graph){
-        color[start] = 0;
-        queue<int>q;
-        q.push(start);
-        while(!q.empty()){
-            int front = q.front();
-            q.pop();
+    bool dfs(int node, vector<bool>&visited, vector<bool>&color, vector<vector<int>>&adj){
+        visited[node] = true;
 
-            for(auto it:graph[front]){                
-                if(color[it]==-1) {
-                    color[it] = !color[front]; 
-                    q.push(it);
+        for(auto it:adj[node]){
+            if(!visited[it]){          
+                // put opposite color      
+                color[it]=!color[node];
+                bool flag = dfs(it, visited, color, adj);
+                if(!flag) return false;                
+            }
+            // already visited
+            else{
+                if(color[it]!=color[node]){
+                    // opposite color
+                    continue;
                 }
-                else if(color[it]==color[front]) return false;
+                else{
+                    // same color
+                    return false;
+                }
             }
-        }
-        return true;
-    }
-
-    bool dfs(int start, int col, vector<int>&color, vector<vector<int>>&graph){        
-        color[start] = col;
-        for(auto it:graph[start]){
-            if(color[it]==-1){                                               
-                if(!dfs(it, !col, color, graph)) return false;
-            }
-            else if(color[it]==color[start]) return false;
         }
         return true;
     }
 
     bool isBipartite(vector<vector<int>>& graph) {
-        // linear can have bipartie, cycle graph with even node can have , but odd one can't
         int v = graph.size();
+        vector<bool>visited(v, false);
+        vector<bool>color(v, false);        
 
-        // using bfs/dfs --
-        vector<int>color(v, -1);        
         for(int i=0; i<v; i++){
-            if(color[i]==-1) {
-                // if(!bfs(i, color, graph)) return false;                
-                if(!dfs(i, 0, color, graph)) return false;
+            if(!visited[i]){
+                bool flag = dfs(i, visited, color, graph);
+                if(!flag) return false;
             }
         }
         return true;
-       
     }
 };

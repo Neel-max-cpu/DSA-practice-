@@ -2,51 +2,42 @@ class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
         int n = nums.size();
+        vector<int>ans(n,0);
 
-        // METHOD 2 ---
-        int pre = 1;
-        vector<int>ans(n,1);
-        for(int i=0; i<n; i++){
-            ans[i] = pre;
-            pre = pre*nums[i];
-        }
-        int post = 1;
-        for(int i=n-1; i>=0; i--){
-            ans[i] = ans[i]*post;
-            post = post*nums[i];
-        }
-        return ans;
-
-
-
-        // METHOD 1---
+        // brute --
         /*
-        // post, pre                
-        vector<int>a, b(n);
-        int x = 1;
-        int y = 1;
-        // n
-        for(auto it:nums){
-            x*=it;
-            a.push_back(x);
-        }
-        // n
-        for(int i=n-1; i>=0; i--){
-            y*=nums[i];
-            b[i] = y;
-        }
-        // n
-        vector<int>ans(n);
+        vector<int>pre(n,1);
+        vector<int>suf(n,1);
+        long long pro = 1;
         for(int i=0; i<n; i++){
-            if(i==0) ans[i] = b[i+1];
-            else if(i==n-1) ans[i] = a[i-1];
-            else{
-                int temp = a[i-1]*b[i+1];
-                ans[i] = temp;
-            }
-        }   
-        return ans;
+            pro = nums[i]*pro;
+            pre[i]=pro;
+        }
+        pro = 1;
+        for(int i=n-1; i>=0; i--){
+            pro = nums[i]*pro;
+            suf[i] = pro;
+        }
+
+        for(int i=0; i<n; i++){
+            if(i==0) ans[i] = suf[i+1];
+            else if(i==n-1) ans[i]=pre[i-1];
+            else ans[i] = pre[i-1]*suf[i+1];
+        }
         */
-        
+        // best --
+        int prefix = 1;
+        for(int i=0; i<n; i++){
+            ans[i] = prefix;
+            prefix *= nums[i];
+        }
+
+        int suffix = 1;
+        for(int i=n-1; i>=0; i--){
+            ans[i] = ans[i]*suffix;
+            suffix *= nums[i];
+        }        
+
+        return ans;
     }
 };

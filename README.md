@@ -120,6 +120,7 @@ just the solution of my leetcode problems
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0001-two-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0001-two-sum/) | Easy |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0105-construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0106-construct-binary-tree-from-inorder-and-postorder-traversal/) | Medium |
 | [0133-clone-graph](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0133-clone-graph/) | Medium |
@@ -148,6 +149,7 @@ just the solution of my leetcode problems
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0001-two-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0001-two-sum/) | Easy |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0105-construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0106-construct-binary-tree-from-inorder-and-postorder-traversal/) | Medium |

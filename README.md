@@ -162,6 +162,7 @@ just the solution of my leetcode problems
 | [0200-number-of-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0200-number-of-islands/) | Medium |
 | [0215-kth-largest-element-in-an-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0217-contains-duplicate](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0217-contains-duplicate/) | Easy |
+| [0238-product-of-array-except-self](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0238-product-of-array-except-self/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0621-task-scheduler](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0621-task-scheduler/) | Medium |
 | [0733-flood-fill](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0733-flood-fill/) | Easy |
@@ -298,4 +299,8 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0347-top-k-frequent-elements](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0347-top-k-frequent-elements/) | Medium |
+## Prefix Sum
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0238-product-of-array-except-self](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0238-product-of-array-except-self/) | Medium |
 <!---LeetCode Topics End-->

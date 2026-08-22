@@ -138,6 +138,7 @@ just the solution of my leetcode problems
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0015-3sum/) | Medium |
 | [0049-group-anagrams](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0049-group-anagrams/) | Medium |
 | [0215-kth-largest-element-in-an-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0217-contains-duplicate](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0217-contains-duplicate/) | Easy |
@@ -155,6 +156,7 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0001-two-sum/) | Easy |
+| [0015-3sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0015-3sum/) | Medium |
 | [0049-group-anagrams](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0049-group-anagrams/) | Medium |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0105-construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium |
@@ -259,6 +261,7 @@ just the solution of my leetcode problems
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0015-3sum/) | Medium |
 | [0125-valid-palindrome](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0125-valid-palindrome/) | Easy |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0653-two-sum-iv-input-is-a-bst/) | Easy |

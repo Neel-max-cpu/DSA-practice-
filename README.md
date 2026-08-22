@@ -156,6 +156,7 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0001-two-sum/) | Easy |
+| [0011-container-with-most-water](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0011-container-with-most-water/) | Medium |
 | [0015-3sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0015-3sum/) | Medium |
 | [0049-group-anagrams](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0049-group-anagrams/) | Medium |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
@@ -261,6 +262,7 @@ just the solution of my leetcode problems
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0011-container-with-most-water](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0011-container-with-most-water/) | Medium |
 | [0015-3sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0015-3sum/) | Medium |
 | [0125-valid-palindrome](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0125-valid-palindrome/) | Easy |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
@@ -283,6 +285,7 @@ just the solution of my leetcode problems
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0011-container-with-most-water](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0011-container-with-most-water/) | Medium |
 | [0621-task-scheduler](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0621-task-scheduler/) | Medium |
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
 ## Counting

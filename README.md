@@ -219,6 +219,7 @@ just the solution of my leetcode problems
 | ------- | ------- |
 | [0049-group-anagrams](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0049-group-anagrams/) | Medium |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
+| [0125-valid-palindrome](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0125-valid-palindrome/) | Easy |
 | [0242-valid-anagram](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0242-valid-anagram/) | Easy |
 | [0572-subtree-of-another-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0572-subtree-of-another-tree/) | Easy |
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
@@ -256,6 +257,7 @@ just the solution of my leetcode problems
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0125-valid-palindrome](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0125-valid-palindrome/) | Easy |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0653-two-sum-iv-input-is-a-bst/) | Easy |
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
 ## Backtracking

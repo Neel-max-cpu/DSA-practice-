@@ -7,6 +7,16 @@ public:
             if(res[i]!=res[n-1-i]) return false;
         }
         return true;
+
+        /*
+        int i = 0, j=res.size()-1;        
+        while(i<j){
+            if(res[i]!=res[j]) return false;
+            i++; j--;
+        }
+        return true;
+        */
+
     }
 
     bool isPalindrome(string s) {
@@ -18,6 +28,15 @@ public:
             }
             if(c>='0' && c<='9') res+=c;
         }
+
+        // or --
+        /*
+        for(auto it:s){
+            if(isalnum(it)){
+                res+=tolower(it);
+            }
+        }
+        */
 
         if(checkPalindrome(res)) return true;
         return false;

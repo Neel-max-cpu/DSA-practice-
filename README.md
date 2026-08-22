@@ -161,6 +161,7 @@ just the solution of my leetcode problems
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0106-construct-binary-tree-from-inorder-and-postorder-traversal/) | Medium |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0108-convert-sorted-array-to-binary-search-tree/) | Easy |
 | [0128-longest-consecutive-sequence](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0128-longest-consecutive-sequence/) | Medium |
+| [0167-two-sum-ii-input-array-is-sorted](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0200-number-of-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0200-number-of-islands/) | Medium |
 | [0215-kth-largest-element-in-an-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0217-contains-duplicate](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0217-contains-duplicate/) | Easy |
@@ -202,6 +203,7 @@ just the solution of my leetcode problems
 | ------- | ------- |
 | [0098-validate-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0098-validate-binary-search-tree/) | Medium |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0108-convert-sorted-array-to-binary-search-tree/) | Easy |
+| [0167-two-sum-ii-input-array-is-sorted](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0173-binary-search-tree-iterator](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0235-lowest-common-ancestor-of-a-binary-search-tree/) | Medium |
@@ -258,6 +260,7 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0125-valid-palindrome](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0125-valid-palindrome/) | Easy |
+| [0167-two-sum-ii-input-array-is-sorted](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0653-two-sum-iv-input-is-a-bst/) | Easy |
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
 ## Backtracking

@@ -122,6 +122,7 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0001-two-sum/) | Easy |
+| [0003-longest-substring-without-repeating-characters](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0049-group-anagrams](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0049-group-anagrams/) | Medium |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0105-construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0106-construct-binary-tree-from-inorder-and-postorder-traversal/) | Medium |
@@ -228,6 +229,7 @@ just the solution of my leetcode problems
 ## String Matching
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0049-group-anagrams](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0049-group-anagrams/) | Medium |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
 | [0125-valid-palindrome](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0125-valid-palindrome/) | Easy |
@@ -324,4 +326,8 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0238-product-of-array-except-self](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0238-product-of-array-except-self/) | Medium |
+## Sliding Window
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 <!---LeetCode Topics End-->

@@ -1,44 +1,51 @@
 class Solution {
 public:
-    int check(vector<int>&nums, int start, int end){
-        int maxi = INT_MIN;
-        for(int i=start; i<end; i++){
-            maxi = max(nums[i], maxi);
+
+    int getMax(vector<int>&arr, int end, int k){
+        int maxi = 0;
+        int start = end - (k-1);
+        for(int i=start; i<=end; i++){
+            maxi = max(maxi, arr[i]);
         }
         return maxi;
     }
-    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
-        int n = nums.size();
+    vector<int> maxSlidingWindow(vector<int>& arr, int k) {
+        int n = arr.size();        
+        vector<int>ans;
 
-        // brute force ---
+        // brute --
         /*
-        vector<int>ans;
-        for(int l=0; l<n-k+1; l++){            
-            ans.push_back(check(nums, l, l+k));    
+        for(int right=0; right<n; right++){
+            if(right>=k-1){
+                int currentMax = getMax(arr, right, k);
+                ans.push_back(currentMax);
+            }                                     
         }
         return ans;
-        */
-        
-        vector<int>ans;
-        // keep the deque in decreasing order always
-        deque<int>dq;
-        int l = 0, r=0;
-        while(r<n){
-            while(!dq.empty() && nums[dq.back()]<nums[r]){
-                dq.pop_back();
+        */        
+        priority_queue<pair<int,int>>pq;  
+        for(int right = 0; right<n; right++){
+                     
+            if(right>=k){
+                // pop till the top is not in the current window or not --                
+                // window from (right-k) to (right-1)
+                while(!(pq.top().second>=right-k && pq.top().second<=right-1)){
+                    pq.pop();
+                }                
+                auto x = pq.top();
+                ans.push_back(x.first);
             }
-            dq.push_back(r);
+            pq.push({arr[right], right});   
 
-            if(l>dq.front()) dq.pop_front();
-            if(r+1>=k) {
-                ans.push_back(nums[dq.front()]);
-                l++;
-            }
-            r++;
         }
+
+        // for the last element        
+        while(!(pq.top().second>=n-k && pq.top().second<=n-1)){
+            pq.pop();
+        }
+        auto x = pq.top();
+        ans.push_back(x.first);        
+
         return ans;
-        
-        
-        
     }
 };

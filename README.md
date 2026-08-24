@@ -117,6 +117,7 @@ just the solution of my leetcode problems
 | [0042-trapping-rain-water](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0042-trapping-rain-water/) | Hard |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0114-flatten-binary-tree-to-linked-list/) | Medium |
 | [0145-binary-tree-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0145-binary-tree-postorder-traversal/) | Easy |
+| [0155-min-stack](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0155-min-stack/) | Medium |
 | [0173-binary-search-tree-iterator](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 ## Hash Table
@@ -204,6 +205,7 @@ just the solution of my leetcode problems
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0155-min-stack](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0155-min-stack/) | Medium |
 | [0173-binary-search-tree-iterator](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [0355-design-twitter](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0355-design-twitter/) | Medium |
 | [0460-lfu-cache](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0460-lfu-cache/) | Hard |

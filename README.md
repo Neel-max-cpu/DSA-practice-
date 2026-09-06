@@ -182,6 +182,7 @@ just the solution of my leetcode problems
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0128-longest-consecutive-sequence](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0150-evaluate-reverse-polish-notation](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
+| [0153-find-minimum-in-rotated-sorted-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0200-number-of-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0200-number-of-islands/) | Medium |
 | [0215-kth-largest-element-in-an-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
@@ -228,6 +229,7 @@ just the solution of my leetcode problems
 | ------- | ------- |
 | [0098-validate-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0098-validate-binary-search-tree/) | Medium |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0108-convert-sorted-array-to-binary-search-tree/) | Easy |
+| [0153-find-minimum-in-rotated-sorted-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0173-binary-search-tree-iterator](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |

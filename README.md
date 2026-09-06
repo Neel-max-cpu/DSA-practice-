@@ -172,6 +172,7 @@ just the solution of my leetcode problems
 | [0001-two-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0001-two-sum/) | Easy |
 | [0011-container-with-most-water](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0011-container-with-most-water/) | Medium |
 | [0015-3sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0015-3sum/) | Medium |
+| [0033-search-in-rotated-sorted-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0033-search-in-rotated-sorted-array/) | Medium |
 | [0042-trapping-rain-water](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0042-trapping-rain-water/) | Hard |
 | [0049-group-anagrams](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0049-group-anagrams/) | Medium |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
@@ -227,6 +228,7 @@ just the solution of my leetcode problems
 ## Binary Search Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0033-search-in-rotated-sorted-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0033-search-in-rotated-sorted-array/) | Medium |
 | [0098-validate-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0098-validate-binary-search-tree/) | Medium |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0108-convert-sorted-array-to-binary-search-tree/) | Easy |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |

@@ -10,47 +10,20 @@ public:
                 ans = mid;
                 return ans;
             }
-            else if(arr[mid]>arr[right]){
-                // here right side sorted in smaller, and left side sorted in bigger                
-                if(arr[mid]>target){
-                    if(target<=arr[right]){
-                        // need to find in smller half - right
-                        left = mid+1;
-                    }
-                    else{
-                        right = mid-1;
-                    }
+            // check if left part is sorted --
+            if(arr[left]<=arr[mid]){
+                // check target is between
+                if(target>=arr[left] && target<arr[mid]){
+                    right = mid-1;
                 }
-                else{
-                    if(target>=arr[left]){
-                        // need to find in larger half - left                        
-                        right = mid-1;
-                    }
-                    else{
-                        left = mid+1;                        
-                    }
-                }                
+                else left = mid+1;
             }
-            else{                
-                // here left side sorted in smaller, and right side sorted in bigger                
-                if(arr[mid]>target){
-                    if(target>=arr[left]){
-                        // need to find in smller half - left
-                        right = mid-1;
-                    }
-                    else{
-                        left = mid+1;
-                    }                    
+            // right part sorted --
+            else{
+                if(arr[mid]<target && target<=arr[right]){
+                    left = mid+1;
                 }
-                else{
-                    if(target<=arr[right]){
-                        // need to find in larger half - right
-                        left = mid+1;                        
-                    }
-                    else{
-                        right = mid-1;
-                    }                    
-                }                
+                else right = mid-1;
             }
         }
         return ans;

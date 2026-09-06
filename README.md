@@ -145,6 +145,7 @@ just the solution of my leetcode problems
 | [0621-task-scheduler](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0621-task-scheduler/) | Medium |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0653-two-sum-iv-input-is-a-bst/) | Easy |
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
+| [0981-time-based-key-value-store](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0981-time-based-key-value-store/) | Medium |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 ## Sorting
 | Problem Name | Difficulty |
@@ -221,6 +222,7 @@ just the solution of my leetcode problems
 | [0355-design-twitter](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0355-design-twitter/) | Medium |
 | [0460-lfu-cache](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0460-lfu-cache/) | Hard |
 | [0703-kth-largest-element-in-a-stream](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
+| [0981-time-based-key-value-store](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0981-time-based-key-value-store/) | Medium |
 ## Doubly-Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -239,6 +241,7 @@ just the solution of my leetcode problems
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0653-two-sum-iv-input-is-a-bst/) | Easy |
 | [0700-search-in-a-binary-search-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0700-search-in-a-binary-search-tree/) | Easy |
 | [0703-kth-largest-element-in-a-stream](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
+| [0981-time-based-key-value-store](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0981-time-based-key-value-store/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 ## Monotonic Stack
@@ -263,6 +266,7 @@ just the solution of my leetcode problems
 | [0567-permutation-in-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0567-permutation-in-string/) | Medium |
 | [0572-subtree-of-another-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0572-subtree-of-another-tree/) | Easy |
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
+| [0981-time-based-key-value-store](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0981-time-based-key-value-store/) | Medium |
 ## Hash Function
 | Problem Name | Difficulty |
 | ------- | ------- |

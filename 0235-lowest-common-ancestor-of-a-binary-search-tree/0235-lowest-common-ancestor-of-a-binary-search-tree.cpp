@@ -10,15 +10,42 @@
 
 class Solution {
 public:
-    TreeNode* helper(TreeNode *root, TreeNode*p, TreeNode*q){
-        if(!root) return NULL;
+    void check(TreeNode*root, TreeNode*p, TreeNode*q, bool &one, bool &two){
+        if(!root) return;
+        
+        if(root==p) one = true;
+        if(root == q) two = true;
 
-        if(root->val > p->val && root->val > q->val) return helper(root->left, p, q);
-        else if(root->val < p->val && root->val < q->val) return helper(root->right, p, q);
-        else return root;
+        if(one && two) return;
+
+        check(root->left, p, q, one, two);
+        check(root->right, p, q, one, two);
     }
 
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        return helper(root, p, q);
+        if(!root) return root;
+
+        if(root == p || root == q) return root;
+
+        bool lp = false, lq = false;
+        check(root->left, p, q, lp, lq);
+
+        // if both on the left
+        if(lp && lq){
+            // go left
+            return lowestCommonAncestor(root->left, p, q);
+        }
+
+        bool rp = false, rq = false;
+        check(root->right, p,q, rp, rq);
+
+        // if both on right
+        if(rp && rq){
+            // go right
+            return lowestCommonAncestor(root->right, p, q);
+        }
+
+        // if both different
+        return root;
     }
 };

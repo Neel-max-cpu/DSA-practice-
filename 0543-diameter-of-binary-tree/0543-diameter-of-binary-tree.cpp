@@ -10,22 +10,20 @@
  * };
  */
 class Solution {
-public:
-    int helper(TreeNode *root, int &ans){
-        if(root == NULL) return 0;
+public:    
+    int helper(TreeNode*root, int&ans){
+        if(!root) return 0;
 
         int left = helper(root->left, ans);
-        int right = helper(root->right, ans);
+        int right = helper(root->right, ans);        
 
-        
-        ans = max(ans, left+right);
-        return  1+max(left,right);
-    } 
+        ans = max(ans, left+right);        
+        return 1+max(left,right);                
+    }
 
     int diameterOfBinaryTree(TreeNode* root) {
         int ans = 0;
-        // if i remove the ans, then its the code to find the heigh of the tree
-        helper(root, ans);
-        return ans;                
+        helper(root, ans);       
+        return ans; 
     }
 };

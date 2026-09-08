@@ -392,4 +392,8 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0020-valid-parentheses/) | Easy |
+## DP on Trees
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0543-diameter-of-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0543-diameter-of-binary-tree/) | Easy |
 <!---LeetCode Topics End-->

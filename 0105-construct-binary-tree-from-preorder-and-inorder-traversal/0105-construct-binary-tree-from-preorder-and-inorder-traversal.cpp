@@ -11,42 +11,29 @@
  */
 class Solution {
 public:
-    TreeNode *helper(int start_in, int end_in, vector<int>&inorder, int start_pre, int end_pre, vector<int>&preorder, map<int,int>&m){
-        if(start_in>end_in || start_pre>end_pre) return NULL;
+    TreeNode*helper(int pStart, int pEnd, vector<int>&preorder, int iStart, int iEnd, vector<int>&inorder, 
+    unordered_map<int,int>&m){
+        if(pStart>pEnd || iStart>iEnd) return NULL;
 
-        int data = preorder[start_pre];
-        TreeNode *root = new TreeNode(data);
-        
-        // root's index in inorder array
-        int root_ind = m[data];
-        
-        // elements in the left subtree
-        int len = root_ind-start_in;
+        int rootVal = preorder[pStart];
+        TreeNode*root = new TreeNode(rootVal);
 
-        root->left = helper(start_in, root_ind-1, inorder, start_pre+1, start_pre+len, preorder, m);
-        root->right = helper(root_ind+1, end_in, inorder, start_pre+len+1, end_pre, preorder, m);
+        int rootIdxInorder = m[rootVal];
+        // Input: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
+        int length = rootIdxInorder - iStart;
 
-        return root;        
+        root->left = helper(pStart+1, pStart+length, preorder, iStart, rootIdxInorder-1, inorder, m);
+        root->right = helper(pStart+length+1, pEnd, preorder, rootIdxInorder+1, iEnd, inorder, m);
+        return root;
     }
 
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-        // pre = root, left, right,
-        // inor  = left , root, right
-
-        /*
-        inorder = 40, 20, 50, 10, 60, 30
-        pre order = 10, 20, 40, 50, 30, 60
-        post order = 40, 50, 20, 60, 30, 10
-        */
-
-        // pre order will give root, and inorder will give left and right
-        // map the inorder so that we can find the root's position (from pre order array to inorder's 
-        // in constant time)
-        map<int,int>m;
-        for(int i=0; i<inorder.size(); i++){
+        int n = inorder.size();
+        unordered_map<int,int>m;
+        for(int i=0; i<n; i++){
             m[inorder[i]] = i;
         }
-        TreeNode *root = helper(0, inorder.size()-1, inorder, 0, preorder.size()-1, preorder, m);
-        return root;
+
+        return helper(0, n-1, preorder, 0, n-1, inorder, m);
     }
 };

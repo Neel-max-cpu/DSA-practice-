@@ -1,111 +1,117 @@
 class Node{
-    public:
+    public:    
     int key;
-    int value;
+    int val;
+    Node*next;
     Node*prev;
-    Node *next;
-
-    Node(int key, int value){
+    Node(int key, int val){
         this->key = key;
-        this->value = value;
-        prev = NULL;
+        this->val = val;
         next = NULL;
+        prev = NULL;
     }
 };
 
 class LRUCache {
 public:
-    int size;
-    int curr;
-    unordered_map<int,Node*>m;
-    Node *head = new Node(-1,-1);
-    Node *tail = new Node(-1,-1);
-    
+    unordered_map<int, Node*>m;
+    int size = 0;
+    Node*head;
+    Node*tail;
     LRUCache(int capacity) {
         size = capacity;
-        curr = 0;
+        head = new Node(-1,-1);
+        tail = new Node(-1,-1);
+
         head->next = tail;
         tail->prev = head;
     }
     
     int get(int key) {
-        if(m.find(key)==m.end()) return -1;
-        else{
-
-            Node *listNode = m[key];
-            int val = listNode->value;
-            //change postion in the linkedlist
-            changePos(listNode);
-            return val;
+        if(m.find(key)==m.end()){
+            // not found
+            return -1;
         }
-        
+        else{
+            int data = m[key]->val;
+            // update most resently used
+            updateMRU(m[key]);
+            return data;
+        }
     }
     
     void put(int key, int value) {
-        if(m.find(key)==m.end()){
-            if(curr>=size){
-                //remove least used
-                removeLeastUsed();            
-            }
-            Node *newNode = new Node(key, value);
-            m[key] = newNode;        
-            // put value in linkedlist
-            putVal(newNode);
+        if(m.find(key)!=m.end()){
+            // change the value
+            m[key]->val = value;
+            updateMRU(m[key]);
         }
         else{
-            // if found -- update the key and put the value behind the head
-            Node *listNode = m[key];
-            listNode->value = value;
-            changePos(listNode);
+            if(m.size()==size){
+                // remove the least used
+                removeLeastUsed();
+            }
+
+            Node *newNode = new Node(key, value);
+            addNode(newNode);
+            
+            // add map
+            m[key] = newNode;        
         }
     }
 
     private:
-    void changePos(Node*listNode){
-        // eg 3 in null<>1<>2<>3<>4<>null
-        Node *nextToList = listNode->next;      // 4
-        Node *prevToList = listNode->prev;      // 2
+    void updateMRU(Node*node){        
+        // get
+        Node*nodeNext = node->next;
+        Node*nodePrev = node->prev;
 
-        //connect prev and next of list
-        nextToList->prev = prevToList;       // 2<4
-        prevToList->next = nextToList;      //2<>4
+        if(nodeNext==tail && nodePrev==head) return;
 
-        Node *nextToHead = head->next;      // 1
-        head->next = listNode;              // null>3
-        listNode->prev = head;              // null<>3
-        listNode->next = nextToHead;        // null<>3>1
-        nextToHead->prev = listNode;        // null<>3<>1
+        // link
+        nodePrev->next = nodeNext;
+        nodeNext->prev = nodePrev;     
+
+        // unlink
+        node->next = NULL;
+        node->prev = NULL;
+
+        // add next to head
+        addNode(node);
     }
 
-    void putVal(Node*newNode){
-        // null<>1<>2<>4<>null -- lets say put 3 after head(null)
-        Node*nextToHead = head->next;    //1
-        head->next = newNode;       // null>3
-        newNode->prev = head;        // null<>3  --chain done        
+    void addNode(Node*newNode){
+        Node*prevMostUsed = head->next;
 
-        newNode->next = nextToHead;     //null<>3>1
-        nextToHead->prev = newNode;      // null<>3<>1 -- chain done
-        curr++;
+        // link new
+        head->next = newNode;
+        newNode->prev = head;
+
+        // old link
+        newNode->next = prevMostUsed;
+        prevMostUsed->prev = newNode;
     }
+
     void removeLeastUsed(){
-        // null<>1<>2<>3<>4<>null -- lets say remove 3 (4 tail)
-        Node *leastUsed = tail->prev;    // 3
-        Node *nextLeastUsed = leastUsed->prev;  //2
+        // get least used tail
+        Node *leastUsed = tail->prev;
+        if(leastUsed==head) return;
 
-        // make 3 alone
+        // link
+        Node*secondLeastUsed = leastUsed->prev;
+        secondLeastUsed->next = tail;
+        tail->prev = secondLeastUsed;
+
+        // then remove from map
+        int key = leastUsed->key;
+        m.erase(key);
+
+        // unlink
         leastUsed->next = NULL;
         leastUsed->prev = NULL;
 
-        tail->prev = nextLeastUsed;     // 2<4
-        nextLeastUsed->next = tail;     //2<>4  -- chain done
-
-        // remove from map
-        m.erase(leastUsed->key);
-        
-        // remove 3
+        // delete
         delete(leastUsed);
-
-        curr--;
     }
 };
 

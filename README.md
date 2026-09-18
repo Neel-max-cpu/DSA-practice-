@@ -141,6 +141,7 @@ just the solution of my leetcode problems
 | [0128-longest-consecutive-sequence](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0133-clone-graph](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0133-clone-graph/) | Medium |
 | [0138-copy-list-with-random-pointer](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0138-copy-list-with-random-pointer/) | Medium |
+| [0146-lru-cache](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0146-lru-cache/) | Medium |
 | [0217-contains-duplicate](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0217-contains-duplicate/) | Easy |
 | [0242-valid-anagram](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0242-valid-anagram/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0347-top-k-frequent-elements/) | Medium |
@@ -224,12 +225,14 @@ just the solution of my leetcode problems
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0116-populating-next-right-pointers-in-each-node/) | Medium |
 | [0138-copy-list-with-random-pointer](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0138-copy-list-with-random-pointer/) | Medium |
 | [0143-reorder-list](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0143-reorder-list/) | Medium |
+| [0146-lru-cache](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0146-lru-cache/) | Medium |
 | [0206-reverse-linked-list](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0206-reverse-linked-list/) | Easy |
 | [0355-design-twitter](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0355-design-twitter/) | Medium |
 | [0460-lfu-cache](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0460-lfu-cache/) | Hard |
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0146-lru-cache](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0146-lru-cache/) | Medium |
 | [0155-min-stack](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0155-min-stack/) | Medium |
 | [0173-binary-search-tree-iterator](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [0355-design-twitter](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0355-design-twitter/) | Medium |
@@ -239,6 +242,7 @@ just the solution of my leetcode problems
 ## Doubly-Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0146-lru-cache](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0146-lru-cache/) | Medium |
 | [0460-lfu-cache](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0460-lfu-cache/) | Hard |
 ## Binary Search Tree
 | Problem Name | Difficulty |

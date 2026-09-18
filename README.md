@@ -140,6 +140,7 @@ just the solution of my leetcode problems
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0106-construct-binary-tree-from-inorder-and-postorder-traversal/) | Medium |
 | [0128-longest-consecutive-sequence](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0133-clone-graph](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0133-clone-graph/) | Medium |
+| [0138-copy-list-with-random-pointer](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0138-copy-list-with-random-pointer/) | Medium |
 | [0217-contains-duplicate](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0217-contains-duplicate/) | Easy |
 | [0242-valid-anagram](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0242-valid-anagram/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0347-top-k-frequent-elements/) | Medium |
@@ -221,6 +222,7 @@ just the solution of my leetcode problems
 | [0021-merge-two-sorted-lists](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0021-merge-two-sorted-lists/) | Easy |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0114-flatten-binary-tree-to-linked-list/) | Medium |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0116-populating-next-right-pointers-in-each-node/) | Medium |
+| [0138-copy-list-with-random-pointer](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0138-copy-list-with-random-pointer/) | Medium |
 | [0143-reorder-list](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0143-reorder-list/) | Medium |
 | [0206-reverse-linked-list](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0206-reverse-linked-list/) | Easy |
 | [0355-design-twitter](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0355-design-twitter/) | Medium |

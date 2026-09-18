@@ -216,6 +216,7 @@ just the solution of my leetcode problems
 ## Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0021-merge-two-sorted-lists](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0021-merge-two-sorted-lists/) | Easy |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0114-flatten-binary-tree-to-linked-list/) | Medium |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0116-populating-next-right-pointers-in-each-node/) | Medium |
 | [0206-reverse-linked-list](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0206-reverse-linked-list/) | Easy |
@@ -408,5 +409,6 @@ just the solution of my leetcode problems
 ## Recursion
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0021-merge-two-sorted-lists](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0021-merge-two-sorted-lists/) | Easy |
 | [0206-reverse-linked-list](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0206-reverse-linked-list/) | Easy |
 <!---LeetCode Topics End-->

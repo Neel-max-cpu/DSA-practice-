@@ -184,6 +184,7 @@ just the solution of my leetcode problems
 | [0033-search-in-rotated-sorted-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0033-search-in-rotated-sorted-array/) | Medium |
 | [0042-trapping-rain-water](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0042-trapping-rain-water/) | Hard |
 | [0049-group-anagrams](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0049-group-anagrams/) | Medium |
+| [0078-subsets](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0078-subsets/) | Medium |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
 | [0084-largest-rectangle-in-histogram](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0084-largest-rectangle-in-histogram/) | Hard |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0105-construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium |
@@ -334,6 +335,7 @@ just the solution of my leetcode problems
 ## Backtracking
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0078-subsets](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0078-subsets/) | Medium |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
 ## Matrix
 | Problem Name | Difficulty |
@@ -423,4 +425,8 @@ just the solution of my leetcode problems
 | [0021-merge-two-sorted-lists](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0021-merge-two-sorted-lists/) | Easy |
 | [0143-reorder-list](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0143-reorder-list/) | Medium |
 | [0206-reverse-linked-list](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0206-reverse-linked-list/) | Easy |
+## Bit Manipulation
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0078-subsets](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0078-subsets/) | Medium |
 <!---LeetCode Topics End-->

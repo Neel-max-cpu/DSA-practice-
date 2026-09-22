@@ -128,6 +128,7 @@ just the solution of my leetcode problems
 | [0173-binary-search-tree-iterator](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0173-binary-search-tree-iterator/) | Medium |
 | [0739-daily-temperatures](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0739-daily-temperatures/) | Medium |
 | [0853-car-fleet](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0853-car-fleet/) | Medium |
+| [0895-maximum-frequency-stack](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0895-maximum-frequency-stack/) | Hard |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
@@ -152,6 +153,7 @@ just the solution of my leetcode problems
 | [0621-task-scheduler](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0621-task-scheduler/) | Medium |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0653-two-sum-iv-input-is-a-bst/) | Easy |
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
+| [0895-maximum-frequency-stack](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0895-maximum-frequency-stack/) | Hard |
 | [0981-time-based-key-value-store](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0981-time-based-key-value-store/) | Medium |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 ## Sorting
@@ -240,6 +242,7 @@ just the solution of my leetcode problems
 | [0355-design-twitter](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0355-design-twitter/) | Medium |
 | [0460-lfu-cache](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0460-lfu-cache/) | Hard |
 | [0703-kth-largest-element-in-a-stream](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
+| [0895-maximum-frequency-stack](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0895-maximum-frequency-stack/) | Hard |
 | [0981-time-based-key-value-store](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0981-time-based-key-value-store/) | Medium |
 ## Doubly-Linked List
 | Problem Name | Difficulty |
@@ -431,4 +434,8 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0078-subsets](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0078-subsets/) | Medium |
+## Ordered Set
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0895-maximum-frequency-stack](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0895-maximum-frequency-stack/) | Hard |
 <!---LeetCode Topics End-->

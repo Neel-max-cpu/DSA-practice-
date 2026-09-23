@@ -8,13 +8,13 @@ public:
         int toLeave = totalSum-x;
         if(toLeave<0) return -1;
         if(toLeave == 0) return n;
-        // find the longes subarray with sum toLeave
+        // find the longest subarray with sum toLeave
         int i = 0, j = 0;
         int maxLen = 0;
         int currSum = 0;
         while(j<n){
             currSum+=arr[j];                        
-            while(currSum>toLeave && i<j){
+            while(currSum>toLeave){
                 currSum-=arr[i++];
             }
             if(currSum==toLeave){

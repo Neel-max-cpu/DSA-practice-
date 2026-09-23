@@ -185,6 +185,7 @@ just the solution of my leetcode problems
 | [0015-3sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0015-3sum/) | Medium |
 | [0033-search-in-rotated-sorted-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0033-search-in-rotated-sorted-array/) | Medium |
 | [0039-combination-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0039-combination-sum/) | Medium |
+| [0040-combination-sum-ii](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0040-combination-sum-ii/) | Medium |
 | [0042-trapping-rain-water](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0042-trapping-rain-water/) | Hard |
 | [0049-group-anagrams](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0049-group-anagrams/) | Medium |
 | [0078-subsets](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0078-subsets/) | Medium |
@@ -340,6 +341,7 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0039-combination-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0039-combination-sum/) | Medium |
+| [0040-combination-sum-ii](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0040-combination-sum-ii/) | Medium |
 | [0078-subsets](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0078-subsets/) | Medium |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
 ## Matrix

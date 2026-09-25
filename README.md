@@ -213,6 +213,7 @@ just the solution of my leetcode problems
 | [0973-k-closest-points-to-origin](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0973-k-closest-points-to-origin/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1658-minimum-operations-to-reduce-x-to-zero/) | Medium |
+| [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3550-smallest-index-with-digit-sum-equal-to-index/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -317,6 +318,7 @@ just the solution of my leetcode problems
 | ------- | ------- |
 | [0150-evaluate-reverse-polish-notation](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0973-k-closest-points-to-origin/) | Medium |
+| [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3550-smallest-index-with-digit-sum-equal-to-index/) | Easy |
 ## Geometry
 | Problem Name | Difficulty |
 | ------- | ------- |

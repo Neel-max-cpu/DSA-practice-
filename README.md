@@ -157,6 +157,7 @@ just the solution of my leetcode problems
 | [0981-time-based-key-value-store](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0981-time-based-key-value-store/) | Medium |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 | [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1658-minimum-operations-to-reduce-x-to-zero/) | Medium |
+| [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1807-evaluate-the-bracket-pairs-of-a-string/) | Medium |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -213,6 +214,7 @@ just the solution of my leetcode problems
 | [0973-k-closest-points-to-origin](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0973-k-closest-points-to-origin/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1658-minimum-operations-to-reduce-x-to-zero/) | Medium |
+| [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1807-evaluate-the-bracket-pairs-of-a-string/) | Medium |
 | [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3550-smallest-index-with-digit-sum-equal-to-index/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
@@ -295,6 +297,7 @@ just the solution of my leetcode problems
 | [0572-subtree-of-another-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0572-subtree-of-another-tree/) | Easy |
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
 | [0981-time-based-key-value-store](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0981-time-based-key-value-store/) | Medium |
+| [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1807-evaluate-the-bracket-pairs-of-a-string/) | Medium |
 ## Hash Function
 | Problem Name | Difficulty |
 | ------- | ------- |

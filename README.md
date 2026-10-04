@@ -126,6 +126,7 @@ just the solution of my leetcode problems
 | [0150-evaluate-reverse-polish-notation](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0155-min-stack](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0155-min-stack/) | Medium |
 | [0173-binary-search-tree-iterator](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0173-binary-search-tree-iterator/) | Medium |
+| [0678-valid-parenthesis-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0678-valid-parenthesis-string/) | Medium |
 | [0739-daily-temperatures](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0739-daily-temperatures/) | Medium |
 | [0853-car-fleet](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0853-car-fleet/) | Medium |
 | [0895-maximum-frequency-stack](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0895-maximum-frequency-stack/) | Hard |
@@ -180,6 +181,7 @@ just the solution of my leetcode problems
 | [0042-trapping-rain-water](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0042-trapping-rain-water/) | Hard |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0124-binary-tree-maximum-path-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
+| [0678-valid-parenthesis-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0678-valid-parenthesis-string/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 ## Array
 | Problem Name | Difficulty |
@@ -299,6 +301,7 @@ just the solution of my leetcode problems
 | [0424-longest-repeating-character-replacement](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0567-permutation-in-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0567-permutation-in-string/) | Medium |
 | [0572-subtree-of-another-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0572-subtree-of-another-tree/) | Easy |
+| [0678-valid-parenthesis-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0678-valid-parenthesis-string/) | Medium |
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
 | [0981-time-based-key-value-store](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0981-time-based-key-value-store/) | Medium |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1190-reverse-substrings-between-each-pair-of-parentheses/) | Medium |
@@ -374,6 +377,7 @@ just the solution of my leetcode problems
 | ------- | ------- |
 | [0011-container-with-most-water](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0011-container-with-most-water/) | Medium |
 | [0621-task-scheduler](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0621-task-scheduler/) | Medium |
+| [0678-valid-parenthesis-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0678-valid-parenthesis-string/) | Medium |
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
 ## Counting
 | Problem Name | Difficulty |
@@ -432,6 +436,7 @@ just the solution of my leetcode problems
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0020-valid-parentheses/) | Easy |
 | [0022-generate-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0022-generate-parentheses/) | Medium |
+| [0678-valid-parenthesis-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0678-valid-parenthesis-string/) | Medium |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1190-reverse-substrings-between-each-pair-of-parentheses/) | Medium |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1614-maximum-nesting-depth-of-the-parentheses/) | Easy |
 ## DP on Trees

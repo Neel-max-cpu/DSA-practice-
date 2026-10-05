@@ -129,6 +129,7 @@ just the solution of my leetcode problems
 | [0678-valid-parenthesis-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0678-valid-parenthesis-string/) | Medium |
 | [0739-daily-temperatures](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0739-daily-temperatures/) | Medium |
 | [0853-car-fleet](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0853-car-fleet/) | Medium |
+| [0856-score-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0856-score-of-parentheses/) | Medium |
 | [0895-maximum-frequency-stack](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0895-maximum-frequency-stack/) | Hard |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1190-reverse-substrings-between-each-pair-of-parentheses/) | Medium |
@@ -303,6 +304,7 @@ just the solution of my leetcode problems
 | [0572-subtree-of-another-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0572-subtree-of-another-tree/) | Easy |
 | [0678-valid-parenthesis-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0678-valid-parenthesis-string/) | Medium |
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
+| [0856-score-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0856-score-of-parentheses/) | Medium |
 | [0981-time-based-key-value-store](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0981-time-based-key-value-store/) | Medium |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1190-reverse-substrings-between-each-pair-of-parentheses/) | Medium |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1614-maximum-nesting-depth-of-the-parentheses/) | Easy |
@@ -437,6 +439,7 @@ just the solution of my leetcode problems
 | [0020-valid-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0020-valid-parentheses/) | Easy |
 | [0022-generate-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0022-generate-parentheses/) | Medium |
 | [0678-valid-parenthesis-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0678-valid-parenthesis-string/) | Medium |
+| [0856-score-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0856-score-of-parentheses/) | Medium |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1190-reverse-substrings-between-each-pair-of-parentheses/) | Medium |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1614-maximum-nesting-depth-of-the-parentheses/) | Easy |
 ## DP on Trees

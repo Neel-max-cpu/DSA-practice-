@@ -1,6 +1,34 @@
 class Solution {
 public:
     int scoreOfParentheses(string s) {
+        // optimal ---
+        int depth = 0;
+        int score = 0;
+
+        for (int i = 0; i < s.size(); i++) {
+
+            if (s[i] == '(') {
+                depth++;
+            }
+            else {
+                depth--;
+
+                // Primitive ()
+                if (s[i - 1] == '(') {
+                    score += (1 << depth);
+                    /* 
+                        left shift operator --- eg 1<<2 then 0001 to 0100
+                        eg 1<<3 then 0001 to 1000
+                    */
+                }
+            }
+        }
+
+        return score;
+
+
+        // my way ---- o(n) + o(n) -- tc and sc
+        /*
         stack<pair<int,int>>number;
         stack<pair<char,int>>open;
         int level = 1;
@@ -39,6 +67,7 @@ public:
             }
             return sum;
         }
+        */
     }
 };
 

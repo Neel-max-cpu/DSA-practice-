@@ -77,6 +77,7 @@ just the solution of my leetcode problems
 | [0200-number-of-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0200-number-of-islands/) | Medium |
 | [0207-course-schedule](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0207-course-schedule/) | Medium |
 | [0226-invert-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0226-invert-binary-tree/) | Easy |
+| [0301-remove-invalid-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0301-remove-invalid-parentheses/) | Hard |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0653-two-sum-iv-input-is-a-bst/) | Easy |
 | [0662-maximum-width-of-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0662-maximum-width-of-binary-tree/) | Medium |
 | [0733-flood-fill](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0733-flood-fill/) | Easy |
@@ -302,6 +303,7 @@ just the solution of my leetcode problems
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
 | [0125-valid-palindrome](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0125-valid-palindrome/) | Easy |
 | [0242-valid-anagram](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0242-valid-anagram/) | Easy |
+| [0301-remove-invalid-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0301-remove-invalid-parentheses/) | Hard |
 | [0424-longest-repeating-character-replacement](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0567-permutation-in-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0567-permutation-in-string/) | Medium |
 | [0572-subtree-of-another-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0572-subtree-of-another-tree/) | Easy |
@@ -367,6 +369,7 @@ just the solution of my leetcode problems
 | [0040-combination-sum-ii](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0040-combination-sum-ii/) | Medium |
 | [0078-subsets](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0078-subsets/) | Medium |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
+| [0301-remove-invalid-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0301-remove-invalid-parentheses/) | Hard |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |

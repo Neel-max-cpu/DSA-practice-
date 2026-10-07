@@ -1,10 +1,8 @@
 class Solution {
 public:
-    bool isValid(string &s){
+    bool isValid(const string &s){
         int open = 0;
-        for(auto it:s){
-            if(open<0) return false;
-
+        for(auto it:s){            
             if(it=='(') open++;
             else if(it==')'){
                 if(open>0) open--;
@@ -14,7 +12,7 @@ public:
 
         return open==0? true:false;
     }    
-    int getMinCount(string &s){
+    int getMinCount(const string &s){
         // extra open + close
         int open = 0, close = 0;
         for(auto it:s){
@@ -53,7 +51,8 @@ public:
     }
 
     vector<string> removeInvalidParentheses(string s) {
-        int n = s.size();        
+        // my solution --
+        /*        
         if(isValid(s)) return {s};            
         set<string>res;
         string t="";
@@ -62,5 +61,43 @@ public:
 
         vector<string>ans(res.begin(), res.end());
         return ans;
+        */
+
+
+        // optimal ---
+        // /*
+        set<string>uniqueSet;
+        uniqueSet.insert(s);                
+        while(true){
+            vector<string>valid;
+            vector<string>notValid;
+            for(const auto &it:uniqueSet){
+                if(isValid(it)){
+                    valid.push_back(it);
+                }
+                else notValid.push_back(it);
+            }
+            // First valid level = minimum removals
+            if (!valid.empty())
+                return valid;
+
+            // none are valid---
+            // Generate next level:
+            // remove exactly ONE parenthesis
+            set<string>newUniqueSet;
+            for(auto &it:notValid){
+                // because of performace not doing auto it: but instead &it
+                for(int i = 0; i < it.size(); i++){
+                    if(it[i] != '(' && it[i] != ')') continue;
+                    string t = it.substr(0, i) + it.substr(i + 1);
+                    newUniqueSet.insert(t);
+                }
+            }
+            // replace old with new -- so level increased
+            uniqueSet = newUniqueSet;            
+        }
+        return {};
+        // */
+
     }
 };

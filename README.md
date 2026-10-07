@@ -187,6 +187,7 @@ just the solution of my leetcode problems
 | [0124-binary-tree-maximum-path-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
 | [0678-valid-parenthesis-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0678-valid-parenthesis-string/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
+| [2267-check-if-there-is-a-valid-parentheses-string-path](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2267-check-if-there-is-a-valid-parentheses-string-path/) | Hard |
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -224,6 +225,7 @@ just the solution of my leetcode problems
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1658-minimum-operations-to-reduce-x-to-zero/) | Medium |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1807-evaluate-the-bracket-pairs-of-a-string/) | Medium |
+| [2267-check-if-there-is-a-valid-parentheses-string-path](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2267-check-if-there-is-a-valid-parentheses-string-path/) | Hard |
 | [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3550-smallest-index-with-digit-sum-equal-to-index/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
@@ -376,6 +378,7 @@ just the solution of my leetcode problems
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
 | [0200-number-of-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0200-number-of-islands/) | Medium |
 | [0733-flood-fill](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0733-flood-fill/) | Easy |
+| [2267-check-if-there-is-a-valid-parentheses-string-path](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2267-check-if-there-is-a-valid-parentheses-string-path/) | Hard |
 ## Iterator
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -449,6 +452,7 @@ just the solution of my leetcode problems
 | [0856-score-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0856-score-of-parentheses/) | Medium |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1190-reverse-substrings-between-each-pair-of-parentheses/) | Medium |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1614-maximum-nesting-depth-of-the-parentheses/) | Easy |
+| [2267-check-if-there-is-a-valid-parentheses-string-path](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2267-check-if-there-is-a-valid-parentheses-string-path/) | Hard |
 ## DP on Trees
 | Problem Name | Difficulty |
 | ------- | ------- |

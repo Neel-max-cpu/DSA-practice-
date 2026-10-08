@@ -134,6 +134,7 @@ just the solution of my leetcode problems
 | [0856-score-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0856-score-of-parentheses/) | Medium |
 | [0895-maximum-frequency-stack](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0895-maximum-frequency-stack/) | Hard |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
+| [1021-remove-outermost-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1021-remove-outermost-parentheses/) | Easy |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1190-reverse-substrings-between-each-pair-of-parentheses/) | Medium |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1614-maximum-nesting-depth-of-the-parentheses/) | Easy |
 ## Hash Table
@@ -313,6 +314,7 @@ just the solution of my leetcode problems
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
 | [0856-score-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0856-score-of-parentheses/) | Medium |
 | [0981-time-based-key-value-store](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0981-time-based-key-value-store/) | Medium |
+| [1021-remove-outermost-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1021-remove-outermost-parentheses/) | Easy |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1190-reverse-substrings-between-each-pair-of-parentheses/) | Medium |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1614-maximum-nesting-depth-of-the-parentheses/) | Easy |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1807-evaluate-the-bracket-pairs-of-a-string/) | Medium |
@@ -450,6 +452,7 @@ just the solution of my leetcode problems
 | [0032-longest-valid-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0032-longest-valid-parentheses/) | Hard |
 | [0678-valid-parenthesis-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0678-valid-parenthesis-string/) | Medium |
 | [0856-score-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0856-score-of-parentheses/) | Medium |
+| [1021-remove-outermost-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1021-remove-outermost-parentheses/) | Easy |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1190-reverse-substrings-between-each-pair-of-parentheses/) | Medium |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1614-maximum-nesting-depth-of-the-parentheses/) | Easy |
 | [2267-check-if-there-is-a-valid-parentheses-string-path](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2267-check-if-there-is-a-valid-parentheses-string-path/) | Hard |

@@ -179,6 +179,7 @@ just the solution of my leetcode problems
 | [0853-car-fleet](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0853-car-fleet/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0973-k-closest-points-to-origin/) | Medium |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
+| [2333-minimum-sum-of-squared-difference](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2333-minimum-sum-of-squared-difference/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -228,6 +229,7 @@ just the solution of my leetcode problems
 | [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1658-minimum-operations-to-reduce-x-to-zero/) | Medium |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1807-evaluate-the-bracket-pairs-of-a-string/) | Medium |
 | [2267-check-if-there-is-a-valid-parentheses-string-path](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2267-check-if-there-is-a-valid-parentheses-string-path/) | Hard |
+| [2333-minimum-sum-of-squared-difference](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2333-minimum-sum-of-squared-difference/) | Medium |
 | [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3550-smallest-index-with-digit-sum-equal-to-index/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
@@ -287,6 +289,7 @@ just the solution of my leetcode problems
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1658-minimum-operations-to-reduce-x-to-zero/) | Medium |
+| [2333-minimum-sum-of-squared-difference](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2333-minimum-sum-of-squared-difference/) | Medium |
 ## Monotonic Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -334,6 +337,7 @@ just the solution of my leetcode problems
 | [0621-task-scheduler](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0621-task-scheduler/) | Medium |
 | [0703-kth-largest-element-in-a-stream](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
 | [0973-k-closest-points-to-origin](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0973-k-closest-points-to-origin/) | Medium |
+| [2333-minimum-sum-of-squared-difference](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2333-minimum-sum-of-squared-difference/) | Medium |
 ## Data Stream
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -395,6 +399,7 @@ just the solution of my leetcode problems
 | [0678-valid-parenthesis-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0678-valid-parenthesis-string/) | Medium |
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
 | [1541-minimum-insertions-to-balance-a-parentheses-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1541-minimum-insertions-to-balance-a-parentheses-string/) | Medium |
+| [2333-minimum-sum-of-squared-difference](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2333-minimum-sum-of-squared-difference/) | Medium |
 ## Counting
 | Problem Name | Difficulty |
 | ------- | ------- |

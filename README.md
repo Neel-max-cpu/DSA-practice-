@@ -166,6 +166,7 @@ just the solution of my leetcode problems
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 | [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1658-minimum-operations-to-reduce-x-to-zero/) | Medium |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1807-evaluate-the-bracket-pairs-of-a-string/) | Medium |
+| [3026-maximum-good-subarray-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3026-maximum-good-subarray-sum/) | Medium |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -231,6 +232,7 @@ just the solution of my leetcode problems
 | [2267-check-if-there-is-a-valid-parentheses-string-path](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2267-check-if-there-is-a-valid-parentheses-string-path/) | Hard |
 | [2333-minimum-sum-of-squared-difference](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2333-minimum-sum-of-squared-difference/) | Medium |
 | [2778-sum-of-squares-of-special-elements](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2778-sum-of-squares-of-special-elements/) | Easy |
+| [3026-maximum-good-subarray-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3026-maximum-good-subarray-sum/) | Medium |
 | [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3550-smallest-index-with-digit-sum-equal-to-index/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
@@ -431,6 +433,7 @@ just the solution of my leetcode problems
 | ------- | ------- |
 | [0238-product-of-array-except-self](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0238-product-of-array-except-self/) | Medium |
 | [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1658-minimum-operations-to-reduce-x-to-zero/) | Medium |
+| [3026-maximum-good-subarray-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3026-maximum-good-subarray-sum/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |

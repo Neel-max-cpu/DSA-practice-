@@ -182,6 +182,7 @@ just the solution of my leetcode problems
 | [0973-k-closest-points-to-origin](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0973-k-closest-points-to-origin/) | Medium |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 | [2333-minimum-sum-of-squared-difference](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2333-minimum-sum-of-squared-difference/) | Medium |
+| [3727-maximum-alternating-sum-of-squares](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3727-maximum-alternating-sum-of-squares/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -236,6 +237,7 @@ just the solution of my leetcode problems
 | [2897-apply-operations-on-array-to-maximize-sum-of-squares](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2897-apply-operations-on-array-to-maximize-sum-of-squares/) | Hard |
 | [3026-maximum-good-subarray-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3026-maximum-good-subarray-sum/) | Medium |
 | [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3550-smallest-index-with-digit-sum-equal-to-index/) | Easy |
+| [3727-maximum-alternating-sum-of-squares](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3727-maximum-alternating-sum-of-squares/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -406,6 +408,7 @@ just the solution of my leetcode problems
 | [1541-minimum-insertions-to-balance-a-parentheses-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1541-minimum-insertions-to-balance-a-parentheses-string/) | Medium |
 | [2333-minimum-sum-of-squared-difference](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2333-minimum-sum-of-squared-difference/) | Medium |
 | [2897-apply-operations-on-array-to-maximize-sum-of-squares](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2897-apply-operations-on-array-to-maximize-sum-of-squares/) | Hard |
+| [3727-maximum-alternating-sum-of-squares](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3727-maximum-alternating-sum-of-squares/) | Medium |
 ## Counting
 | Problem Name | Difficulty |
 | ------- | ------- |

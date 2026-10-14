@@ -191,6 +191,7 @@ just the solution of my leetcode problems
 | [0042-trapping-rain-water](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0042-trapping-rain-water/) | Hard |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0124-binary-tree-maximum-path-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
+| [0131-palindrome-partitioning](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0131-palindrome-partitioning/) | Medium |
 | [0678-valid-parenthesis-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0678-valid-parenthesis-string/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [2267-check-if-there-is-a-valid-parentheses-string-path](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2267-check-if-there-is-a-valid-parentheses-string-path/) | Hard |
@@ -316,6 +317,7 @@ just the solution of my leetcode problems
 | [0076-minimum-window-substring](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0076-minimum-window-substring/) | Hard |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
 | [0125-valid-palindrome](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0125-valid-palindrome/) | Easy |
+| [0131-palindrome-partitioning](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0131-palindrome-partitioning/) | Medium |
 | [0242-valid-anagram](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0242-valid-anagram/) | Easy |
 | [0301-remove-invalid-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0301-remove-invalid-parentheses/) | Hard |
 | [0424-longest-repeating-character-replacement](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0424-longest-repeating-character-replacement/) | Medium |
@@ -387,6 +389,7 @@ just the solution of my leetcode problems
 | [0040-combination-sum-ii](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0040-combination-sum-ii/) | Medium |
 | [0078-subsets](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0078-subsets/) | Medium |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
+| [0131-palindrome-partitioning](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0131-palindrome-partitioning/) | Medium |
 | [0301-remove-invalid-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0301-remove-invalid-parentheses/) | Hard |
 ## Matrix
 | Problem Name | Difficulty |

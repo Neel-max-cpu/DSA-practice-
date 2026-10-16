@@ -1,54 +1,59 @@
 class Solution {
 public:
-    bool check(int row, int col, vector<string>&current, int n){
-        // from top to col
+    bool isValid(int col, int row, int n, vector<string>&temp){
+        if(temp.empty()) return true;
+        // check directly below of col,row
         for(int i=row-1; i>=0; i--){
-            if(current[i][col]=='Q') return false;
+            if(temp[i][col]=='Q') return false;
         }
 
-        // diagonal from upper left to right
-        int i = row-1, j=col-1;
-        while(i>=0 && j>=0){
-            if(current[i][j]=='Q') return false;
-            i--;
-            j--;
+        // check diagonally left below
+        int j =col-1;
+        for(int i=row-1; i>=0; i--){            
+            if(j<0) break;
+            if(temp[i][j]=='Q') return false;
+            j--;            
         }
 
-        // diagonal from upper right to left(from lower left to right)
-        i = row-1;
-        j=col+1;
-        while(i>=0 && j<n){
-            if(current[i][j]=='Q') return false;
-            i--;
-            j++;
+        j = col+1;
+        // check diagonally right below
+        for(int i=row-1; i>=0; i--){            
+            if(j>=n) break;
+            if(temp[i][j]=='Q') return false;
+            j++;            
         }
+
         return true;
     }
 
-    void putQueens(vector<vector<string>>&ans, vector<string>&current, int n, int row){
-        if(row==n){
-            ans.push_back(current);
+    string getString(int idx, int n){
+        string s;
+        for(int i = 0; i<n; i++){
+            if(i==idx) s+='Q';
+            else s+='.';
+        }
+        return s;
+    }
+    void helper(int n, int row, vector<string>&temp, vector<vector<string>>&ans){
+        if(row>=n){
+            ans.push_back(temp);
             return;
         }
-        for(int j=0; j<n; j++){
-            //if putting queen in ith col valid
-            if(check(row, j, current, n)){                
-                current[row][j] = 'Q';                
-                putQueens(ans, current, n, row+1);
-                current[row][j] = '.';                                
+        
+        for(int i=0; i<n; i++){
+            string s = getString(i, n);
+            if(isValid(i, row, n, temp)){
+                temp.push_back(s);
+                helper(n, row+1, temp, ans);
+                temp.pop_back();
             }
         }
     }
 
     vector<vector<string>> solveNQueens(int n) {
         vector<vector<string>>ans;
-        vector<string>current;
-        string s(n, '.');
-        for(int i=0; i<n; i++){
-            current.push_back(s);
-        }
-        // basically is n = 3, then ["...", "...", "..."] in current
-        putQueens(ans, current, n, 0);
+        vector<string>temp;
+        helper(n, 0, temp, ans);
         return ans;
     }
 };

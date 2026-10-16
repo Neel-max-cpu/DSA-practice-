@@ -209,6 +209,7 @@ just the solution of my leetcode problems
 | [0040-combination-sum-ii](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0040-combination-sum-ii/) | Medium |
 | [0042-trapping-rain-water](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0042-trapping-rain-water/) | Hard |
 | [0049-group-anagrams](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0049-group-anagrams/) | Medium |
+| [0051-n-queens](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0051-n-queens/) | Hard |
 | [0078-subsets](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0078-subsets/) | Medium |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
 | [0084-largest-rectangle-in-histogram](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0084-largest-rectangle-in-histogram/) | Hard |
@@ -391,6 +392,7 @@ just the solution of my leetcode problems
 | [0022-generate-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0022-generate-parentheses/) | Medium |
 | [0039-combination-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0039-combination-sum/) | Medium |
 | [0040-combination-sum-ii](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0040-combination-sum-ii/) | Medium |
+| [0051-n-queens](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0051-n-queens/) | Hard |
 | [0078-subsets](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0078-subsets/) | Medium |
 | [0079-word-search](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0079-word-search/) | Medium |
 | [0131-palindrome-partitioning](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0131-palindrome-partitioning/) | Medium |
@@ -525,4 +527,8 @@ just the solution of my leetcode problems
 | ------- | ------- |
 | [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2913-subarrays-distinct-element-sum-of-squares-i/) | Easy |
 | [2916-subarrays-distinct-element-sum-of-squares-ii](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2916-subarrays-distinct-element-sum-of-squares-ii/) | Hard |
+## Algorithm X
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0051-n-queens](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0051-n-queens/) | Hard |
 <!---LeetCode Topics End-->

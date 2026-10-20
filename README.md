@@ -190,6 +190,7 @@ just the solution of my leetcode problems
 | [2333-minimum-sum-of-squared-difference](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2333-minimum-sum-of-squared-difference/) | Medium |
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3551-minimum-swaps-to-sort-by-digit-sum/) | Medium |
 | [3727-maximum-alternating-sum-of-squares](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3727-maximum-alternating-sum-of-squares/) | Medium |
+| [3886-sum-of-sortable-integers](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3886-sum-of-sortable-integers/) | Hard |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -253,6 +254,7 @@ just the solution of my leetcode problems
 | [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3550-smallest-index-with-digit-sum-equal-to-index/) | Easy |
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3551-minimum-swaps-to-sort-by-digit-sum/) | Medium |
 | [3727-maximum-alternating-sum-of-squares](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3727-maximum-alternating-sum-of-squares/) | Medium |
+| [3886-sum-of-sortable-integers](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3886-sum-of-sortable-integers/) | Hard |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -376,6 +378,7 @@ just the solution of my leetcode problems
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1569-number-of-ways-to-reorder-array-to-get-same-bst/) | Hard |
 | [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3550-smallest-index-with-digit-sum-equal-to-index/) | Easy |
 | [3723-maximize-sum-of-squares-of-digits](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3723-maximize-sum-of-squares-of-digits/) | Medium |
+| [3886-sum-of-sortable-integers](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3886-sum-of-sortable-integers/) | Hard |
 ## Geometry
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -531,6 +534,7 @@ just the solution of my leetcode problems
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [2778-sum-of-squares-of-special-elements](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2778-sum-of-squares-of-special-elements/) | Easy |
+| [3886-sum-of-sortable-integers](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3886-sum-of-sortable-integers/) | Hard |
 ## Binary Indexed Tree
 | Problem Name | Difficulty |
 | ------- | ------- |

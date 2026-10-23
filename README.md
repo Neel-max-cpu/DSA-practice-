@@ -253,6 +253,7 @@ just the solution of my leetcode problems
 | [3026-maximum-good-subarray-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3026-maximum-good-subarray-sum/) | Medium |
 | [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3550-smallest-index-with-digit-sum-equal-to-index/) | Easy |
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3551-minimum-swaps-to-sort-by-digit-sum/) | Medium |
+| [3644-maximum-k-to-sort-a-permutation](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3644-maximum-k-to-sort-a-permutation/) | Medium |
 | [3727-maximum-alternating-sum-of-squares](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3727-maximum-alternating-sum-of-squares/) | Medium |
 | [3886-sum-of-sortable-integers](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3886-sum-of-sortable-integers/) | Hard |
 | [3942-minimum-operations-to-sort-a-permutation](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3942-minimum-operations-to-sort-a-permutation/) | Medium |
@@ -527,6 +528,7 @@ just the solution of my leetcode problems
 | ------- | ------- |
 | [0078-subsets](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0078-subsets/) | Medium |
 | [2897-apply-operations-on-array-to-maximize-sum-of-squares](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2897-apply-operations-on-array-to-maximize-sum-of-squares/) | Hard |
+| [3644-maximum-k-to-sort-a-permutation](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3644-maximum-k-to-sort-a-permutation/) | Medium |
 ## Ordered Set
 | Problem Name | Difficulty |
 | ------- | ------- |

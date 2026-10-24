@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int countDaysTogether(string aa, string la, string ab, string lb) {
+    int helper(string aa, string la, string ab, string lb){
         unordered_map<string,int>m;
         m["01"] = 31;
         m["02"] = 28;
@@ -79,5 +79,51 @@ public:
         }
         
         return ans;
+    }
+
+    int countDaysTogether(string aa, string la, string ab, string lb) {
+        
+        // mine --- 
+        // return helper(aa, la, ab, lb);   
+
+        //both are optimal just this is more readable--
+        vector<int> days = {
+            31, 28, 31, 30, 31, 30,
+            31, 31, 30, 31, 30, 31
+        };
+
+        auto getDay = [&](string date) {
+            int month = stoi(date.substr(0, 2));
+            int day = stoi(date.substr(3, 2));
+
+            // except the current month add all previous months
+            for (int i = 0; i < month - 1; i++) {
+                day += days[i];
+            }
+
+            return day;
+        };
+
+        /* convert the entire month-day to days eg 
+        "08-15"(15th aug in days is 227) - alice arrive
+        "08-18"(1th aug in days is 230) - alice leave
+        "08-16"(1th aug in days is 228) - bob arrive 
+        "08-19"(1th aug in days is 231) - bob leave
+        */
+        int aliceStart = getDay(aa);
+        int aliceEnd = getDay(la);
+        int bobStart = getDay(ab);
+        int bobEnd = getDay(lb);
+
+        // cout<<aliceStart<<" "<<aliceEnd<<" "<<bobStart<<" "<<bobEnd<<endl;
+
+        int start = max(aliceStart, bobStart);
+        int end = min(aliceEnd, bobEnd);
+        // if no over lap end-start+1 will result in -ve so max of 0 and overlap
+        // cout<<end-start+1<<endl;
+
+        return max(0, end - start + 1);
+
+
     }
 };

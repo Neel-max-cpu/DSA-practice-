@@ -65,6 +65,7 @@ just the solution of my leetcode problems
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 | [1254-number-of-closed-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1254-number-of-closed-islands/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
+| [3619-count-islands-with-total-value-divisible-by-k](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3619-count-islands-with-total-value-divisible-by-k/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -86,6 +87,7 @@ just the solution of my leetcode problems
 | [0785-is-graph-bipartite](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0785-is-graph-bipartite/) | Medium |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 | [1254-number-of-closed-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1254-number-of-closed-islands/) | Medium |
+| [3619-count-islands-with-total-value-divisible-by-k](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3619-count-islands-with-total-value-divisible-by-k/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -256,6 +258,7 @@ just the solution of my leetcode problems
 | [3026-maximum-good-subarray-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3026-maximum-good-subarray-sum/) | Medium |
 | [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3550-smallest-index-with-digit-sum-equal-to-index/) | Easy |
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3551-minimum-swaps-to-sort-by-digit-sum/) | Medium |
+| [3619-count-islands-with-total-value-divisible-by-k](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3619-count-islands-with-total-value-divisible-by-k/) | Medium |
 | [3644-maximum-k-to-sort-a-permutation](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3644-maximum-k-to-sort-a-permutation/) | Medium |
 | [3727-maximum-alternating-sum-of-squares](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3727-maximum-alternating-sum-of-squares/) | Medium |
 | [3886-sum-of-sortable-integers](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3886-sum-of-sortable-integers/) | Hard |
@@ -428,6 +431,7 @@ just the solution of my leetcode problems
 | [0733-flood-fill](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0733-flood-fill/) | Easy |
 | [1254-number-of-closed-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1254-number-of-closed-islands/) | Medium |
 | [2267-check-if-there-is-a-valid-parentheses-string-path](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2267-check-if-there-is-a-valid-parentheses-string-path/) | Hard |
+| [3619-count-islands-with-total-value-divisible-by-k](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3619-count-islands-with-total-value-divisible-by-k/) | Medium |
 ## Iterator
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -467,6 +471,7 @@ just the solution of my leetcode problems
 | [0785-is-graph-bipartite](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0785-is-graph-bipartite/) | Medium |
 | [1254-number-of-closed-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1254-number-of-closed-islands/) | Medium |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1569-number-of-ways-to-reorder-array-to-get-same-bst/) | Hard |
+| [3619-count-islands-with-total-value-divisible-by-k](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3619-count-islands-with-total-value-divisible-by-k/) | Medium |
 ## Bucket Sort
 | Problem Name | Difficulty |
 | ------- | ------- |

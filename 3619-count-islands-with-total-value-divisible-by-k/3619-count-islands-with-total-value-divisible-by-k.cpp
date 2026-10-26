@@ -18,6 +18,25 @@ public:
         }
     }
 
+
+     long long dfs(vector<vector<int>>& arr, int row, int col, int n, int m) {
+        if (row < 0 || row >= n || col < 0 || col >= m || arr[row][col] <= 0)
+            return 0;
+
+        long long sum = arr[row][col];
+
+        // Mark visited by changing the cell to 0
+        arr[row][col] = 0;
+
+        sum += dfs(arr, row - 1, col, n, m);
+        sum += dfs(arr, row + 1, col, n, m);
+        sum += dfs(arr, row, col - 1, n, m);
+        sum += dfs(arr, row, col + 1, n, m);
+
+        return sum;
+    }
+
+
     int countIslands(vector<vector<int>>& arr, int k) {
         int n = arr.size();
         int m = arr[0].size();
@@ -27,10 +46,19 @@ public:
         int count = 0;
         for(int i=0; i<n; i++){
             for(int j=0;j<m; j++){
+                // mine --
+                /*
                 if(arr[i][j]>0 && !visited[i][j]){
                     long long sum = 0;                    
                     helper(arr, visited, i, j, n, m, sum);
                     if(sum%k==0) count++;
+                }
+                */
+
+                // optimal ---
+                if (arr[i][j] > 0) {
+                    long long sum = dfs(arr, i, j, n, m);
+                    if (sum % k == 0) count++;
                 }
             }
         }

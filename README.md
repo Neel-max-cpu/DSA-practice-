@@ -35,6 +35,7 @@ just the solution of my leetcode problems
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1569-number-of-ways-to-reorder-array-to-get-same-bst/) | Hard |
+| [3841-palindromic-path-queries-in-a-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3841-palindromic-path-queries-in-a-tree/) | Hard |
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -66,6 +67,7 @@ just the solution of my leetcode problems
 | [1254-number-of-closed-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1254-number-of-closed-islands/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [3619-count-islands-with-total-value-divisible-by-k](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3619-count-islands-with-total-value-divisible-by-k/) | Medium |
+| [3841-palindromic-path-queries-in-a-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3841-palindromic-path-queries-in-a-tree/) | Hard |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -261,6 +263,7 @@ just the solution of my leetcode problems
 | [3619-count-islands-with-total-value-divisible-by-k](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3619-count-islands-with-total-value-divisible-by-k/) | Medium |
 | [3644-maximum-k-to-sort-a-permutation](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3644-maximum-k-to-sort-a-permutation/) | Medium |
 | [3727-maximum-alternating-sum-of-squares](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3727-maximum-alternating-sum-of-squares/) | Medium |
+| [3841-palindromic-path-queries-in-a-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3841-palindromic-path-queries-in-a-tree/) | Hard |
 | [3886-sum-of-sortable-integers](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3886-sum-of-sortable-integers/) | Hard |
 | [3942-minimum-operations-to-sort-a-permutation](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3942-minimum-operations-to-sort-a-permutation/) | Medium |
 ## Divide and Conquer
@@ -274,6 +277,7 @@ just the solution of my leetcode problems
 | [0347-top-k-frequent-elements](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0973-k-closest-points-to-origin/) | Medium |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1569-number-of-ways-to-reorder-array-to-get-same-bst/) | Hard |
+| [3841-palindromic-path-queries-in-a-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3841-palindromic-path-queries-in-a-tree/) | Hard |
 ## Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -360,6 +364,7 @@ just the solution of my leetcode problems
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1614-maximum-nesting-depth-of-the-parentheses/) | Easy |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1807-evaluate-the-bracket-pairs-of-a-string/) | Medium |
 | [2409-count-days-spent-together](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2409-count-days-spent-together/) | Easy |
+| [3841-palindromic-path-queries-in-a-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3841-palindromic-path-queries-in-a-tree/) | Hard |
 ## Hash Function
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -541,6 +546,7 @@ just the solution of my leetcode problems
 | [0078-subsets](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0078-subsets/) | Medium |
 | [2897-apply-operations-on-array-to-maximize-sum-of-squares](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2897-apply-operations-on-array-to-maximize-sum-of-squares/) | Hard |
 | [3644-maximum-k-to-sort-a-permutation](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3644-maximum-k-to-sort-a-permutation/) | Medium |
+| [3841-palindromic-path-queries-in-a-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3841-palindromic-path-queries-in-a-tree/) | Hard |
 ## Ordered Set
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -555,11 +561,13 @@ just the solution of my leetcode problems
 | ------- | ------- |
 | [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2913-subarrays-distinct-element-sum-of-squares-i/) | Easy |
 | [2916-subarrays-distinct-element-sum-of-squares-ii](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2916-subarrays-distinct-element-sum-of-squares-ii/) | Hard |
+| [3841-palindromic-path-queries-in-a-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3841-palindromic-path-queries-in-a-tree/) | Hard |
 ## Segment Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2913-subarrays-distinct-element-sum-of-squares-i/) | Easy |
 | [2916-subarrays-distinct-element-sum-of-squares-ii](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2916-subarrays-distinct-element-sum-of-squares-ii/) | Hard |
+| [3841-palindromic-path-queries-in-a-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3841-palindromic-path-queries-in-a-tree/) | Hard |
 ## Algorithm X
 | Problem Name | Difficulty |
 | ------- | ------- |

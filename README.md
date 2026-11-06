@@ -192,6 +192,7 @@ just the solution of my leetcode problems
 | [0853-car-fleet](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0853-car-fleet/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0973-k-closest-points-to-origin/) | Medium |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
+| [1385-find-the-distance-value-between-two-arrays](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1385-find-the-distance-value-between-two-arrays/) | Easy |
 | [2089-find-target-indices-after-sorting-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2089-find-target-indices-after-sorting-array/) | Easy |
 | [2333-minimum-sum-of-squared-difference](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2333-minimum-sum-of-squared-difference/) | Medium |
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/3551-minimum-swaps-to-sort-by-digit-sum/) | Medium |
@@ -247,6 +248,7 @@ just the solution of my leetcode problems
 | [0973-k-closest-points-to-origin](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0973-k-closest-points-to-origin/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1254-number-of-closed-islands](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1254-number-of-closed-islands/) | Medium |
+| [1385-find-the-distance-value-between-two-arrays](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1385-find-the-distance-value-between-two-arrays/) | Easy |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1569-number-of-ways-to-reorder-array-to-get-same-bst/) | Hard |
 | [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1658-minimum-operations-to-reduce-x-to-zero/) | Medium |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1807-evaluate-the-bracket-pairs-of-a-string/) | Medium |
@@ -325,6 +327,7 @@ just the solution of my leetcode problems
 | [0981-time-based-key-value-store](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0981-time-based-key-value-store/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
+| [1385-find-the-distance-value-between-two-arrays](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1385-find-the-distance-value-between-two-arrays/) | Easy |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1569-number-of-ways-to-reorder-array-to-get-same-bst/) | Hard |
 | [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1658-minimum-operations-to-reduce-x-to-zero/) | Medium |
 | [2089-find-target-indices-after-sorting-array](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/2089-find-target-indices-after-sorting-array/) | Easy |
@@ -417,6 +420,7 @@ just the solution of my leetcode problems
 | [0567-permutation-in-string](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0567-permutation-in-string/) | Medium |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0653-two-sum-iv-input-is-a-bst/) | Easy |
 | [0763-partition-labels](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/0763-partition-labels/) | Medium |
+| [1385-find-the-distance-value-between-two-arrays](https://github.com/Neel-max-cpu/DSA-practice-/tree/main/1385-find-the-distance-value-between-two-arrays/) | Easy |
 ## Backtracking
 | Problem Name | Difficulty |
 | ------- | ------- |
